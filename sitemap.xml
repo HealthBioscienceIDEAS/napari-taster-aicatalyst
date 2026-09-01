@@ -10,6 +10,12 @@
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/images.html</loc>
+  </url>
+  <url>
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/index.html</loc>
   </url>
   <url>
@@ -22,10 +28,22 @@
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/index.html</loc>
   </url>
   <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/profiles.html</loc>
@@ -34,7 +52,13 @@
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/reference.html</loc>
   </url>
   <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor-notes.html</loc>
+  </url>
+  <url>
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/key-points.html</loc>
   </url>
   <url>
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/profiles.html</loc>
