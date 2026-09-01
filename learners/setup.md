@@ -2,9 +2,6 @@
 title: Setup
 ---
 
-FIXME: Setup instructions live in this document. Please specify the tools and
-the data sets the Learner needs to have installed.
-
 ## Data Sets
 No datasets will be required to download for this taster session.
 All images will be pre-loaded examples that are already part of Napari. 
