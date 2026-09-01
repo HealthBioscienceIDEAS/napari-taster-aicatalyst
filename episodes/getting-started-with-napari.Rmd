@@ -35,7 +35,7 @@ take a while the first time, so give it a few minutes!
 
 ```bash
 # Change micro-sam to wherever you put your environment
-cd micro-sam
+cd napari-ai-workshop
 source .venv/bin/activate
 napari
 ```
@@ -230,21 +230,19 @@ the nuclei), allows us to see the nuclei again.
 
 ### Contrast limits 
 The contrast limits adjust what parts of the image we can see and how bright 
-they appear inthe viewer. Moving the left node adjusts what is shown as fully 
+they appear in the viewer. Moving the left node adjusts what is shown as fully 
 black, while moving the right node adjusts what is shown as fully bright.
 
-::::::::::::::::::::::::: instructor
-Previously, there was a link to image-display - see if a relevant one can be 
-made for this one. 
-:::::::::::::::::::::::::
 
 ### Colormap
-Again, we'll discuss this in detail in the [image display episode
-](what-is-an-image.md#colormaps-luts), but briefly - the colormap determines what 
-colours an image is displayed with. Clicking in the dropdown shows a wide range 
+Along with the contrast limits, the colormap determines how pixels values are
+assigned colors on the display. Clicking in the dropdown shows a wide range 
 of options that you can swap between.
 
-### Blending    
+### Blending
+:::::::::::::::::: instructor
+#### Skip this section on blending
+::::::::::::::::::
 This controls how multiple layers are blended together to give the final result 
 in the viewer. There are [many different options to choose 
 from](https://napari.org/stable/guides/layers.html#blending-layers). For 
@@ -276,6 +274,12 @@ appear brighter
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Layer buttons
+:::::::::::::::::::: instructor
+#### Just go briefly over the types of layers
+Mention that layers can be made up of different objects depending on 
+what they represent. We are looking at an image but could annotate with points/shapes,
+and we will make a labels layer in our segmentations in a later episode.
+::::::::::::::::::::
 
 So far we have only looked at `Image` layers, but there are many more types 
 supported by Napari. The layer buttons allow us to add additional layers of 
@@ -361,8 +365,14 @@ https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/
 ## Napari plugins
 
 :::::::::::::::::::::::::: instructor
-Don't go through this bit very much, just show napari-hub and
-plugins page, but explain if you want to get more plugins how to do it.
+#### Explanation on plugins
+Explain that they will not be able to see the plugin explorer due to an issue
+where the micro-sam plugin seems to disable search for plugins through napari.
+Use a conda environment, tell them we have put alternative instructions
+to install in case you want to explore plugins but many would be available
+to install at command line, so we will go to napari-hub and show
+plugins page saying that this is what it looks like in case you want to try out 
+later.
 ::::::::::::::::::::::::::
 
 How can we quickly assess the pixel values in an image? We could hover over 
@@ -403,18 +413,15 @@ need to close and re-open Napari.**
 If all worked as planned, you should see a new option in the top menubar under:  
 `Plugins > napari Matplotlib`
 
+:::::::::::::::::::::: instructor
+### Highlight what to look for in a plugin
+This section is good just to touch upon what to consider when looking
+at plugins. We won't have time to do the challenge.
+::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::: challenge 
 
 ## Finding plugins
-
-::::::::::::::::::::::::::::::::::::: instructor
-I've moved the plugins here as I think we just want to highlight this
-and get people to download the key plugin. We will leave the challenges for
-them do to on their own.
-Also, you will need to do this on the conda environment and point out to them
-that this instance doesn't allow additioal plugins through the GUI.
-:::::::::::::::::::::::::::::::::::::
-
 
 Napari hub contains hundreds of plugins with varying quality, written by many 
 different developers. It can be difficult to choose which plugins to use!
