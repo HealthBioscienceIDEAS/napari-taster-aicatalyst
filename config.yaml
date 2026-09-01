@@ -71,10 +71,10 @@ episodes:
 - napari-notebook.Rmd
 - what-is-an-image.Rmd
 - instance-segmentation-classic.Rmd
-- filters-and-thresholding.md
 
 # Information for Learners
 learners:
+- filters-and-thresholding.md
 
 # Information for Instructors
 instructors:
