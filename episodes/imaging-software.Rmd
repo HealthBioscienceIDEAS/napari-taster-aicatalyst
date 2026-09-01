@@ -1,7 +1,7 @@
 ---
 title: 'Imaging Software for microscopy'
 teaching: 10
-exercises: 2
+exercises: 0
 ---
 
 

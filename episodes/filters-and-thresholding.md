@@ -1,7 +1,7 @@
 ---
 title: 'Filters and thresholding'
-teaching: 40
-exercises: 20
+teaching: 0
+exercises: 0
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -26,6 +26,7 @@ gaussian blur change?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+**This is an optional episode that provides background on image processing techniques **
 In the previous episode, we started to develop an image processing workflow to 
 count the number of cells in an image. Our initial pipeline relied on manual 
 segmentation:
