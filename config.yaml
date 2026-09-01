@@ -17,7 +17,7 @@ carpentry: 'IDEAS'
 # carpentry_description: "Custom Carpentry"
 
 # Overall title for pages.
-title: 'Image visualisation with Napari, a modular based framework with AI capabilities'
+title: 'Image visualisation with Napari'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: '2026-08-18'
