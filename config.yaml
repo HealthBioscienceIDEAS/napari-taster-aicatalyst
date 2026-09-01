@@ -67,6 +67,7 @@ contact: 'team@carpentries.org'
 # Order of episodes in your lesson
 episodes:
 - introduction.Rmd
+- 2-microsam.Rmd
 
 # Information for Learners
 learners:

@@ -1,0 +1,204 @@
+---
+title: 'napari plugins with AI-capabilities'
+teaching: 30
+exercises: 20
+---
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+- What is μSAM and how does it differ from classical image‑processing?
+- When do traditional image analysis methods fail, and how can AI models help in those cases?
+
+:::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Think about when classical methods succeed or fail  
+- Use μSAM area and point prompts to aid segmentation and explore automatic mode, to segment a live‑cell image inside napari.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Unlabeled live cells
+
+We start with segmenting a live-cell sample image that comes with the μSAM napari plugin.
+
+```
+# Import napari 
+import napari
+```
+
+```
+# Open a sample image in the viewer
+viewer = napari.Viewer()
+viewer.open_sample("micro_sam", "micro_sam-livecell")
+```
+
+For details on the dataset this image came from see https://doi.org/10.1038/s41592-021-01249-6.
+
+## Segmenting the cells using traditional image analysis methods
+
+Let's try to segment these cells using the image analysis approaches we explored in the first half of the workshop.
+
+### Import the tools we need
+
+``` python
+# Import the functions we need from scikit-image
+from skimage.filters import threshold_otsu, gaussian
+from skimage.morphology import erosion, disk
+from skimage.measure import label
+from skimage.segmentation import expand_labels
+```
+
+### Access the image
+
+``` python
+# Open micro-sam sample image
+viewer = napari.Viewer()
+viewer.open_sample("micro_sam", "micro_sam-livecell")
+```
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Disk
+
+You may notice that in this part of the workshop we import `disk` from `skimage.morphology`, whereas earlier we used a `ball`.
+
+Why should you use a disk‑shaped footprint rather than a ball‑shaped footprint when performing morphological operations on this image?
+
+:::::::::::::::::::::::: solution 
+## solution
+
+Morphological operations rely on a structuring element whose shape must match the dimensionality of the data. Because the image we are working with is two‑dimensional, the appropriate structuring element is a disk footprint (a circular shape defined in the x–y plane).
+
+A ball footprint, by contrast, is a three‑dimensional structuring element. It assumes the presence of a z‑axis and is only meaningful when working with three-dimensional images.
+
+:::::::::::::::::::::::::::::::::
+
+
+### Smooth the image
+
+``` python
+# Access the image from the viewer
+image = viewer.layers["livecell"].data
+```
+
+### Compute a threshold and create a mask
+
+``` python
+# Smooth image
+blurred = gaussian(image, sigma=3)
+viewer.add_image(blurred)
+
+# Compute threshold
+threshold = threshold_otsu(blurred)
+
+# Create mask
+mask = blurred < threshold
+
+# Add to viewer
+viewer.add_labels(mask)
+```
+
+### Erode the mask and label instances
+
+``` python
+# Erode mask 
+eroded_mask = erosion(mask, footprint=disk(3))
+
+# Label instances
+eroded_labels = label(eroded_mask)
+
+# Add to viewer
+viewer.add_labels(eroded_labels)
+```
+
+### Dilate labels 
+
+``` python
+# Dilate labels
+instance_seg = expand_labels(eroded_labels, 3)
+
+# Add to viewer
+viewer.add_labels(instance_seg)
+```
+
+Below is the result of applying our traditional workflow to the live‑cell image.
+
+![](episodes\fig\livecells-traditional-segmentation.png)
+
+While many of the cell regions have been identified. Some cells have been largely missed out or broken apart.
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Segmenting an unlabeled image
+
+Why do classical image‑processing methods struggle here?
+
+:::::::::::::::::::::::: solution 
+## Solution
+
+Traditional image-processing methods depend on clear intensity differences between structures of interest and the background.
+
+In fluorescence imaging, traditional methods usually work well because labeled structures appear bright and distinct. 
+
+But in label‑free imaging, cells are more heterogeneous in appearance and often have only subtle intensity differences from the background, making thresholding unreliable. 
+
+:::::::::::::::::::::::::::::::::
+
+Image analysis methods often rely on labels like fluorescent proteins. However, labeling may not always be possible or desirable.
+
+Label‑free settings are an example of situations in which traditional image analysis methods of microscopy images can become significantly harder. 
+
+## AI-based segmentation methods
+
+AI‑based segmentation methods can address these limitations.
+
+AI models used for image segmentation are trained on large collections of images paired with "ground‑truth" segmentation masks. 
+
+These masks may come from manual annotation or semi‑automated annotation refined by experts.
+
+During training, the model repeatedly predicts segmentation masks and compares them to the ground truth. 
+
+The difference between the prediction and the ground‑truth mask is measured and the model then adjusts its internal parameters to reduce this error. 
+
+Once trained, the model can apply what it learned to new images.
+
+The nature and diversity of the training data determines how well the model generalises to new cell types and imaging modalities.
+
+## μSAM
+
+The [Segment Anything Model (SAM)](https://segment-anything.metademolab.com/) was developed by Meta AI. It was released in 2023 alongside the dataset, a collection of over 1.1 billion segmentation masks across 11 million images.
+
+[μSAM](https://computational-cell-analytics.github.io/micro-sam/micro_sam.html) is a microscopy‑adapted version of the Segment Anything Model designed specifically for biological images. 
+
+As a napari plugin, μSAM integrates directly into the napari image viewer. You can load images, add area or point "prompts", run automatic segmentation, and immediately inspect or refine the results. 
+
+### Embeddings
+
+When μSAM processes an image, it needs to compute the image's embeddings. The embeddings contain a compact, multi-dimensional representation of the image that captures it's features.
+
+This is a computationally expensive step that is done only once per image for the specific model you are using.
+
+After the embedding is computed, Because the embedding is reused for every prompt, μSAM can deliver fast, interactive segmentation.
+
+### Point prompts
+
+### Area prompts
+
+### Automatic segmentation
+
+
+::::::::::::::::::::::::::::::::::::: keypoints 
+
+- μSAM adapts SAM for microscopy and integrates it into napari, providing robust segmentation tools for biological images.
+
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+
+### ::: {#refs}
+Edlund, C., Jackson, T. R., Khalid, N., Bevan, N., Dale, T., Dengel, A., Ahmed, S., Trygg, J., & Sjögren, R. (2021). LIVECell-A large-scale dataset for label-free live cell segmentation. Nature methods, 18(9), 1038–1045. https://doi.org/10.1038/s41592-021-01249-6
+:::
