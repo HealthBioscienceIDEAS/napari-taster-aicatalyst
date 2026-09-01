@@ -24,7 +24,7 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-In the last episodes, we looked at how to view images in Napari and how to
+In the last episode, we looked at how to view images in Napari and how to
 interact with the Napari interface via Jupyter notebooks. Let's take a 
 step back now and try to understand how Napari (or ImageJ or any other viewer) 
 understands how to display images properly. To do that we must first be able to 
@@ -46,6 +46,9 @@ You can also remove a layer through the notebook:
 ``` python
 # Remove the membrane layer from the viewer
 viewer.layers.remove("membrane")
+
+# Or you can remove all layers using
+viewer.layers.clear()
 ```
 
 - We will now load a new layer in Napari
@@ -72,14 +75,10 @@ image and see how the value changes in the bottom left of the viewer:
 ![](fig/pixel-value.png){alt="A screenshot of Napari - with the mouse cursor 
 hovering over a pixel and highlighting the corresponding pixel value"}
 
-You should see that brighter areas have higher values than darker areas
+You should see that brighter areas have higher values than darker areas. The 
+actual color is dictated by the contrast limits which map this value into an 
+entry in a colormap, which provides the associated color to display.
 
-::::::::::::::::::::::::::::: instructor
-See if there is a relative link to put in here
-(we'll 
-see exactly how these values are converted to colours in the 
-[image display episode](image-display.md)).
-:::::::::::::::::::::::::::::
 
 ## Images are arrays of numbers
 
@@ -98,6 +97,7 @@ here we access the top (first) layer with `viewer.layers[0]`. Then, to access
 the actual image data stored in that layer, we retrieve it with `.data`:
 
 :::::::::::::::::::::::: instructor
+# By number of by label
 SHow that the layer can also be accessed via the name of the layer
 ::::::::::::::::::::::::
 
@@ -149,7 +149,8 @@ all at the same location).
 ## Creating an image
 
 ::::::::::::::::::: instructor
-This is probably out of scope for this session
+### This section is out of scope.
+We don't have time to cover this bit about creating an image.
 :::::::::::::::::::
 
 Where do the numbers in our image array come from? The exact details of how an 
@@ -190,7 +191,8 @@ https://bioimagebook.github.io/chapters/1-concepts/1-images_and_pixels/images_an
 ## Image dimensions
 
 ::::::::::::::::::::::::: instructor
-Resuming and working on this one
+### Resuming teaching
+The image dimensiosn bit is an important one
 :::::::::::::::::::::::::
 
 Let's return to our human mitosis image and explore some of the key features of 
@@ -234,7 +236,8 @@ type (unsigned integer) and the bit-depth (8-bit).
 
 ## Type
 :::::::::::::::::::::: instructor
-I don't think we need to go through this
+### Go quickly through types
+I don't think we need to go through this. Look for a resume instructor note.
 ::::::::::::::::::::::
 
 The type determines what kind of values can be stored in the array, for example:
@@ -353,6 +356,12 @@ is of type 'unsigned integer' this corresponds to a min and max of 0 and 65535.
 
 
 ## Common data types
+:::::::::::::::::::: instructor
+### Resume just to cover common data types
+That often we will see 8 or 16 bit, with float's making sense in some cases as
+well. It's all a tradeoff between precision needed and storage required.
+More bytes per pixel can store more values but will take more space on disk.
+::::::::::::::::::::
 
 NumPy supports a [very wide range of data types](
 https://numpy.org/doc/stable/reference/arrays.scalars.html#sized-aliases), 
@@ -376,12 +385,6 @@ A higher bit depth will allow a wider range of values to be stored, but it will
 also result in larger file sizes for the resulting images. In general, a 16-bit 
 image will have a file size that is about twice as large as an 8-bit image 
 if no compression is used 
-
-:::::::::::::::::::::::::::: instructor
-Maybe we keep episodes we don't cover and then have a link for them?
-(we'll discuss compression in the 
-[filetypes and metadata episode](filetypes-and-metadata.md#compression)).
-::::::::::::::::::::::::::::
 
 The best bit depth choice will depend on your particular imaging experiment and 
 research question. For example, if you know you have to recognise features that 
@@ -422,6 +425,14 @@ converting between different bit depths.
 
 ## Coordinate system
 
+::::::::::::::::::::::: instructor
+### Briefly cover coordinate systems
+Highlight that the information is there in Napari, and these can 
+help access individual pixel values, make accurate measurements and 
+perform spatial operations. THey are different from usual x and y axes
+in plots
+:::::::::::::::::::::::
+
 We've seen that images are arrays of numbers with a specific shape (dimensions) 
 and data type. How do we access specific values from this array? What coordinate 
 system is Napari using?
@@ -449,15 +460,10 @@ start from 0 as you can see in the diagram below:
 ![](fig/coordinates-on-image.png
 ){alt="A diagram showing how pixel coordinates change over a simple 4x4 image" width=50%}
 
-:::::::::::::::::::::::::::::::: instructor
-See if relevant link for this passage:
-we'll see in the 
-[filetypes and metadata episode](filetypes-and-metadata.md#pixel-size) that
-::::::::::::::::::::::::::::::::
-
 For the mitosis image, these coordinates are in pixels, but  
 images can also be scaled based on resolution to represent distances in the 
-physical world (e.g. in micrometres). Also, bear in mind that images with more 
+physical world (e.g. in micrometres). This information is often called *pixel size*
+and is stored in the image metadata. Also, bear in mind that images with more 
 dimensions (e.g. a 3D image) will have longer coordinates like [z, y, x]...
 
 ::::::::::::::::::::::::::::::::::::: challenge 
