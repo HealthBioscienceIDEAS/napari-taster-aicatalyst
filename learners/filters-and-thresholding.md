@@ -80,9 +80,8 @@ could choose a pixel value of 100 and set all pixels with a value less than that
 as background, and all pixels with a value greater than that as nuclei. How do 
 we go about choosing a good threshold though?
 
-One common approach to choosing a threshold is to use the image histogram - 
-recall that we looked at histograms in detail in the [image display episode
-](image-display.md). Let's go ahead and open a histogram with:  
+One common approach to choosing a threshold is to use the image histogram. 
+Let's go ahead and open a histogram with:  
 `Plugins > napari Matplotlib > Histogram`
 
 ![](fig/nuclei-histogram.png){alt="A histogram of the 29th z slice of Napari's 
@@ -112,7 +111,7 @@ clicking on the contrast limits slider in Napari.
 This demonstrates that the higher intensity peak is the one we are interested 
 in, and we should set our threshold accordingly.
 
-We can set this threshold with some commands in Napari's console:
+We can set this threshold with some commands:
 
 ```python
 
@@ -141,9 +140,7 @@ labelled.
 ![](fig/threshold-mask.png){alt="Mask of nuclei (brown) overlaid on nuclei 
 image - created with manual thresholding" width="60%"}
 
-This is mostly due to the presence of noise in our image (as we looked at in the 
-[choosing acquisition settings episode
-](choosing-acquisition-settings.md#signal-to-noise-ratio)). For example, the 
+This is mostly due to the presence of noise in our image. For example, the 
 dark image background isn't completely uniform - there are random fluctuations 
 in the pixel values giving it a 'grainy' appearance when we zoom in. These 
 fluctuations in pixel value make it more difficult to set a threshold that fully 
@@ -266,22 +263,17 @@ viewer.add_labels(triangle)
 Fortunately for us, segmenting images in the presence of noise is a widely 
 studied problem, so there are a many existing plugins we can install to help. If 
 you need a refresher on the details of how to find and install plugins in 
-Napari, see the [image display episode](image-display.md#napari-plugins).
+Napari, see the [image display episode](../episodes/getting-started-with-napari.md#napari-plugins).
 
 We will use the [`napari-skimage`](https://napari-hub.org/plugins/napari-skimage.html) 
 plugin, which adds many features that can aid with image segmentation and other 
 image processing tasks.
 
-In the top menu-bar of Napari select:  
-`Plugins > Install/Uninstall Plugins...`
-
-Then search for `napari-skimage` and click the blue button labelled 'install'. 
-Wait for the installation to complete.
-
-![](fig/napari-skimage-installation.png){alt="Screenshot of plugin 
-installation window for napari-skimage"}
-
-Once the plugin is installed, **you will need to close and re-open Napari**.
+If you do not see the skimage plugin, then you should run the following command
+after your environment is activated:
+```bash
+uv pip install napari-skimage
+```
 
 ## Filters
 
@@ -300,6 +292,7 @@ change its colormap from 'green' to 'gray' in the layer controls.
 With the new plugin installed, you should see many new options under `Layers` in 
 the top menu-bar of Napari. You can find out more about these options using the 
 [plugin's documentation](https://github.com/guiwitz/napari-skimage/blob/main/README.md).
+
 
 For now, we are interested in the _gaussian blur_ under:  
 `Layers > Filter > Filtering > Gaussian filter (napari-skimage)`
@@ -570,7 +563,7 @@ float64
 
 The shape is as expected, but what happened to the data type! It's now a 64-bit 
 float image (rather than the usual unsigned integer 8-bit/16-bit for images). 
-Recall from the ['What is an image?' episode](what-is-an-image.md#type) that 
+Recall from the ['What is an image?' episode](../episodes/what-is-an-image.md#type) that 
 float images allow values with a decimal point to be stored e.g. 3.14.
 
 Many image processing operations will convert images to `float32` or `float64`, 
@@ -601,7 +594,7 @@ Make sure you have 'nuclei_gaussian_sigma=3.0' selected in the layer list (shoul
 be highlighted in blue).
 
 You should see that this histogram now runs from 0 to 1, reflecting the new 
-values after the gaussian blur and its new data type. Let's again choose a 
+values after the Gaussian blur and its new data type. Let's again choose a 
 threshold between the two peaks - around 0.134:
 
 ```python
