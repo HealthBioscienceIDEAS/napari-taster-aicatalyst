@@ -75,6 +75,7 @@ episodes:
 # Information for Learners
 learners:
 - filters-and-thresholding.md
+- quality-control-and-manual-segmentation.md
 
 # Information for Instructors
 instructors:
