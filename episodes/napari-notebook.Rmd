@@ -1,7 +1,7 @@
 ---
 title: 'Using Napari through Jupyter'
 teaching: 10
-exercises: 2
+exercises: 0
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -38,7 +38,8 @@ Open the terminal (the same one you used for Napari installation:
 see 'Opening a terminal' section of [the setup instructions](https://healthbioscienceideas.github.io/microscopy-novice/index.html)), 
 and activate the environment you created for Napari:
 ``` bash
-conda activate napari-env
+cd napari-ai-workshop
+source .venv/bin/activate
 ```
 
 ### 2. Launch JupyterLab
@@ -53,10 +54,10 @@ It is best practice to keep all your project files together in a dedicated folde
 
 - Use the file browser on the left-hand side
 - Navigate to a location that is easy to find again (like your Desktop)
-- Right-click to create a new folder and name it *napari-workshop* 
+- Right-click to create a new folder and name it *workshop-notebooks* 
 
 ### 4. Create a new notebook
-Once you are inside the *napari-workshop* folder, create a new notebook.
+Once you are inside the *workshop-notebooks* folder, create a new notebook.
 
 For example by using the JupyterLab menu bar to select: **File > New > Notebook > Python 3 (ipykernel)**
 
@@ -72,7 +73,9 @@ Enter a meaningful name, for example: *image_display.ipynb*.
 ## About notebooks
 
 ::::::::::::::::::::::: instructor
-We can breeze through this session pretty quickly. 
+### Say you assume people have worked with Jupyter notebooks before 
+But if not, we will provide more of a primer in the materials at the end
+of the workshop.
 :::::::::::::::::::::::
 
 A notebook is made up of building blocks called **cells**.
