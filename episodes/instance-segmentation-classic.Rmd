@@ -23,8 +23,9 @@ exercises: 2
 
 ## Introduction
 Now that we are able to do basic operations in Napari, let's start doing
-something more applicable by segmenting some cells and measurig key 
+something more applicable by segmenting some cells and measuring key 
 properties about them.
+
 
 Let's create another notebook that we made from the last lesson and call it
 *instance_segmentation.ipynb*
@@ -41,17 +42,34 @@ viewer = napari.Viewer()
 viewer.open_sample("napari", "cells3d")
 ```
 
+## What is segmentation?
+
+In order to count the number of cells, we must 'segment' the nuclei in this 
+image. Segmentation is the process of labelling each pixel in an image e.g. is 
+that pixel part of a nucleus or not? Segmentation comes in two main types - 
+'semantic segmentation' and 'instance segmentation'. In this section we'll 
+describe what both kinds of segmentation represent, as well as how they relate 
+to each other, using some simple examples.
+
+
 ## Semantic segmentation
 
-First, we are going to use classic image processing techniques, like 
-thresholding and filtering to segment the cells from the background of the image
+In a semantic segmentation, pixels are grouped into different categories 
+(also known as 'classes'). In this example, we are going to use classic
+image processing techniques to assign each pixel in the imate to one of 
+two classes: `nuclei` or `background`. Importantly, it doesn't recognise which 
+pixels belong to different objects of the same category - for example, here we 
+don't know which pixels belong to individual, separate nuclei. This is the role of 
+'instance segmentation' that we'll look at next.
+
 :::::::::::::::::::::: instructor
 Perhaps put the filtering and thresholding episode in the document, but we
 just won't cover it here. 
 ::::::::::::::::::::::
 
 First, we will blur the image using a Gaussian kernel. You can play 
-with how much the images is blurred by adjusting sigma property.
+with how much the images is blurred by adjusting `sigma` property in the
+`gaussian` function.
 
 ```python
 # Create a semantic segmentation 
@@ -74,6 +92,8 @@ print("The threshold picked is:", threshold)
 ``` output
 The threshold picked is: 0.1407702761280905
 ```
+If you do pick a different blurring kernel, it might have a knock on effect
+on the threshold that the Otsu method chooses.
 
 Using our threshold on the blurred image we create a semantic segmentation. 
 
@@ -92,9 +112,23 @@ viewer.add_labels(semantic_seg)
 ![](fig/semantic-seg-napari.png){alt="A screenshot of a rough semantic
 segmentation of nuclei in Napari"}
 
-In the Napari viewer you should see the image above. 
+In the Napari viewer you should see the image above. Mouse over the pixels and
+check their intensity. You should notice that the pixels assigned to background
+are assigned to 0 and the pixels categorized as nuclei are have a value of 1.
 
 ## Instance segmentation
+
+Now we will go about creating an 'instance segmentation' for this image.
+Instance segmentations recognise which pixels belong to individual 'instances'
+of our category (nuclei). This is the kind of segmentation we will need in 
+order to count the number of nuclei (and therefore the number of cells) in 
+our image.
+
+Note that it's common for instance segmentation to be created by first making a 
+semantic segmentation, then splitting the resulting category from the semantic
+segmentation into individual instances. This isn't 
+always the case though - it will depend on the type of segmentation method you 
+use.
 
 We will use the the [label](https://scikit-image.org/docs/stable/api/skimage.measure.html#skimage.measure.label) function from scikit-image to create an instance segmentation. 
 
@@ -118,7 +152,10 @@ viewer.add_labels(instance_seg)
 alt="A screenshot of an instance segmentation of nuclei with some
 incorrectly joined instances."}
 
-You should see the above image in the Napari viewer. The different colours are used to represent the labels of separate objects. 
+You should see the above image in the Napari viewer. The different colours are used to represent the labels of separate objects. Again, mouse over the image and notice the
+change of pixels. The background pixels are still assigned to 0, but each 
+instance of the nuclei has a different label value, which has a different color
+assigned to that value.
 
 ## Counting the nuclei
 
@@ -144,7 +181,7 @@ Select `instance_seg` in the 'Labels layer' drop down box and `nuclei` in the
 'Intensity Image Layer' drop down box. You can choose to measure various shape
 properties with this plugin but for now let's keep it simple, making
 sure that only `area`, `centroid` and `label` are selected. You will need to hold 
-down <kbd>ctrl</kbd> to select multiple items in the list.
+down <kbd>ctrl</kbd> (or <kbd>⌘</kbd> on Mac) to select multiple items in the list.
 
 Click `Analyze` - a table of numeric values should appear in napari. If it 
 opens in an inconvenient location, you can click and drag on the header containing the `x`, ![](
@@ -193,6 +230,27 @@ sorted_props_df = props_df.sort_values("area")
 # Display the table
 sorted_props_df
 ```
+```output
+    label      area  centroid-0  centroid-1  centroid-2
+0       1   43945.0   39.089407   87.218409   53.622232
+1       2   27187.0   33.299555  219.697392  244.239931
+2       3  202258.0   34.401952  195.413526   76.441688
+3       4   47652.0   34.303828  157.445417  110.678712
+4       5   54018.0   31.364397  201.457755  173.293958
+5       6  113935.0   36.186343   37.206205  183.966147
+6       7   79226.0   33.722503   85.528072  137.286535
+7       8  102444.0   34.497628  136.998624  215.951993
+8       9   34421.0   35.555271   18.081346   24.130676
+9      10   35227.0   34.429500   32.455418   80.085531
+10     11   14525.0   31.464578  246.703408  207.343477
+11     12    3258.0   35.920810    2.583487   80.581338
+12     13    2000.0   32.342000  187.727500    1.962500
+13     14     240.0   33.233333    0.962500  252.758333
+14     15     155.0   29.787097  254.696774   51.258065
+15     16    4709.0   39.099809    3.779996  208.094500
+16     17     522.0   35.431034   24.015326  254.118774
+17     18       7.0   33.000000   62.714286    0.000000
+```
 
 ### The largest nucleus
 According to the table, nucleus 3 is larger than the other nuclei
@@ -234,7 +292,11 @@ You should see the image rendered in 3D, with a clear join between the
 upper most light purple nucleus and its neighbour.
 
 ::::::::::::::::::::::::: 
-::::::::::::::::::::::::: 
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::: instructor
+You can focus on the smallest one if there is time
+:::::::::::::::::::::::
 
 ### The smallest nucleus
 The smallest nucleus is labelled 18, with a size of 7 pixels. We can use the position data (the `centroid` columns) in the table to help find this nucleus. We need to navigate to slice 33 and get the mouse near the top left corner (33 63 0) to find label 18 in the image.
@@ -250,7 +312,8 @@ Our first problem is how to deal with four apparently distinct nuclei (labelled
 with a light purple colour) being segmented as a single nucleus. 
 
 ### Erosion
-To separate our nuclei, we can 'erode' our segmentation. Erosion is a type of filter, similar to those we covered in the [filters and thresholding episode](https://healthbioscienceideas.github.io/microscopy-novice/filters-and-thresholding.html). It will make all segmented nuclei smaller, by setting pixels at their edge to zero.
+To separate our nuclei, we can 'erode' our segmentation. Erosion is a type of filter, similar to those we covered in the [filters and thresholding episode](filters-and-thresholding.md). 
+It will make all segmented nuclei smaller, by setting pixels at their edge to zero.
 
 The size / shape of the region that gets set to zero is controlled by the filter's 'footprint'. We'll use scikit-image's ball function to generate a sphere to use as the footprint. Any pixels closer to the edge of the nucleus than the radius of this sphere will be set to zero.
 
@@ -301,6 +364,11 @@ eroded_mask = erosion(semantic_seg, footprint=ball(15))
 viewer.add_labels(eroded_mask, name="eroded_ball_15")
 ```
 
+::::::::::::::::: instructor
+You may have to not go so forensically into which ball size to choose,
+depending on time.
+:::::::::::::::::
+
 #### Radius 5
 Some nuclei that are touching remain **partially connected**.
 ![](fig/eroded_ball_5.png){alt="Semantic segmentation mask eroded with a ball of radius 5."}
@@ -342,7 +410,8 @@ for radius in radii:
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::
 
-It is possible to run the erosion function through a plugin: `Layers > Filter > Morphology > Binary Morphology (napari skimage)`.
+It is also possible to run the erosion function through a plugin: 
+`Layers > Filter > Morphology > Binary Morphology (napari skimage)`.
 
 ### Instance segmentation using the eroded mask
 
@@ -367,6 +436,12 @@ alt="Instance segmentation on the eroded segmentation mask"}
 Looking at the image above, there are no longer any incorrectly joined nuclei. 
 
 ### Dilation
+
+::::::::::::::::: instructor
+Probably only time for a brief introduction into dilation being the reverse
+of erosion, with the expand_labels not allowing for stopping dilation if it
+hits another instance
+:::::::::::::::::
 
 We managed to separate the nuclei, however performing any size or shape analysis on these nuclei will be flawed, as they are heavily eroded.
 
@@ -422,6 +497,11 @@ our results be significant?
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::
 
+::::::::::::::::: instructor
+Quickly show this, but don't talk too much about the function
+:::::::::::::::::
+
+
 ## Removing Border Cells
 Now we return to the second problem with our initial instance segmentation,
 the presence of partial nuclei around the image borders. As we're measuring
@@ -454,6 +534,11 @@ removed"}
 We now have an image with 11 clearly labelled nuclei. You may notice that the smaller nucleus (dark orange) near the top left of the image has been removed even though we can't see where it touches the image border. Remember that this is a 3D image and clear border removes nuclei touching any border. This nucleus has been removed because it touches the top or bottom (z axis) of the image. 
 
 Let's check the nuclei count as we did above.
+
+::::::::::::::::: instructor
+Just talk about the relabel and that we need to fix it.
+:::::::::::::::::
+
 
 ```python
 # First count the nuclei
@@ -541,6 +626,18 @@ Once you know the voxel size, `pandas` makes the conversion and analysis extreme
 ```python
 # Quick stats using pandas
 props_df["volume_um3"].describe()
+```
+```output
+count      11.000000
+mean      855.980145
+std       178.497656
+min       602.391712
+25%       729.190384
+50%       800.019636
+75%       983.473868
+max      1181.493872
+Name: volume_um3, dtype: float64
+
 ```
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
