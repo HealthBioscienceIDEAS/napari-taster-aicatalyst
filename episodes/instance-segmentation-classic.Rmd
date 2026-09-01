@@ -1,7 +1,7 @@
 ---
-title: 'instance-segmentation-classic'
+title: 'Image Segmentation: Basic Concepts'
 teaching: 20
-exercises: 2
+exercises: 0
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -62,10 +62,9 @@ pixels belong to different objects of the same category - for example, here we
 don't know which pixels belong to individual, separate nuclei. This is the role of 
 'instance segmentation' that we'll look at next.
 
-:::::::::::::::::::::: instructor
-Perhaps put the filtering and thresholding episode in the document, but we
-just won't cover it here. 
-::::::::::::::::::::::
+This episode uses classic image processing techniques to perform the 
+segmentation. If you would like to find more, please check out the extra
+[Filtering and Thresholding episode](../learners/filters-and-thresholding.md).
 
 First, we will blur the image using a Gaussian kernel. You can play 
 with how much the images is blurred by adjusting `sigma` property in the
@@ -253,6 +252,7 @@ sorted_props_df
 ```
 
 ### The largest nucleus
+
 According to the table, nucleus 3 is larger than the other nuclei
 (202258 pixels). In the [what is an image](what-is-an-image.md#pixels)
 lesson, we learnt to use the mouse pointer to find particular values in an
@@ -274,6 +274,7 @@ it is not surprising that they have been considered as a single
 fourth apparently separate nucleus? Why does it have the same label?
 
 :::::::::::::::::::::::::solution
+
 It is important to remember that this is
 a three-dimensional image and so pixels will be considered as "connected" if
 they are adjacent to another segmented pixel in any of the three dimensions
@@ -295,7 +296,9 @@ upper most light purple nucleus and its neighbour.
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::: instructor
-You can focus on the smallest one if there is time
+### Check time before going into smallest one
+This and clear border wil be nice to have, but you really need to 
+get everything previously done efficiently.
 :::::::::::::::::::::::
 
 ### The smallest nucleus
@@ -330,6 +333,7 @@ viewer.add_labels(eroded_mask, name = "eroded_ball_1")
 ```
 
 :::::::::::::::::::::::::challenge
+
 ### What is a good radius?
 We can change the radius of the footprint to control the amount of erosion. 
 
@@ -386,12 +390,18 @@ and some disappear completely.
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::
 
-:::::::::::::::::::::::::challenge
+:::::::::::::::::::::::: instructor
+### Skip the for loops
+Great for longer carpentries session where we have time to teach about code
+but not here.
+::::::::::::::::::::::::
+
+::::::::::::::::::::::::: challenge
 ### For-loop to test different radii
 
 Try using a Python `for` loop to test several radius values.
 
-:::::::::::::::::::::::::solution
+::::::::::::::::::::::::: solution
 You can change the radius manually (for example, `radius = 5`) and re‑run the erosion each time.  
 But if you want to test **many** radius values quickly, a Python [for loop](https://swcarpentry.github.io/python-novice-inflammation/05-loop.html) lets you repeat the same steps for each radius in a list.
 
@@ -438,6 +448,8 @@ Looking at the image above, there are no longer any incorrectly joined nuclei.
 ### Dilation
 
 ::::::::::::::::: instructor
+### Keep explanation about dilation brief!
+
 Probably only time for a brief introduction into dilation being the reverse
 of erosion, with the expand_labels not allowing for stopping dilation if it
 hits another instance
@@ -498,6 +510,7 @@ our results be significant?
 :::::::::::::::::::::::::
 
 ::::::::::::::::: instructor
+### Demonstrate but don't get too in the weeds discussing
 Quickly show this, but don't talk too much about the function
 :::::::::::::::::
 
@@ -536,6 +549,7 @@ We now have an image with 11 clearly labelled nuclei. You may notice that the sm
 Let's check the nuclei count as we did above.
 
 ::::::::::::::::: instructor
+### Just do relabelling as part of the process and explain with a comment
 Just talk about the relabel and that we need to fix it.
 :::::::::::::::::
 
@@ -605,9 +619,9 @@ This is why biologists convert pixel counts into physical units like µm³ that 
 
 ## Volume per nuclei
 
-To convert to volumes we need to know the pixel size. 
-
-In the lesson on [filetypes and metadata](filetypes-and-metadata.md#pixel-size) we learnt how to inspect the image metadata to determine the pixel size. 
+To convert to volumes we need to know the pixel size, which tells us the 
+physical measurement of each dimension of a pixel. This information is often 
+stored inside the image metadata that comes with the pixel data itself. 
 
 Unfortunately the sample image we're using in this lesson has no metadata. Fortunately the image pixel sizes can be found in the [scikit-image documentation](https://scikit-image.org/docs/stable/api/skimage.data.html#skimage.data.cells3d). So we can assign a pixel size of 0.26&mu;m (x axis), 0.26&mu;m (y axis) and 0.29&mu;m (z axis).
 
