@@ -33,7 +33,7 @@ viewer = napari.Viewer()
 viewer.open_sample("micro_sam", "micro_sam-livecell")
 ```
 
-![](episodes\fig\livecells.png)
+![](fig\livecells.png)
 
 For details on the dataset this image came from see https://doi.org/10.1038/s41592-021-01249-6.
 
@@ -117,7 +117,7 @@ viewer.add_labels(instance_seg)
 
 Below is the result of applying our traditional workflow to the live‑cell image.
 
-![](episodes\fig\livecells-traditional-segmentation.png)
+![](fig\livecells-traditional-segmentation.png)
 
 While many of the cell regions have been identified. Some cells have been largely missed out or broken apart.
 
