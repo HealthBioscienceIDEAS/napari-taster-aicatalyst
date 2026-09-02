@@ -18,24 +18,24 @@ exercises: 20
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Unlabeled live cells
+## Segment unlabeled live cells
 
 We start with segmenting a live-cell sample image that comes with the μSAM napari plugin.
 
-```
+``` python
 # Import napari 
 import napari
 ```
 
-```
+``` python
 # Open a sample image in the viewer
 viewer = napari.Viewer()
 viewer.open_sample("micro_sam", "micro_sam-livecell")
 ```
 
-For details on the dataset this image came from see https://doi.org/10.1038/s41592-021-01249-6.
+![](episodes\fig\livecells.png)
 
-## Segmenting the cells using traditional image analysis methods
+For details on the dataset this image came from see https://doi.org/10.1038/s41592-021-01249-6.
 
 Let's try to segment these cells using the image analysis approaches we explored in the first half of the workshop.
 
@@ -49,13 +49,6 @@ from skimage.measure import label
 from skimage.segmentation import expand_labels
 ```
 
-### Access the image
-
-``` python
-# Open micro-sam sample image
-viewer = napari.Viewer()
-viewer.open_sample("micro_sam", "micro_sam-livecell")
-```
 
 :::::::::::::::::::::::::challenge
 
