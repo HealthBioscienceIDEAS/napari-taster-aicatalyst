@@ -305,40 +305,34 @@ If automatic segmentation clashes with existing committed objects (overlaps, dup
 
 ### Automatic segmentation in a Jupyter notebook
 
-μSAM provides a high‑level function for automatic segmentation: `micro_sam.segment.segment_image()`
+μSAM also supports automatic segmentation directly from Python. 
+
+This gives you a full‑image segmentation directly in Jupyter, using the same μSAM model and settings as the napari plugin.
 
 ``` python
-import numpy as np
-from micro_sam.automatic_segmentation import (
-    get_predictor_and_segmenter,
-    automatic_instance_segmentation
-)
-
-# Load your image (example: napari sample)
+# import packages
+from micro_sam.automatic_segmentation import get_predictor_and_segmenter, automatic_instance_segmentation
 import napari
+```
+
+``` python
 viewer = napari.Viewer()
-layer = viewer.open_sample("micro_sam", "micro_sam-livecell")
-image = layer.data
+image = viewer.layers["livecell"].data
+```
 
-# 1. Load predictor + automatic segmenter
-predictor, segmenter = get_predictor_and_segmenter(
-    model_type="vit_b"      # or vit_l / vit_h depending on availability
-)
+``` python
+# Load model
+predictor, segmenter = get_predictor_and_segmenter(model_type="vit_b_lm")
 
-# 2. Run automatic segmentation
+# Run automatic segmentation
 auto_seg = automatic_instance_segmentation(
     predictor=predictor,
     segmenter=segmenter,
     input_path=image        # you can also pass a file path
 )
-
-# 3. Visualise in napari
-viewer.add_labels(auto_seg, name="auto_segmentation")
-
+# Add to viewer
+viewer.add_labels(auto_seg)
 ```
-
-## Cell tracking
-
 
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
