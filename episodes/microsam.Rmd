@@ -179,7 +179,7 @@ This opens a _Annotator 2d_ window, where you can select an image and model, and
 In the layer list you will see a number of new layers appear:
 - prompts
 - point_prompts
-- commited_objects
+- committed_objects
 - auto_segmentation
 - current_object
 
