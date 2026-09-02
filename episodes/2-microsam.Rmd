@@ -304,6 +304,9 @@ If automatic segmentation clashes with existing committed objects (overlaps, dup
 - Re‑run Automatic Segmentation
 - Commit again (μSAM will create a new committed‑objects layer automatically)
 
+The results of the automatic segmentation will look like the image below.
+
+![](fig\livecells-automatic_segmentation.png)
 
 ### Automatic segmentation in a Jupyter notebook
 
