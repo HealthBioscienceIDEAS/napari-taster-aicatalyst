@@ -73,7 +73,7 @@ Morphological operations rely on a structuring element whose shape must match th
 A ball footprint, by contrast, is a three‑dimensional structuring element. It assumes the presence of a z‑axis and is only meaningful when working with three-dimensional images.
 
 :::::::::::::::::::::::::::::::::
-
+:::::::::::::::::::::::::::::::::
 
 ### Smooth the image
 
@@ -334,21 +334,15 @@ auto_seg = automatic_instance_segmentation(
 viewer.add_labels(auto_seg)
 ```
 
-
-::::::::::::::::::::::::::::::::::::: keypoints 
-
-- μSAM adapts SAM for microscopy and integrates it into napari, providing robust segmentation tools for biological images.
-
-
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-
-
 ### References
 
 Archit, A., Freckmann, L., Nair, S., Khalid, N., Hilt, P., Rajashekar, V., Freitag, M., Teuber, C., Spitzner, M., Tapia Contreras, C., Buckley, G., von Haaren, S., Gupta, S., Grade, M., Wirth, M., Schneider, G., Dengel, A., Ahmed, S., & Pape, C. (2025). Segment Anything for Microscopy. Nature methods, 22(3), 579–591. https://doi.org/10.1038/s41592-024-02580-4
 
 Edlund, C., Jackson, T. R., Khalid, N., Bevan, N., Dale, T., Dengel, A., Ahmed, S., Trygg, J., & Sjögren, R. (2021). LIVECell-A large-scale dataset for label-free live cell segmentation. Nature methods, 18(9), 1038–1045. https://doi.org/10.1038/s41592-021-01249-6
 
+
+::::::::::::::::::::::::::::::::::::: keypoints 
+
+- μSAM adapts SAM for microscopy and integrates it into napari, providing robust segmentation tools for biological images.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
