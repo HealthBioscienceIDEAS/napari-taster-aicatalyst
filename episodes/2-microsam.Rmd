@@ -217,10 +217,9 @@ We start with the simplest area prompt: the box prompt.
 
 Creating a box prompt:
 - Select the _prompts_ layer from the layer list and pick the box tool  
-- Click and drag on the image to draw a rectangular region around one cell.
+- Click and drag on the image to draw a rectangular region around one cell
 - In the _Annotator 2d_ window click on _Segment Object_
-- To "commit" the object, click _Commit Object_ in the Annotator window.
-
+- To "commit" the object, click _Commit Object_ in the Annotator window
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
@@ -245,14 +244,44 @@ Select the polygon tool in the prompts layer. Click around the outline of an irr
 
 :::::::::::::::::::::::::::::::::
 
-
-
-
 ### Point prompts
 
+Point prompts let you guide μSAM using single points rather than areas.
 
+They are especially useful when cells are small, touching, or hard to isolate with boxes.
 
+There are two types of point prompts:
+- Positive points (object(s))
+- Negative points (background)
 
+Creating point prompts
+- Select the point_prompts layer in the layer list
+- Choose the positive point tool
+- Click on the image to place a point
+- In the _Annotator 2d_ window, click _Segment Object_
+- Commit the object if the segmentation looks correct
+
+Positive points should be placed inside the cell you want to segment.
+
+Negative points help μSAM avoid including neighbouring cells or background regions.
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Batched segmentation using point prompts
+
+What happens when you place point prompts in multiple cells and click _Segment Object_ without ticking the _batched_ option?
+
+What happens if you now toggle it on and click on _Segment Object_ again?
+
+:::::::::::::::::::::::: solution 
+
+## solution
+
+By default μSAM treats all point prompts as belonging to one single object.
+
+With batched enabled, μSAM treats each point prompt independently and μSAM returns one segmentation per point, producing multiple separate cell masks.
+
+:::::::::::::::::::::::::::::::::
 
 ### Automatic segmentation
 
