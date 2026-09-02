@@ -1,5 +1,5 @@
 ---
-title: 'napari plugins with AI-capabilities'
+title: 'Segment Anything for Microscopy (μSAM)'
 teaching: 30
 exercises: 20
 ---
