@@ -13,7 +13,6 @@ exercises: 20
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-
 - Think about when classical methods succeed or fail  
 - Use μSAM area and point prompts to aid segmentation and explore automatic mode, to segment a live‑cell image inside napari.
 
