@@ -9,9 +9,10 @@ exercises: 20
 - What is μSAM and how does it differ from classical image‑processing?
 - When do traditional image analysis methods fail, and how can AI models help in those cases?
 
-:::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
+
 
 - Think about when classical methods succeed or fail  
 - Use μSAM area and point prompts to aid segmentation and explore automatic mode, to segment a live‑cell image inside napari.
