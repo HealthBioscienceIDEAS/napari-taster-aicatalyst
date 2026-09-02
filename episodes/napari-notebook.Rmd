@@ -156,7 +156,7 @@ Then open it from the notebook
 viewer = napari.Viewer()
 ```
 
-Finally open a sample iamge. 
+Finally open a sample image. 
 ``` python
 # Open Cells (3D + 2Ch) sample image in napari's viewer
 viewer.open_sample("napari", "cells3d")
