@@ -57,7 +57,7 @@ viewer = napari.Viewer()
 viewer.open_sample("micro_sam", "micro_sam-livecell")
 ```
 
-::::::::::::::::::::::::::::::::::::: challenge 
+:::::::::::::::::::::::::challenge
 
 ## Disk
 
@@ -65,7 +65,7 @@ You may notice that in this part of the workshop we import `disk` from `skimage.
 
 Why should you use a disk‑shaped footprint rather than a ball‑shaped footprint when performing morphological operations on this image?
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::::solution 
 ## solution
 
 Morphological operations rely on a structuring element whose shape must match the dimensionality of the data. Because the image we are working with is two‑dimensional, the appropriate structuring element is a disk footprint (a circular shape defined in the x–y plane).
@@ -128,13 +128,14 @@ Below is the result of applying our traditional workflow to the live‑cell imag
 
 While many of the cell regions have been identified. Some cells have been largely missed out or broken apart.
 
-::::::::::::::::::::::::::::::::::::: challenge 
+:::::::::::::::::::::::::challenge
 
 ## Segmenting an unlabeled image
 
 Why do classical image‑processing methods struggle here?
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::::solution
+
 ## Solution
 
 Traditional image-processing methods depend on clear intensity differences between structures of interest and the background.
@@ -143,7 +144,8 @@ In fluorescence imaging, traditional methods usually work well because labeled s
 
 But in label‑free imaging, cells are more heterogeneous in appearance and often have only subtle intensity differences from the background, making thresholding unreliable. 
 
-:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::: 
+:::::::::::::::::::::::::
 
 Image analysis methods often rely on labels like fluorescent proteins. However, labeling may not always be possible or desirable.
 
@@ -221,7 +223,7 @@ Creating a box prompt:
 - In the _Annotator 2d_ window click on _Segment Object_
 - To "commit" the object, click _Commit Object_ in the Annotator window
 
-::::::::::::::::::::::::::::::::::::: challenge 
+:::::::::::::::::::::::::challenge
 
 ## Shortcuts, multiple objects at once, and polygons
 
@@ -229,7 +231,7 @@ Creating a box prompt:
 - Use multiple box prompts at once to segment multiple objects.
 - Use a polygon prompt to segment an irregularly shaped cell
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::::solution
 
 ## solution
 
@@ -242,7 +244,8 @@ In the prompts layer, draw several box prompts before running Segment Object. μ
 **Using a polygon prompt**
 Select the polygon tool in the prompts layer. Click around the outline of an irregular cell to define a custom shape. Once the polygon is closed, run Segment Object to generate the segmentation.
 
-:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::: 
+:::::::::::::::::::::::::
 
 ### Point prompts
 
@@ -265,7 +268,8 @@ Positive points should be placed inside the cell you want to segment.
 
 Negative points help μSAM avoid including neighbouring cells or background regions.
 
-::::::::::::::::::::::::::::::::::::: challenge 
+
+:::::::::::::::::::::::::challenge
 
 ## Batched segmentation using point prompts
 
@@ -273,7 +277,7 @@ What happens when you place point prompts in multiple cells and click _Segment O
 
 What happens if you now toggle it on and click on _Segment Object_ again?
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::::solution
 
 ## solution
 
@@ -281,7 +285,8 @@ By default μSAM treats all point prompts as belonging to one single object.
 
 With batched enabled, μSAM treats each point prompt independently and μSAM returns one segmentation per point, producing multiple separate cell masks.
 
-:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::: 
+:::::::::::::::::::::::::
 
 ### Automatic segmentation
 
@@ -298,6 +303,40 @@ If automatic segmentation clashes with existing committed objects (overlaps, dup
 - Commit again (μSAM will create a new committed‑objects layer automatically)
 
 
+### Automatic segmentation in a Jupyter notebook
+
+μSAM provides a high‑level function for automatic segmentation: `micro_sam.segment.segment_image()`
+
+``` python
+import numpy as np
+from micro_sam.automatic_segmentation import (
+    get_predictor_and_segmenter,
+    automatic_instance_segmentation
+)
+
+# Load your image (example: napari sample)
+import napari
+viewer = napari.Viewer()
+layer = viewer.open_sample("micro_sam", "micro_sam-livecell")
+image = layer.data
+
+# 1. Load predictor + automatic segmenter
+predictor, segmenter = get_predictor_and_segmenter(
+    model_type="vit_b"      # or vit_l / vit_h depending on availability
+)
+
+# 2. Run automatic segmentation
+auto_seg = automatic_instance_segmentation(
+    predictor=predictor,
+    segmenter=segmenter,
+    input_path=image        # you can also pass a file path
+)
+
+# 3. Visualise in napari
+viewer.add_labels(auto_seg, name="auto_segmentation")
+
+```
+
 ## Cell tracking
 
 
@@ -313,10 +352,9 @@ If automatic segmentation clashes with existing committed objects (overlaps, dup
 
 
 
-### ::: {#refs}
+### References
 
 Archit, A., Freckmann, L., Nair, S., Khalid, N., Hilt, P., Rajashekar, V., Freitag, M., Teuber, C., Spitzner, M., Tapia Contreras, C., Buckley, G., von Haaren, S., Gupta, S., Grade, M., Wirth, M., Schneider, G., Dengel, A., Ahmed, S., & Pape, C. (2025). Segment Anything for Microscopy. Nature methods, 22(3), 579–591. https://doi.org/10.1038/s41592-024-02580-4
 
 Edlund, C., Jackson, T. R., Khalid, N., Bevan, N., Dale, T., Dengel, A., Ahmed, S., Trygg, J., & Sjögren, R. (2021). LIVECell-A large-scale dataset for label-free live cell segmentation. Nature methods, 18(9), 1038–1045. https://doi.org/10.1038/s41592-021-01249-6
 
-:::
