@@ -173,17 +173,86 @@ The [Segment Anything Model (SAM)](https://segment-anything.metademolab.com/) wa
 
 As a napari plugin, μSAM integrates directly into the napari image viewer. You can load images, add area or point "prompts", run automatic segmentation, and immediately inspect or refine the results. 
 
+### Open Annotator 2d
+
+Remove all layers except for the `livecells` layer and open the μSAM annotator.
+
+plugins > Segment Anything for Microscopy > Annotator 2d
+
+This opens a _Annotator 2d_ window, where you can select an image and model, and interactively segment objects.
+
+In the layer list you will see a number of new layers appear:
+- prompts
+- point_prompts
+- commited_objects
+- auto_segmentation
+- current_object
+
+We will have a look at these layers after computing the "embeddings".
+
 ### Embeddings
 
-When μSAM processes an image, it needs to compute the image's embeddings. The embeddings contain a compact, multi-dimensional representation of the image that captures it's features.
+When μSAM processes an image, it needs to compute the image's embeddings. The embeddings contain a compact, multi-dimensional representation of the imaging data that captures it's features.
 
 This is a computationally expensive step that is done only once per image for the specific model you are using.
 
 After the embedding is computed, Because the embedding is reused for every prompt, μSAM can deliver fast, interactive segmentation.
 
-### Point prompts
+In the _Annotator 2d_ window, have a look at the _Embedding Settings_, here you can load pre-computed embeddings and select things like the size of the model (the bigger the model the longer it will take to compute the embeddigns).#
+
+For this workshop we will use the default settings to compute the embeddings by clicking on _Compute Embeddings_.
 
 ### Area prompts
+
+Now that we have computed the embeddings, let's first explore the _area prompts_.
+
+Area prompts let you draw a region on the image and μSAM will propose a segmentation for the object inside that region.
+
+
+#### Box prompt
+
+We start with the simplest area prompt: the box prompt.
+
+![](fig\livecells-boxprompt.png)
+
+Creating a box prompt:
+- Select the _prompts_ layer from the layer list and pick the box tool  
+- Click and drag on the image to draw a rectangular region around one cell.
+- In the _Annotator 2d_ window click on _Segment Object_
+- To "commit" the object, click _Commit Object_ in the Annotator window.
+
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Shortcuts, multiple objects at once, and polygons
+
+- Use keyboard shortcuts to segment and commit an object.
+- Use multiple box prompts at once to segment multiple objects.
+- Use a polygon prompt to segment an irregularly shaped cell
+
+:::::::::::::::::::::::: solution 
+
+## solution
+
+**Using shortcuts**
+After creating a box prompt, press `S` to segment and `C` to commit the object.
+
+**Segmenting multiple objects at once**
+In the prompts layer, draw several box prompts before running Segment Object. μSAM will generate a segmentation for each box simultaneously. After reviewing them, click Commit Object(s) to add all segmentations at once.
+
+**Using a polygon prompt**
+Select the polygon tool in the prompts layer. Click around the outline of an irregular cell to define a custom shape. Once the polygon is closed, run Segment Object to generate the segmentation.
+
+:::::::::::::::::::::::::::::::::
+
+
+
+
+### Point prompts
+
+
+
+
 
 ### Automatic segmentation
 
@@ -200,5 +269,9 @@ After the embedding is computed, Because the embedding is reused for every promp
 
 
 ### ::: {#refs}
+
+Archit, A., Freckmann, L., Nair, S., Khalid, N., Hilt, P., Rajashekar, V., Freitag, M., Teuber, C., Spitzner, M., Tapia Contreras, C., Buckley, G., von Haaren, S., Gupta, S., Grade, M., Wirth, M., Schneider, G., Dengel, A., Ahmed, S., & Pape, C. (2025). Segment Anything for Microscopy. Nature methods, 22(3), 579–591. https://doi.org/10.1038/s41592-024-02580-4
+
 Edlund, C., Jackson, T. R., Khalid, N., Bevan, N., Dale, T., Dengel, A., Ahmed, S., Trygg, J., & Sjögren, R. (2021). LIVECell-A large-scale dataset for label-free live cell segmentation. Nature methods, 18(9), 1038–1045. https://doi.org/10.1038/s41592-021-01249-6
+
 :::
