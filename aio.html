@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Image visualisation with Napari, a modular based framework with AI capabilities: All in One View</title>
+<title>Image visualisation with Napari: All in One View</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="assets/styles.css">
 <script src="assets/scripts.js" type="text/javascript"></script><!-- mathjax --><script type="text/x-mathjax-config">
@@ -65,7 +65,7 @@
       <img class="small-logo" alt="IDEAS" src="assets/images/IDEAS-logo-sm.svg">
 </div>
     <div class="lesson-title-md">
-      Image visualisation with Napari, a modular based framework with AI capabilities
+      Image visualisation with Napari
     </div>
     <div class="search-icon-sm">
       <!-- TODO: do not show until we have search
@@ -76,7 +76,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 <li class="nav-item">
           <span class="lesson-title">
-            Image visualisation with Napari, a modular based framework with AI capabilities
+            Image visualisation with Napari
           </span>
         </li>
         <li class="nav-item">
@@ -93,7 +93,8 @@
             More <i data-feather="chevron-down"></i>
           </button>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-<li><a class="dropdown-item" href="reference.html">Reference</a></li>
+<li><a class="dropdown-item" href="filters-and-thresholding.html">Filters and thresholding</a></li>
+<li><a class="dropdown-item" href="quality-control-and-manual-segmentation.html">Quality control and manual segmentation</a></li>
           </ul>
 </li>
       </ul>
@@ -112,7 +113,7 @@
   </div>
 <!--/div.container-fluid -->
 </nav><div class="col-md-12 mobile-title">
-  Image visualisation with Napari, a modular based framework with AI capabilities
+  Image visualisation with Napari
 </div>
 
 <aside class="col-md-12 lesson-progress"><div style="width: %" class="percentage">
@@ -185,7 +186,55 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. introduction</a>
+        <a href="imaging-software.html">1. Imaging Software for microscopy</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush3">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading3">
+        <a href="getting-started-with-napari.html">2. Getting Started With Napari</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush4">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading4">
+        <a href="napari-notebook.html">3. Using Napari through Jupyter</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="what-is-an-image.html">4. What is an image?</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="instance-segmentation-classic.html">5. Image Segmentation: Basic Concepts</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -218,7 +267,8 @@
                       <li>
                         <a href="profiles.html">Learner Profiles</a>
                       </li>
-                      <li><a href="reference.html">Reference</a></li>
+                      <li><a href="filters-and-thresholding.html">Filters and thresholding</a></li>
+<li><a href="quality-control-and-manual-segmentation.html">Quality control and manual segmentation</a></li>
                     </ul>
 </div>
                 </div>
@@ -248,11 +298,11 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>All in One View</h1>
         
-<section id="aio-introduction"><p>Content from <a href="introduction.html">introduction</a></p>
+<section id="aio-imaging-software"><p>Content from <a href="imaging-software.html">Imaging Software for microscopy</a></p>
 <hr>
-<p>Last updated on 2026-09-01 |
+<p>Last updated on 2026-09-02 |
 
-        <a href="https://github.com/HealthBioscienceIDEAS/napari-taster-aicatalyst/edit/main/episodes/introduction.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/HealthBioscienceIDEAS/napari-taster-aicatalyst/edit/main/episodes/imaging-software.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -264,8 +314,8 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using R Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>What are the different software options for viewing microscopy
+images?</li>
 </ul>
 </div>
 </div>
@@ -275,81 +325,1397 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain how to use markdown with the new lesson template</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
+<li>Explain the pros and cons of different image visualisation tools
+(e.g. ImageJ, Napari and proprietary options)</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<section><h2 class="section-heading" id="choosing-the-right-tool-for-the-job">Choosing the right tool for the job<a class="anchor" aria-label="anchor" href="#choosing-the-right-tool-for-the-job"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files (with extension <code>.md</code>) and <a href="https://rmarkdown.rstudio.com/" class="external-link">R Markdown</a> for dynamic files
-that can render code into output (with extension <code>.Rmd</code>).
-Please refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson template:</p>
-<ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
+<p>Light microscopes can produce a very wide range of image data, for
+example:</p>
+<ul>
+<li>2D or 3D</li>
+<li>Time series or snapshots</li>
+<li>Different channels</li>
+<li>Small to large datasets</li>
+</ul>
+<figure><img src="fig/images-mosaic.png" style="width:80.0%" alt="A mosaic of screenshots of some of Napari's  included sample data" class="figure mx-auto d-block"></figure><p>With such a wide range of data, there comes a huge variety of
+software that can work with these images. Different software may be
+specialised to specific types of image data, or to specific research
+fields. There is no one ‘right’ software to use - it’s about choosing
+the right tool for yourself, your data, and your research question!</p>
+<p>Some points to consider when choosing software are:</p>
+<ul>
+<li><p><strong>What is common in your research field?</strong><br>
+Having a good community around the software you work with can be
+extremely helpful - so it’s worth considering what is popular in your
+department, or in relevant papers in your field.</p></li>
+<li><p><strong>Open source or proprietary?</strong><br>
+It’s important to consider if the software you are using is open-source
+or proprietary (requiring a one-off payment or a regular subscription
+fee to use). Open source means it is more freely available and likely
+more accessible to a larger group of researchers, but it may not be as
+robust or stable as software commerically developed by large team,
+particularly if you are interested in a very specific feature that it
+provides. Open source software often will rely on more open file formats
+and workflows, and they are designed to be extended by the
+community.</p></li>
+<li><p><strong>Support for image types?</strong><br>
+For example, does it support 3D images, or timeseries?</p></li>
+<li><p><strong>Can it be automated/customised/extended?</strong><br>
+Can you automate certain steps with your own scripts or plugins?
+<strong>Scripts</strong> are lists of commands to be carried out by a
+piece of software e.g.  load an image, then threshold it, then measure
+its size…These are often used to automate processes, especially for high
+throughput studies. <strong>Plugins</strong> add optional new features
+to a piece of software (rather than automating use of existing
+features). They’re designed to be reusable so other members of the
+community can easily benefit from these new features. Both of these
+components are useful to make sure your analysis steps can be easily
+shared and reproduced by other researchers.</p></li>
+</ul>
+<p>As always, the right software to use will depend on your preference,
+your data and your research question. This being said, we will only use
+open-source software in this course, and we encourage using open-source
+software where possible.</p>
+</section><section><h2 class="section-heading" id="fijiimagej-and-napari">Fiji/ImageJ and Napari<a class="anchor" aria-label="anchor" href="#fijiimagej-and-napari"></a>
+</h2>
+<hr class="half-width">
+<p>While there are many pieces of software to choose from, two of the
+most popular open-source options are <a href="https://imagej.net/software/fiji/" class="external-link">Fiji/ImageJ</a> and <a href="https://napari.org/" class="external-link">Napari</a>. They are both:</p>
+<ul>
+<li>Freely available</li>
+<li>‘General’ imaging software i.e. applicable to many different
+research fields</li>
+<li>Supporting a wide range of image types</li>
+<li>Customisable with scripts + plugins</li>
+</ul>
+<p>Both are great options for working with a wide variety of images - so
+why choose one over the other? Some of the main differences are listed
+below if you are interested:</p>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Differences between Fiji/ImageJ and Napari
+  </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
+<p><strong>Python vs Java</strong><br>
+A big advantage of Napari is that it is made with the Python programming
+language (vs Fiji/ImageJ which is made with Java). In general, this
+makes it easier to extend with scripts and plugins as Python tends to be
+more widely used in the research community. It also means Napari can
+easily integrate with other python tools e.g. Python’s popular machine
+learning libraries.</p>
+<p><strong>Maturity</strong><br>
+Fiji/ImageJ has been actively developed <a href="https://imagej.net/software/imagej/" class="external-link">for many years now (&gt;20
+years)</a>, while Napari is a more recent development <a href="https://napari.org/stable/community/team.html#project-history" class="external-link">starting
+around 2018</a>. This difference in age comes with pros and cons - in
+general, it means that the core features and layout of Fiji/ImageJ are
+very well established, and less likely to change than Napari. With
+Napari, you will likely have to adjust your image processing workflow
+with new versions, or update any scripts/plugins more often. Equally, as
+Napari is new and rapidly growing in popularity, it is quickly gaining
+new features and attracting a wide range of new plugin developers.</p>
+<p><strong>Built-in tools</strong><br>
+Fiji/ImageJ comes with many image processing tools built-in by default -
+e.g.  making image histograms, thresholding and gaussian blur. While
+Napari is more minimal by default and mostly focusing on image display,
+the core functionality is continuing to evolve. Some of these features
+which have in the past required installation of additional plugins are
+now being built in.</p>
+<p><strong>Specific plugins</strong><br>
+There are excellent plugins available for Fiji/ImageJ and Napari that
+focus on specific types of image data or processing steps. The
+availability of a specific plugin will often be a deciding factor on
+whether to use Fiji/ImageJ or Napari for your project.</p>
+<p><strong>Ease of installation and user interface</strong><br>
+As Fiji/ImageJ has been in development for longer, it tends to be
+simpler to install than Napari (especially for those with no prior
+Python experience). In addition, as it has more built-in image
+processing tools, it tends to be simpler to use fully from its user
+interface. Napari meanwhile is often strongest when you combine it with
+some Python scripting (although this isn’t required for many
+workflows!)</p>
+</div>
+</div>
+</div>
+</div>
+<p>For this lesson, we will use Napari as our software of choice. It’s
+worth bearing in mind though that Fiji/ImageJ can be a useful
+alternative - and many workflows will actually use both Fiji/ImageJ and
+Napari together! Again, it’s about choosing the right tool for your data
+and research question.</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>There are many software options for light microscopy images</li>
+<li>Considerations when choosing a software for your analysis include
+functionality, cost, availability, and customisation.</li>
+<li>Napari and Fiji/ImageJ are popular open-source options</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-getting-started-with-napari"><p>Content from <a href="getting-started-with-napari.html">Getting Started With Napari</a></p>
+<hr>
+<p>Last updated on 2026-09-02 |
+
+        <a href="https://github.com/HealthBioscienceIDEAS/napari-taster-aicatalyst/edit/main/episodes/getting-started-with-napari.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How can Napari be used to view images?</li>
+<li>How can I interact Napari through the console or via Jupyter
+Lab?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Use Napari to open images</li>
+<li>Navigate the Napari viewer (pan/zoom/swapping between 2D and 3D
+views…)</li>
+<li>Change colormap (LUT) in Napari</li>
+<li>Explain the main parts of the Napari user interface</li>
+<li>Install plugins from Napari Hub</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>In this section, we will open up with Napari in a number of different
+ways, and understand how it represents images, as well as measurements
+derived for it.</p>
+<section><h2 class="section-heading" id="opening-napari">Opening Napari<a class="anchor" aria-label="anchor" href="#opening-napari"></a>
+</h2>
+<hr class="half-width">
+<p>Let’s get started by opening a new Napari window - you should have
+already followed the <a href="index.html#setup">installation instructions</a>.
+Note this can take a while the first time, so give it a few minutes!</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="co"># Change micro-sam to wherever you put your environment</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="bu">cd</span> napari-ai-workshop</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a><span class="bu">source</span> .venv/bin/activate</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="ex">napari</span></span></code></pre>
+</div>
+<figure><img src="fig/blank-napari-ui.png" alt="A screenshot of the default Napari user  interface" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="opening-images">Opening images<a class="anchor" aria-label="anchor" href="#opening-images"></a>
+</h2>
+<hr class="half-width">
+<p>Napari comes with some example images - let’s open one now. Go to the
+top menu-bar of Napari and select:<br><code>File &gt; Open Sample &gt; napari builtins &gt; Cells (3D+2Ch)</code></p>
+<p>You should see a fluorescence microscopy image of some cells:</p>
+<figure><img src="fig/cells-napari.png" alt="A screenshot of a fluorescence microscopy image  of some cells in Napari" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="naparis-user-interface">Napari’s User interface<a class="anchor" aria-label="anchor" href="#naparis-user-interface"></a>
+</h2>
+<hr class="half-width">
+<p>Napari’s user interface is split into a few main sections, as you can
+see in the diagram below (note that on Macs the main menu will appear in
+the upper ribbon, rather than inside the Napari window):</p>
+<figure><img src="fig/ui-sections-napari.png" alt="A screenshot of Napari with the main user  interface sections labelled" class="figure mx-auto d-block"></figure><p>Let’s take a brief look at each of these sections - for full
+information see the <a href="https://napari.org/stable/tutorials/fundamentals/viewer.html" class="external-link">Napari
+documentation</a>.</p>
+</section><section><h2 class="section-heading" id="main-menu">Main menu<a class="anchor" aria-label="anchor" href="#main-menu"></a>
+</h2>
+<hr class="half-width">
+<p>We already used the main menu in the last section to open a sample
+image. The main menu contains various commands for opening images,
+changing preferences and installing plugins (we’ll see more of these
+options in later episodes).</p>
+</section><section><h2 class="section-heading" id="canvas">Canvas<a class="anchor" aria-label="anchor" href="#canvas"></a>
+</h2>
+<hr class="half-width">
+<p>The canvas is the main part of the Napari user interface. This is
+where we display and interact with our images.</p>
+<p>Try moving around the cells image with the following commands:</p>
+<pre><code>Pan - Click and drag
+Zoom - Scroll in/out (use the same gestures with your mouse
+                      that you would use to scroll up/down
+                      in a document)</code></pre>
+</section><section><h2 class="section-heading" id="dimension-sliders">Dimension sliders<a class="anchor" aria-label="anchor" href="#dimension-sliders"></a>
+</h2>
+<hr class="half-width">
+<p>Dimension sliders appear at the bottom of the canvas depending on the
+type of image displayed. For example, here we have a 3D image of some
+cells, which consists of a stack of 2D images. If we drag the slider at
+the bottom of the image, we move up and down in this stack:</p>
+<figure><img src="fig/dim-slider.png" alt="Three screenshots of the cells image in napari, at  different z depths" class="figure mx-auto d-block"></figure><p>Pressing the arrow buttons at either end of the slider steps through
+one slice at a time. Also, pressing the ‘play’ button at the very left
+of the slider moves automatically through the stack until pressed
+again.</p>
+<p><img src="fig/dim-slider-closeup.png" style="width:80.0%" alt="Closeup of Napari's dimension slider with labels" class="figure"> sand More
+sliders can appear if our image has more dimensions (e.g. time series,
+or further channels).</p>
+</section><section><h2 class="section-heading" id="viewer-buttons">Viewer buttons<a class="anchor" aria-label="anchor" href="#viewer-buttons"></a>
+</h2>
+<hr class="half-width">
+<p>The viewer buttons (the row of buttons at the bottom left of Napari)
+control various aspects of the Napari viewer:</p>
+<div class="section level3">
+<h3 id="console">Console <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/console.svg" alt="A screenshot of Napari's console button" height="30" class="figure"><a class="anchor" aria-label="anchor" href="#console"></a>
+</h3>
+<p>This button opens Napari’s built-in python console.</p>
+</div>
+<div class="section level3">
+<h3 id="d3d">2D/3D <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/2D.svg" alt="A screenshot of Napari's 2D button" height="25" class="figure"> / <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/3D.svg" alt="A screenshot of Napari's 3D button" height="25" class="figure"><a class="anchor" aria-label="anchor" href="#d3d"></a>
+</h3>
+<p>This switches the canvas between 2D and 3D display. Try switching to
+the 3D view for the cells image:</p>
+<figure><img src="fig/cells-3d-napari.png" alt="A screenshot of 3D cells in Napari" class="figure mx-auto d-block"></figure><p>The controls for moving in 3D are similar to those for 2D:</p>
+<pre><code>Rotate - Click and drag
+Pan - Shift + click and drag
+Zoom - Scroll in/out</code></pre>
+</div>
+<div class="section level3">
+<h3 id="roll-dimensions">Roll dimensions <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/roll.svg" alt="A screenshot of Napari's roll dimensions button" height="25" class="figure"><a class="anchor" aria-label="anchor" href="#roll-dimensions"></a>
+</h3>
+<p>This changes which image dimensions are displayed in the viewer. For
+example, let’s switch back to the 2D view for our cells image and press
+the roll dimensions button multiple times. You’ll see that it switches
+between different orthogonal views (i.e. at 90 degrees to our starting
+view). Pressing it 3 times will bring us back to the original
+orientation.</p>
+<figure><img src="fig/roll-dims.png" alt="Three screenshots of the cells image in napari,  with different axes being visualised" class="figure mx-auto d-block"></figure>
+</div>
+<div class="section level3">
+<h3 id="transpose-dimensions">Transpose dimensions <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/transpose.svg" alt="A screenshot of Napari's transpose dimensions button" height="25" class="figure"><a class="anchor" aria-label="anchor" href="#transpose-dimensions"></a>
+</h3>
+<p>This button swaps the two currently displayed dimensions. In our
+cells image, this means the x and y axis are switched. Pressing the
+button again brings us back to the original orientation.</p>
+<figure><img src="fig/transpose-dim.png" alt="Two screenshots of the cells image in napari,  with dimensions swapped" class="figure mx-auto d-block"></figure>
+</div>
+<div class="section level3">
+<h3 id="grid">Grid <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/canvas-grid-view.svg" alt="A screenshot of Napari's grid button" height="25" class="figure"><a class="anchor" aria-label="anchor" href="#grid"></a>
+</h3>
+<p>This button displays all image layers in a grid (+ any additional
+layer types, as we’ll see <a href="#layer-buttons">later in the
+episode</a>). Using this for our cells image, we see the nuclei (green)
+displayed next to the cell membranes (purple), rather than on top of
+each other.</p>
+</div>
+<div class="section level3">
+<h3 id="home">Home <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/home.svg" alt="A screenshot of Napari's home button" height="25" class="figure"><a class="anchor" aria-label="anchor" href="#home"></a>
+</h3>
+<p>This button brings the canvas back to its default view. This is
+useful if you have panned/zoomed to a specific region and want to
+quickly get back to an overview of the full image.</p>
+</div>
+</section><section><h2 class="section-heading" id="layer-list">Layer list<a class="anchor" aria-label="anchor" href="#layer-list"></a>
+</h2>
+<hr class="half-width">
+<p>Now that we’ve seen the main controls for the viewer, let’s look at
+the layer list. ‘Layers’ are how Napari displays multiple items together
+in the viewer. For example, currently our layer list contains two items
+- ‘nuclei’ and ‘membrane’. These are both <code>Image</code> layers and
+are displayed in order, with the nuclei on top and membrane
+underneath.</p>
+<figure><img src="fig/layer-list.png" alt="A screenshot of Napari's layer list, showing two  image layers named 'nuclei' and 'membrane'" class="figure mx-auto d-block"></figure><p>We can show/hide each layer by clicking the eye icon on the left side
+of their row. We can also rename them by double clicking on the row.</p>
+<p>We can change the order of layers by dragging and dropping items in
+the layer list. For example, try dragging the membrane layer above the
+nuclei. You should see the nuclei disappear from the viewer (as they are
+now hidden by the membrane image on top).</p>
+<figure><img src="fig/layer-reordering.png" alt="A screenshot of Napari with the nuclei and  membrane layer swapped" class="figure mx-auto d-block"></figure><p>Here we only have <code>Image</code> layers, but there are many more
+types like <code>Points</code>, <code>Shapes</code> and
+<code>Labels</code>, some of which we will see <a href="#layer-buttons">later in the episode</a>.</p>
+</section><section><h2 class="section-heading" id="layer-controls">Layer controls<a class="anchor" aria-label="anchor" href="#layer-controls"></a>
+</h2>
+<hr class="half-width">
+<p>Next let’s look at the layer controls - this area shows controls only
+for the currently selected layer (i.e. the one that is highlighted in
+blue in the layer list). For example, if we click on the nuclei layer
+then we can see a <code>colormap</code> of green, while if we click on
+the membrane layer we see a <code>colormap</code> of magenta.</p>
+<p>Controls will also vary depending on layer type (like
+<code>Image</code> vs <code>Points</code>) as we will see <a href="#layer-buttons">later in this episode</a>.</p>
+<p>Let’s take a quick look at some of the main image layer controls:</p>
+<div class="section level3">
+<h3 id="opacity">Opacity<a class="anchor" aria-label="anchor" href="#opacity"></a>
+</h3>
+<p>This changes the opacity of the layer - lower values are more
+transparent. For example, reducing the opacity of the membrane layer (if
+it is still on top of the nuclei), allows us to see the nuclei
+again.</p>
+</div>
+<div class="section level3">
+<h3 id="contrast-limits">Contrast limits<a class="anchor" aria-label="anchor" href="#contrast-limits"></a>
+</h3>
+<p>The contrast limits adjust what parts of the image we can see and how
+bright they appear in the viewer. Moving the left node adjusts what is
+shown as fully black, while moving the right node adjusts what is shown
+as fully bright.</p>
+</div>
+<div class="section level3">
+<h3 id="colormap">Colormap<a class="anchor" aria-label="anchor" href="#colormap"></a>
+</h3>
+<p>Along with the contrast limits, the colormap determines how pixels
+values are assigned colors on the display. Clicking in the dropdown
+shows a wide range of options that you can swap between.</p>
+</div>
+<div class="section level3">
+<h3 id="blending">Blending<a class="anchor" aria-label="anchor" href="#blending"></a>
+</h3>
+
+<p>This controls how multiple layers are blended together to give the
+final result in the viewer. There are <a href="https://napari.org/stable/guides/layers.html#blending-layers" class="external-link">many
+different options to choose from</a>. For example, let’s put the nuclei
+layer back on top of the membrane and change its blending to ‘opaque’.
+You should see that it now completely hides the membrane layer
+underneath. Changing the blending back to ‘additive’ will allow both the
+nucleus and membrane layers to be seen together again.</p>
+<div id="using-image-layer-controls" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?</h3>
+<div id="using-image-layer-controls" class="callout-inner">
+<h3 class="callout-title">Using image layer controls</h3>
 <div class="callout-content">
-<p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
-</div>
+<p>Adjust the layer controls for both nuclei and membrane to give the
+result below:</p>
+<figure><img src="fig/layer-controls-task.png" alt="Cells image with blue nuclei and bright  red membranes" class="figure mx-auto d-block"></figure>
 </div>
 </div>
 </div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<ul>
+<li>Click on the nuclei in the layer list</li>
+<li>Change the colormap to cyan</li>
+<li>Click on the membrane in the layer list</li>
+<li>Change the colormap to red</li>
+<li>Move the right contrast limits node to the left to make the
+membranes appear brighter</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="layer-buttons">Layer buttons<a class="anchor" aria-label="anchor" href="#layer-buttons"></a>
+</h2>
+<hr class="half-width">
+<p>So far we have only looked at <code>Image</code> layers, but there
+are many more types supported by Napari. The layer buttons allow us to
+add additional layers of these new types:</p>
+<div class="section level3">
+<h3 id="points">Points <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/new_points.svg" alt="A screenshot of Napari's point layer button" height="30" class="figure"><a class="anchor" aria-label="anchor" href="#points"></a>
 </h3>
-<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
+<p>This button creates a new <a href="https://napari.org/stable/howtos/layers/points.html" class="external-link">points
+layer</a>. This can be used to mark specific locations in an image.</p>
+</div>
+<div class="section level3">
+<h3 id="shapes">Shapes <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/new_shapes.svg" alt="A screenshot of Napari's shape layer button" height="30" class="figure"><a class="anchor" aria-label="anchor" href="#shapes"></a>
+</h3>
+<p>This button creates a new <a href="https://napari.org/stable/howtos/layers/shapes.html" class="external-link">shapes
+layer</a>. Shapes can be used to mark regions of interest e.g. with
+rectangles, ellipses or lines.</p>
+</div>
+<div class="section level3">
+<h3 id="labels">Labels <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/new_labels.svg" alt="A screenshot of Napari's labels layer button" height="30" class="figure"><a class="anchor" aria-label="anchor" href="#labels"></a>
+</h3>
+<p>This button creates a new <a href="https://napari.org/stable/howtos/layers/labels.html" class="external-link">labels
+layer</a>. This is usually used to label specific regions in an image
+e.g. to label individual nuclei.</p>
+</div>
+<div class="section level3">
+<h3 id="remove-layer">Remove layer <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/delete.svg" alt="A screenshot of Napari's delete layer button" height="30" class="figure"><a class="anchor" aria-label="anchor" href="#remove-layer"></a>
+</h3>
+<p>This button removes the currently selected layer (highlighted in
+blue) from the layer list.</p>
+<div id="other-layer-types" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="other-layer-types" class="callout-inner">
+<h3 class="callout-title">Other layer types</h3>
+<div class="callout-content">
+<p>Note that there are some layer types that can’t be added via clicking
+buttons in the user interface, like <a href="https://napari.org/stable/howtos/layers/surface.html" class="external-link">surfaces</a>,
+<a href="https://napari.org/stable/howtos/layers/tracks.html" class="external-link">tracks</a>
+and <a href="https://napari.org/stable/howtos/layers/vectors.html" class="external-link">vectors</a>.
+These require calling python commands in Napari’s console or an external
+python script.</p>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
+<div id="point-layers" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within
-challenge blocks?</h3>
+<div id="point-layers" class="callout-inner">
+<h3 class="callout-title">Point layers</h3>
 <div class="callout-content">
+<p>Let’s take a quick look at one of these new layer types - the
+<code>Points</code> layer.</p>
+<p>Add a new points layer by clicking the points button. Investigate the
+different layer controls - what do they do? Note that hovering over
+buttons will usually show a summary tooltip.</p>
+<p>Add points and adjust settings to give the result below:</p>
+<figure><img src="fig/points-task.png" alt="Cells image with points marking multiple nuclei" class="figure mx-auto d-block"></figure>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<ul>
+<li>Click the ‘add points’ button <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/add.svg" alt="Screenshot of Napari's add points button" height="30" class="figure">
+</li>
+<li>Click on nuclei to add points on top of them</li>
+<li>Click the ‘select points’ button <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/select.svg" alt="Screenshot of Napari's select points button" height="30" class="figure">
+</li>
+<li>Click on the point over the dividing nucleus</li>
+<li>Increase the point size slider</li>
+<li>Change its symbol to star</li>
+<li>Change its face colour to purple</li>
+<li>change its edge colour to white</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="napari-plugins">Napari plugins<a class="anchor" aria-label="anchor" href="#napari-plugins"></a>
+</h2>
+<hr class="half-width">
+<p>How can we quickly assess the pixel values in an image? We could
+hover over individual pixels in the Napari window, or we could print the
+array into Napari’s console or in a Jupyter notebook, but these are hard
+to interpret at a glance. A much better option is to use an image
+histogram.</p>
+<p>To do this, we will have to install a new plugin for Napari. Remember
+from the <a href="imaging-software.html">Imaging Software episode</a>
+that plugins add new features to a piece of software. Napari has
+hundreds of plugins available on the <a href="https://www.napari-hub.org/" class="external-link">napari hub</a> website.</p>
+<p>Let’s start by going to the napari hub and searching for
+‘matplotlib’:</p>
+<figure><img src="fig/napari-hub.png" alt="Screenshot of searching 'matplotlib' on napari hub" class="figure mx-auto d-block"></figure><p>You should see ‘napari Matplotlib’ appear in the list (if not, try
+scrolling further down the page). If we click on
+<code>napari matplotlib</code> this opens a summary of the plugin with
+links to the documentation and github repository containing the plugin’s
+source code.</p>
+<p>Now that we’ve found the plugin we want to use, let’s go ahead and
+install it in Napari. Note that some plugins have special requirements
+for installation, so it’s always worth checking their napari hub page
+for any extra instructions. In the top menu bar of Napari select:<br><code>Plugins &gt; Install/Uninstall Plugins...</code></p>
+<figure><img src="fig/plugin-installation.png" alt="Screenshot of plugin installation window in Napari" class="figure mx-auto d-block"></figure><p>This should open a window summarising all installed plugins (at the
+top) and all available plugins to install (at the bottom). If we search
+for ‘matplotlib’ in the top searchbar, then ‘napari-matplotlib’ will
+appear under ‘Available Plugins’. Press the blue install button and wait
+for it to finish. <strong>You’ll then need to close and re-open
+Napari.</strong></p>
+<p>If all worked as planned, you should see a new option in the top
+menubar under:<br><code>Plugins &gt; napari Matplotlib</code></p>
 
+<div id="finding-plugins" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="finding-plugins" class="callout-inner">
+<h3 class="callout-title">Finding plugins</h3>
+<div class="callout-content">
+<p>Napari hub contains hundreds of plugins with varying quality, written
+by many different developers. It can be difficult to choose which
+plugins to use!</p>
+<ul>
+<li>Search for cell tracking plugins on <a href="https://www.napari-hub.org/" class="external-link">Napari hub</a>
+</li>
+<li>Look at some of the plugin summaries, documentation and github
+repositories</li>
+<li>What factors could help you decide if the plugin is well
+maintained?</li>
+<li>What factors could help you decide if the plugin is popular with
+Napari users?</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div class="accordion-body">
+<div class="section level3">
+<h3 id="is-a-plugin-well-maintained">Is a plugin well maintained?<a class="anchor" aria-label="anchor" href="#is-a-plugin-well-maintained"></a>
+</h3>
+<p>Some factors to look for:</p>
+<p><strong>Last updated</strong><br>
+Check when the plugin was last updated - was it recently? This is shown
+in the search list summary and in the left sidebar when you open the
+plugin’s page on napari-hub.</p>
+<p><strong>Documentation</strong><br>
+Is the plugin summary (+ any linked documentation) detailed enough to
+explain how to use the plugin?</p>
+</div>
+<div class="section level3">
+<h3 id="is-a-plugin-popular">Is a plugin popular?<a class="anchor" aria-label="anchor" href="#is-a-plugin-popular"></a>
+</h3>
+<p>Some factors to look for:</p>
+<p><strong>Stars on github</strong><br>
+If you open a plugin’s linked github repository, you can see the number
+of ‘stars’ in the top right. More stars tend to indicate a plugin is
+more popular - although this isn’t always the case! Github is mainly
+used by plugin developers, so a plugin with few stars may still have
+many people using it.</p>
+<p><strong>Image.sc</strong><br>
+It can also be useful to search the plugin’s name on the <a href="https://forum.image.sc/" class="external-link">image.sc</a> forum to browse relevant
+posts and see if other people had good experiences using it. Image.sc is
+also a great place to get help and advice from other plugin users, or
+the plugin’s developers.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Napari’s user interface is split into a few main sections including
+the canvas, layer list, layer controls…</li>
+<li>Layers can be of different types e.g. <code>Image</code>,
+<code>Point</code>, <code>Label</code>
+</li>
+<li>Different layer types have different layer controls</li>
+<li>Lots of additional functionality for Napari are available through
+plugins extendng its capability.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-napari-notebook"><p>Content from <a href="napari-notebook.html">Using Napari through Jupyter</a></p>
+<hr>
+<p>Last updated on 2026-09-02 |
+
+        <a href="https://github.com/HealthBioscienceIDEAS/napari-taster-aicatalyst/edit/main/episodes/napari-notebook.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How can you interact with Napari in a notebook?</li>
+<li>How are images represented in the computer?</li>
+<li>What are the main structures that Napari uses to represent imaging
+data?</li>
+<li>How can we get basic measurements out from this</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Understand how to open and interact with Napari via JupyterLab
+notebooks</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Instead of entering Python commands in Napari’s built‑in console, we
+will write and run our code in a <a href="https://docs.jupyter.org/en/latest/#what-is-a-notebook" class="external-link">computational
+notebook</a> using <a href="https://jupyterlab.readthedocs.io/en/stable/index.html" class="external-link">JupyterLab</a>.
+This allows us to build a reusable workflow that is easy to repeat and
+adapt.</p>
+<p>We have kept the level of programming knowledge required to the
+minimum possible and all code can be run by copy and pasting, so don’t
+worry if you don’t understand it all yet.</p>
+<p>Most, if not all, of the functions we will use in this lesson are
+also accessible via various Napari plugins, so the analysis pipeline
+could also be assembled within Napari if you prefer.</p>
+<section><h2 class="section-heading" id="creating-a-notebook-in-jupyterlab">Creating a notebook in JupyterLab<a class="anchor" aria-label="anchor" href="#creating-a-notebook-in-jupyterlab"></a>
+</h2>
+<hr class="half-width">
+<div class="section level3">
+<h3 id="activate-your-napari-environment">1. Activate your Napari environment<a class="anchor" aria-label="anchor" href="#activate-your-napari-environment"></a>
+</h3>
+<p>Open the terminal (the same one you used for Napari installation: see
+‘Opening a terminal’ section of <a href="https://healthbioscienceideas.github.io/microscopy-novice/index.html" class="external-link">the
+setup instructions</a>), and activate the environment you created for
+Napari:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="bu">cd</span> napari-ai-workshop</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="bu">source</span> .venv/bin/activate</span></code></pre>
+</div>
+</div>
+<div class="section level3">
+<h3 id="launch-jupyterlab">2. Launch JupyterLab<a class="anchor" aria-label="anchor" href="#launch-jupyterlab"></a>
+</h3>
+<p>Start JupyterLab:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="ex">jupyter</span> lab</span></code></pre>
+</div>
+<p>The JupyterLab interface should appear in a browser window.</p>
+</div>
+<div class="section level3">
+<h3 id="create-and-navigate-to-your-workshop-folder">3. Create and navigate to your workshop folder<a class="anchor" aria-label="anchor" href="#create-and-navigate-to-your-workshop-folder"></a>
+</h3>
+<p>It is best practice to keep all your project files together in a
+dedicated folder.</p>
+<ul>
+<li>Use the file browser on the left-hand side</li>
+<li>Navigate to a location that is easy to find again (like your
+Desktop)</li>
+<li>Right-click to create a new folder and name it
+<em>workshop-notebooks</em>
+</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="create-a-new-notebook">4. Create a new notebook<a class="anchor" aria-label="anchor" href="#create-a-new-notebook"></a>
+</h3>
+<p>Once you are inside the <em>workshop-notebooks</em> folder, create a
+new notebook.</p>
+<p>For example by using the JupyterLab menu bar to select: <strong>File
+&gt; New &gt; Notebook &gt; Python 3 (ipykernel)</strong></p>
+<p>This will open a new Python notebook.</p>
+</div>
+<div class="section level3">
+<h3 id="name-your-notebook">5. Name your notebook<a class="anchor" aria-label="anchor" href="#name-your-notebook"></a>
+</h3>
+<p>Renaming your notebook immediately helps keep your workflow tidy and
+makes it easier to find later.</p>
+<p>Right click the default name at the top of the notebook tab (e.g.,
+<em>Untitled.ipynb</em>), and select
+<code>Rename Notebook...</code>.</p>
+<p>Enter a meaningful name, for example:
+<em>image_display.ipynb</em>.</p>
+</div>
+</section><section><h2 class="section-heading" id="about-notebooks">About notebooks<a class="anchor" aria-label="anchor" href="#about-notebooks"></a>
+</h2>
+<hr class="half-width">
+<p>A notebook is made up of building blocks called
+<strong>cells</strong>.</p>
+<p>For this workshop, we will only use <strong>Code Cells</strong>.</p>
+<p>When you run a Code Cell, the output typically appears underneath it.
+This could be a number, text, a table, or an error message.</p>
+<p>By splitting code up into cells, you can run one specific part of
+your code without having to re-run the whole file and get instant
+feedback.</p>
+<p>Be careful about the order of your notebook cells. Running them out
+of sequence can leave variables outdated or missing, which can lead to
+confusing results.</p>
+</section><section><h2 class="section-heading" id="using-python-inside-a-notebook">Using Python inside a notebook<a class="anchor" aria-label="anchor" href="#using-python-inside-a-notebook"></a>
+</h2>
+<hr class="half-width">
+<p>Run each of the following examples in separate notebook cells so you
+can clearly see the output after each step.</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="co"># Everything after a hash (#) is a comment and is ignored by Python.</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a><span class="co"># Use comments to explain what you're doing.</span></span></code></pre>
+</div>
+<p>If you want to create another cell, click the <strong>+</strong>
+button in the toolbar or use the <strong>Insert Cell Below</strong>
+button on the right side of the cell.</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="co"># Python can do basic calculations</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a><span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a><span class="dv">1</span> <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a><span class="co"># and will display the last output</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="fl">3</span></span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="co"># Python can assign values to variables</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a>one <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a>two <span class="op">=</span> one <span class="op">+</span> one</span></code></pre>
+</div>
+<p>Notice that there is no output.</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="co"># Variables store values rather than return them</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a><span class="co"># To see their value write the variable name</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1" aria-label="code-block-7-3"></a>two</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="fl">2</span></span></code></pre>
+</div>
+<p><strong>Note</strong>: In a standard Python script, writing a
+variable name on its own does nothing and you must use
+<code>print()</code> to show output.</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="co"># Python's print function</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a><span class="bu">print</span>(<span class="st">"one plus one is"</span>, two)</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1" aria-label="code-block-9-3"></a><span class="bu">print</span>(<span class="st">"one plus two is"</span>, one <span class="op">+</span> two)</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>one plus one is 2
+one plus two is 3</code></pre>
+</div>
+</section><section><h2 class="section-heading" id="using-napari-from-within-a-notebook">Using Napari from within a notebook<a class="anchor" aria-label="anchor" href="#using-napari-from-within-a-notebook"></a>
+</h2>
+<hr class="half-width">
+<p>First import napari</p>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="co"># Import napari package</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1" aria-label="code-block-11-2"></a><span class="im">import</span> napari</span></code></pre>
+</div>
+<p>Then open it from the notebook</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="co"># Open Napari from the notebook</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1" aria-label="code-block-12-2"></a>viewer <span class="op">=</span> napari.Viewer()</span></code></pre>
+</div>
+<p>Finally open a sample iamge.</p>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="co"># Open Cells (3D + 2Ch) sample image in napari's viewer</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1" aria-label="code-block-13-2"></a>viewer.open_sample(<span class="st">"napari"</span>, <span class="st">"cells3d"</span>)</span></code></pre>
+</div>
+<p>The output should look like this:</p>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>[&lt;Image layer 'membrane' at 0x1853b7738c0&gt;,
+ &lt;Image layer 'nuclei' at 0x1853c844710&gt;]</code></pre>
+</div>
+<p>The memory addresses (<code>0x1853b7738c0</code> and
+<code>0x1853c844710</code>) will be different for you. They indicate the
+locations in memory where Python happened to store those layer
+objects.</p>
+<p>Napari’s viewer should open in a separate window, preloaded with the
+cells3D sample image.</p>
+<p>Now that we are able to interact with Napari via a lab-book, let’s
+now look more into the structure of imaging data.</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>You can interact with Napari both through the interface, it’s
+built-in console or through a Jupyter lab notebook</li>
+<li>Napari represents all elements for viewing (Images, Points, etc) as
+layers</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-what-is-an-image"><p>Content from <a href="what-is-an-image.html">What is an image?</a></p>
+<hr>
+<p>Last updated on 2026-09-02 |
+
+        <a href="https://github.com/HealthBioscienceIDEAS/napari-taster-aicatalyst/edit/main/episodes/what-is-an-image.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How are images represented in the computer?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li><p>Explain how a digital image is made of pixels</p></li>
+<li><p>Find the value of different pixels in an image in Napari</p></li>
+<li><p>Determine an image’s dimensions (numpy ndarray
+<code>.shape</code>)</p></li>
+<li><p>Determine an image’s data type (numpy ndarray
+<code>.dtype</code>)</p></li>
+<li><p>Explain the coordinate system used for images</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>In the last episode, we looked at how to view images in Napari and
+how to interact with the Napari interface via Jupyter notebooks. Let’s
+take a step back now and try to understand how Napari (or ImageJ or any
+other viewer) understands how to display images properly. To do that we
+must first be able to answer the fundamental question - what is an
+image?</p>
+<section><h2 class="section-heading" id="pixels">Pixels<a class="anchor" aria-label="anchor" href="#pixels"></a>
+</h2>
+<hr class="half-width">
+<p>Let’s start by removing all the layers we added to the Napari viewer
+last episode. Then we can open a new sample image:</p>
+<ul>
+<li><p>Click on the top layer in the layer list and <kbd>shift</kbd> +
+click the bottom layer. This should highlight all layers in
+blue.</p></li>
+<li><p>Press the remove layer button <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/delete.svg" alt="A screenshot of Napari's delete layer button" height="30" class="figure"></p></li>
+</ul>
+<p>You can also remove a layer through the notebook:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="co"># Remove the membrane layer from the viewer</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a>viewer.layers.remove(<span class="st">"membrane"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="co"># Or you can remove all layers using</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a>viewer.layers.clear()</span></code></pre>
+</div>
+<ul>
+<li>We will now load a new layer in Napari</li>
+</ul>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="co"># Open the builtin napari sample called "Human Mitosis"</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a>viewer.open_sample(<span class="st">"napari"</span>,<span class="st">"human_mitosis"</span>)</span></code></pre>
+</div>
+<p>This will open a Napari window, which should look like the screenshot
+below:</p>
+<figure><img src="fig/human-mitosis-napari.png" alt="A screenshot of a 2D image of human cells  undergoing mitosis in Napari" class="figure mx-auto d-block"></figure><p>This 2D image shows the nuclei of human cells undergoing mitosis. If
+we really zoom in up-close by scrolling, we can see that this image is
+actually made up of many small squares with different brightness values.
+These squares are the image’s pixels (or ‘picture elements’) and are the
+individual units that make up all digital images.</p>
+<p>If we hover over these pixels with the mouse cursor, we can see that
+each pixel has a specific value. Try hovering over pixels in dark and
+bright areas of the image and see how the value changes in the bottom
+left of the viewer:</p>
+<figure><img src="fig/pixel-value.png" alt="A screenshot of Napari - with the mouse cursor  hovering over a pixel and highlighting the corresponding pixel value" class="figure mx-auto d-block"></figure><p>You should see that brighter areas have higher values than darker
+areas. The actual color is dictated by the contrast limits which map
+this value into an entry in a colormap, which provides the associated
+color to display.</p>
+</section><section><h2 class="section-heading" id="images-are-arrays-of-numbers">Images are arrays of numbers<a class="anchor" aria-label="anchor" href="#images-are-arrays-of-numbers"></a>
+</h2>
+<hr class="half-width">
+<p>We’ve seen that images are made of individual units called pixels
+that have specific values - but how is an image really represented in
+the computer? Let’s dig deeper into Napari’s <code>Image</code>
+layers…</p>
+<p>In our notebook, let’s look at the human mitosis image more closely -
+copy the text in the ‘Python’ cell below into Napari’s console and then
+press the <kbd>Enter</kbd> key. You should see it returns text that
+matches the ‘Output’ cell below in response.</p>
+<p>All of the information about the Napari viewer can be accessed
+through the console with a variable called <code>viewer</code>. A
+<code>viewer</code> has 1 to many layers, and here we access the top
+(first) layer with <code>viewer.layers[0]</code>. Then, to access the
+actual image data stored in that layer, we retrieve it with
+<code>.data</code>:</p>
+
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a><span class="co"># Get the image data for the first layer in Napari</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a>image <span class="op">=</span> viewer.layers[<span class="dv">0</span>].data</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1" aria-label="code-block-3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1" aria-label="code-block-3-5"></a><span class="co"># Print the image values and type</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1" aria-label="code-block-3-6"></a><span class="bu">print</span>(image)</span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1" aria-label="code-block-3-7"></a><span class="bu">print</span>(<span class="bu">type</span>(image))</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>[[ 8  8  8 ... 63 78 75]
+ [ 8  8  7 ... 67 71 71]
+ [ 9  8  8 ... 53 64 66]
+ ...
+ [ 8  9  8 ... 17 24 59]
+ [ 8  8  8 ... 17 22 55]
+ [ 8  8  8 ... 16 18 38]]
+
+ &lt;class 'numpy.ndarray'&gt;</code></pre>
+</div>
+<p>You should see that a series of numbers are printed out that are
+stored in a Python data type called a <code>numpy.ndarray</code>.
+Fundamentally, this means that all images are really just arrays of
+numbers (one number per pixel). Arrays are just rectangular grids of
+numbers, much like a spreadsheet. Napari is reading those values and
+converting them into squares of particular colours for us to see in the
+viewer, but this is only to help us interpret the image contents - the
+numbers are the real underlying data.</p>
+<p>For example, look at the simplified image of an arrow below. On the
+left is the array of numbers, with the corresponding image display on
+the right. This is called a 4 by 4 image, as it has 4 rows and 4
+columns:</p>
+<figure><img src="fig/array.png" alt="A diagram comparing the array of numbers and image  display for a simplified image of an arrow" class="figure mx-auto d-block"></figure><p>In Napari this array is a <code>numpy.ndarray</code>. <a href="https://numpy.org/" class="external-link">NumPy</a> is a popular python package that
+provides ‘n-dimensional arrays’ (or ‘ndarray’ for short). N-dimensional
+just means they can support any number of dimensions - for example, 2D
+(squares/rectangles of numbers), 3D (cubes/cuboids of numbers) and
+beyond (like time series, images with many channels etc. where we would
+have multiple rectangles or cuboids of data which provide further
+information all at the same location).</p>
+</section><section><h2 class="section-heading" id="creating-an-image">Creating an image<a class="anchor" aria-label="anchor" href="#creating-an-image"></a>
+</h2>
+<hr class="half-width">
+<p>Where do the numbers in our image array come from? The exact details
+of how an image is created will depend on the type of microscope you are
+using e.g.  widefield, confocal, superresolution etc. In general though,
+we have 3 main parts:</p>
+<ul>
+<li>
+<strong>Sample:</strong> the object we want to image e.g. some
+cells</li>
+<li>
+<strong>Objective lens:</strong> the lens that gathers the light and
+focuses it for detection</li>
+<li>
+<strong>Detector:</strong> the device that detects the light to form
+the digital image e.g. a CCD camera</li>
+</ul>
+<p>To briefly summarise for a fluorescence microscopy image:<br>
+an excitation light source (e.g. a laser) illuminates the sample, and
+this light is absorbed by a fluorescent label. This causes it to emit
+light which is then gathered and focused by the objective lens, before
+hitting the detector. The detector might be a single element (e.g. in a
+laser-scanning microscope) or composed of an array of many small, light
+sensitive areas - these are physical pixels, that will correspond to the
+pixels in the final image. When light hits one of the detector elements
+it is converted into electrons, with more light resulting in more
+electrons and a higher final value for that pixel.</p>
+<p>The important factor to understand is that the final pixel value is
+only ever an approximation of the real sample. Many factors will affect
+this final result including the microscope optics, detector performance
+etc.</p>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Read the <a href="https://bioimagebook.github.io/chapters/1-concepts/1-images_and_pixels/images_and_pixels.html#a-simple-microscope" class="external-link">‘A
+simple microscope’ section of Pete Bankhead’s bioimage book</a>.</p>
+<ul>
+<li>What are some factors that influence pixel values?</li>
+<li>Can you come up with suggestions for any more?</li>
+</ul>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="image-dimensions">Image dimensions<a class="anchor" aria-label="anchor" href="#image-dimensions"></a>
+</h2>
+<hr class="half-width">
+<p>Let’s return to our human mitosis image and explore some of the key
+features of its image array. First, what size is it?</p>
+<p>We can find this out by running the following in our notebook:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a>image.shape</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>(512, 512)</code></pre>
+</div>
+<p>The array size (also known as its dimensions) is stored in the
+<code>.shape</code>. Here we see that it is <code>(512, 512)</code>
+meaning this image is 512 pixels high and 512 pixels wide. Two values
+are printed as this image is two dimensional (2D), for a 3D image there
+would be 3, for a 4D image (e.g. with an additional time series) there
+would be 4 and so on…</p>
+</section><section><h2 class="section-heading" id="image-data-type">Image data type<a class="anchor" aria-label="anchor" href="#image-data-type"></a>
+</h2>
+<hr class="half-width">
+<p>The other key feature of an image array is its ‘data type’ - this
+controls which values can be stored inside of it. For example, let’s
+look at the data type for our human mitosis image - this is stored in
+<code>.dtype</code>:</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a>image.dtype</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span></span>
+<span><span class="fu">dtype</span><span class="op">(</span><span class="st">'uint8'</span><span class="op">)</span></span></code></pre>
+</div>
+<p>We see that the data type (or ‘dtype’ for short) is
+<code>uint8</code>. This is short for ‘unsigned integer 8-bit’. Let’s
+break this down further into two parts - the type (unsigned integer) and
+the bit-depth (8-bit).</p>
+</section><section><h2 class="section-heading" id="type">Type<a class="anchor" aria-label="anchor" href="#type"></a>
+</h2>
+<hr class="half-width">
+<p>The type determines what kind of values can be stored in the array,
+for example:</p>
+<ul>
+<li>Unsigned integer: positive whole numbers</li>
+<li>Signed integer: positive and negative whole numbers</li>
+<li>Float: positive and negative numbers with a decimal point
+e.g. 3.14</li>
+</ul>
+<p>For our mitosis image, ‘unsigned integer’ means that only positive
+whole numbers can be stored inside. You can see this by hovering over
+the pixels in the image again in Napari - the pixel value down in the
+bottom left is always a positive whole number.</p>
+</section><section><h2 class="section-heading" id="bit-depth">Bit depth<a class="anchor" aria-label="anchor" href="#bit-depth"></a>
+</h2>
+<hr class="half-width">
+<p>The bit depth determines the range of values that can be stored
+e.g. only values between 0 and 255. This is directly related to how the
+array is stored in the computer.</p>
+<p>In the computer, each pixel value will ultimately be stored in some
+binary format as a series of ones and zeros. Each of these ones or zeros
+is known as a ‘bit’, and the ‘bit depth’ is the number of bits used to
+store each value. For example, our mitosis image uses 8 bits to store
+each value (i.e.  a series of 8 ones or zeros like
+<code>00000000</code>, or <code>01101101</code>…).</p>
+<p>The reason the bit depth is so important is that it dictates the
+number of different values that can be stored. In fact it is equal
+to:</p>
+<p><span class="math display">\[\large \text{Number of values} =
+2^{\text{(bit depth)}}\]</span></p>
+<p>Going back to our mitosis image, since it is stored as integers with
+a bit-depth of 8, this means that it can store <span class="math inline">\(2^8 = 256\)</span> different values. This is equal
+to a range of 0-255 for unsigned integers.</p>
+<p>We can verify this by looking at the maximum value of the mitosis
+image:</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a><span class="bu">print</span>(image.<span class="bu">max</span>())</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span></span>
+<span><span class="fl">255</span></span></code></pre>
+</div>
+<p>You can also see this by hovering over the brightest nuclei in the
+viewer and examining their pixel values. Even the brightest nuclei won’t
+exceed the limit of 255.</p>
+<div id="dimensions-and-data-types" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="dimensions-and-data-types" class="callout-inner">
+<h3 class="callout-title">Dimensions and data types</h3>
+<div class="callout-content">
+<p>Let’s open a new image by removing all layers from the Napari viewer,
+then copying and pasting the following lines into the Napari
+console:</p>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1" aria-label="code-block-11-2"></a><span class="im">from</span> skimage <span class="im">import</span> data</span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1" aria-label="code-block-11-3"></a>viewer.add_image(data.brain()[<span class="dv">9</span>, :, :], name<span class="op">=</span><span class="st">"brain"</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1" aria-label="code-block-11-4"></a>image <span class="op">=</span> viewer.layers[<span class="st">"brain"</span>].data</span></code></pre>
+</div>
+<p>This opens a new 2D image of part of a human head X-ray.</p>
+<ul>
+<li><p>What are the dimensions of this image?</p></li>
+<li><p>What type and bit depth is this image?</p></li>
+<li><p>What are the possible min/max values of this image array, based
+on the bit depth?</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<div class="section level3">
+<h3 id="dimensions">Dimensions<a class="anchor" aria-label="anchor" href="#dimensions"></a>
+</h3>
+<p>The image’s dimensions are (256, 256)</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1" aria-label="code-block-12-2"></a>image.shape</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>
+(256, 256)</code></pre>
+</div>
+</div>
+<div class="section level3">
+<h3 id="type-and-bit-depth">Type and bit depth<a class="anchor" aria-label="anchor" href="#type-and-bit-depth"></a>
+</h3>
+<p>The image’s type and bit depth are: unsigned integer 16-bit</p>
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1" aria-label="code-block-14-2"></a>image.dtype</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span></span>
+<span><span class="fu">dtype</span><span class="op">(</span><span class="st">'uint16'</span><span class="op">)</span></span></code></pre>
+</div>
+</div>
+<div class="section level3">
+<h3 id="min-and-max">Min and max<a class="anchor" aria-label="anchor" href="#min-and-max"></a>
+</h3>
+<p>Based on a bit depth of 16, this image can store <span class="math inline">\(2^{16} = 65536\)</span> values. As it is of type
+‘unsigned integer’ this corresponds to a min and max of 0 and 65535.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="common-data-types">Common data types<a class="anchor" aria-label="anchor" href="#common-data-types"></a>
+</h2>
+<hr class="half-width">
+<p>NumPy supports a <a href="https://numpy.org/doc/stable/reference/arrays.scalars.html#sized-aliases" class="external-link">very
+wide range of data types</a>, but there are a few that are most common
+for image data:</p>
+<table class="table">
+<thead><tr>
+<th align="left">NumPy datatype</th>
+<th align="left">Full name</th>
+</tr></thead>
+<tbody>
+<tr>
+<td align="left"><code>uint8</code></td>
+<td align="left">Unsigned integer 8-bit</td>
+</tr>
+<tr>
+<td align="left"><code>uint16</code></td>
+<td align="left">Unsigned integer 16-bit</td>
+</tr>
+<tr>
+<td align="left"><code>float32</code></td>
+<td align="left">Float 32-bit</td>
+</tr>
+<tr>
+<td align="left"><code>float64</code></td>
+<td align="left">Float 64-bit</td>
+</tr>
+</tbody>
+</table>
+<p><code>uint8</code> and <code>uint16</code> are most common for images
+from light microscopes. <code>float32</code> and <code>float64</code>
+are common during image processing (as we will see in later
+episodes).</p>
+</section><section><h2 class="section-heading" id="choosing-a-bit-depth">Choosing a bit depth<a class="anchor" aria-label="anchor" href="#choosing-a-bit-depth"></a>
+</h2>
+<hr class="half-width">
+<p>Most images are either 8-bit or 16-bit - so how to choose which to
+use? A higher bit depth will allow a wider range of values to be stored,
+but it will also result in larger file sizes for the resulting images.
+In general, a 16-bit image will have a file size that is about twice as
+large as an 8-bit image if no compression is used</p>
+<p>The best bit depth choice will depend on your particular imaging
+experiment and research question. For example, if you know you have to
+recognise features that only differ slightly in their brightness, then
+you will likely need 16-bit to capture this. Equally, if you know that
+you will need to collect a very large number of images and 8-bit is
+sufficient to see your features of interest, then 8-bit may be a better
+choice to reduce the required file storage space. As always it’s about
+choosing the best fit for your specific project!</p>
+<p>For more information on bit depths and types - we highly recommend <a href="https://bioimagebook.github.io/chapters/1-concepts/3-bit_depths/bit_depths.html" class="external-link">the
+‘Types &amp; bit-depths’ chapter from Pete Bankhead’s free bioimage
+book</a>.</p>
+<div id="clipping-and-overflow" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="clipping-and-overflow" class="callout-inner">
+<h3 class="callout-title">Clipping and overflow</h3>
+<div class="callout-content">
+<p>It’s important to be aware of what image type and bit depth you are
+using. If you try to store values outside of the valid range, this can
+lead to <em>clipping</em> and <em>overflow</em>.</p>
+<ul>
+<li><p>Clipping: Values outside the valid range are changed to the
+closest valid value. For example, storing 1000 in a <code>uint8</code>
+image may result in 255 being stored instead (the max value)</p></li>
+<li><p>Overflow: For NumPy arrays, values outside the valid range may be
+‘wrapped around’ or create an <code>OverflowError</code>, depending on
+what version of NumPy is installed. Older versions of NumPy may wrap the
+values around, so storing 256 in a <code>uint8</code> image (max 255)
+would give 0, 257 would give 1 and so on… Newer versions of NumPy will
+raise an <code>OverflowError</code>.</p></li>
+</ul>
+<p>Clipping and overflow result in data loss - you can’t get the
+original values back! So it’s always good to keep the data type in mind
+when doing image processing operations (as we will see in later
+episodes), and also when converting between different bit depths.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="coordinate-system">Coordinate system<a class="anchor" aria-label="anchor" href="#coordinate-system"></a>
+</h2>
+<hr class="half-width">
+<p>We’ve seen that images are arrays of numbers with a specific shape
+(dimensions) and data type. How do we access specific values from this
+array? What coordinate system is Napari using?</p>
+<p>To look into this, let’s hover over pixels in our mitosis image and
+examine the coordinates that appear to the left of the pixel value. If
+you closed the mitosis image, then open it again by removing all layers
+and selecting:
+<code>File &gt; Open Sample &gt; napari builtins &gt; Human Mitosis</code>:</p>
+<figure><img src="fig/coordinates.png" alt="A screenshot of Napari - with the mouse cursor  hovering over a pixel and highlighting the corresponding coordinates" class="figure mx-auto d-block"></figure><p>As you move around, you should see that the lowest coordinate values
+are at the top left corner, with the first value increasing as you move
+down and the second value increasing as you move to the right. This is
+different to the standard coordinate systems you may be used to (for
+example, from making graphs):</p>
+<figure><img src="fig/coordinate-system.png" alt="Diagram comparing a standard graph  coordinate system (left) and the image coordinate system (right)" class="figure mx-auto d-block"></figure><p>Note that Napari lists coordinates as [y, x] or [rows, columns], so
+e.g. [1,3] would be the pixel in row 1 and column 3. Remember that these
+coordinates always start from 0 as you can see in the diagram below:</p>
+<figure><img src="fig/coordinates-on-image.png" style="width:50.0%" alt="A diagram showing how pixel coordinates change over a simple 4x4 image" class="figure mx-auto d-block"></figure><p>For the mitosis image, these coordinates are in pixels, but<br>
+images can also be scaled based on resolution to represent distances in
+the physical world (e.g. in micrometres). This information is often
+called <em>pixel size</em> and is stored in the image metadata. Also,
+bear in mind that images with more dimensions (e.g. a 3D image) will
+have longer coordinates like [z, y, x]…</p>
+<div id="reading-and-modifying-pixel-values" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="reading-and-modifying-pixel-values" class="callout-inner">
+<h3 class="callout-title">Reading and modifying pixel values</h3>
+<div class="callout-content">
+<p>First, make sure you only have the human mitosis image open (close
+any others). Run the following line in the console to ensure you are
+referencing the correct image:</p>
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a></span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1" aria-label="code-block-16-2"></a><span class="co"># Get the image data for the layer called 'human_mitosis'</span></span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1" aria-label="code-block-16-3"></a>image <span class="op">=</span> viewer.layers[<span class="st">"human_mitosis"</span>].data</span></code></pre>
+</div>
+<p>Pixel values can be read by hovering over them in the viewer, or by
+running the following in the console:</p>
+<div class="codewrapper sourceCode" id="cb17">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1" aria-label="code-block-17-2"></a><span class="co"># Replace y and x with the correct y and x coordinate e.g. image[3, 5]</span></span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1" aria-label="code-block-17-3"></a><span class="bu">print</span>(image[y, x])</span></code></pre>
+</div>
+<p>Pixel values can be changed by running the following in the
+console:</p>
+<div class="codewrapper sourceCode" id="cb18">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1" aria-label="code-block-18-2"></a><span class="co"># Replace y and x with the correct y and x coordinate, and</span></span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1" aria-label="code-block-18-3"></a><span class="co"># 'pixel_value' with the desired new pixel value e.g. image[3, 5] = 10</span></span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1" aria-label="code-block-18-4"></a>image[y, x] <span class="op">=</span> pixel_value</span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1" aria-label="code-block-18-5"></a>viewer.layers[<span class="st">"human_mitosis"</span>].refresh()</span></code></pre>
+</div>
+<p>Given this information:</p>
+<ol style="list-style-type: decimal">
+<li>What is the pixel value at x=213 and y=115?</li>
+<li>What is the pixel value at x=25 and y=63?</li>
+<li>Change the value of the pixel at x=10 and y=15 to 200. Check the new
+value - is it correct? If not, why not?</li>
+<li>Change the value of the pixel at x=10 and y=15 to 300. Check the new
+value - is it correct? If not, why not?</li>
+</ol>
 </div>
 </div>
 </div>
@@ -360,41 +1726,86 @@ challenge blocks?</h3>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
-<p>You can add a line with at least three colons and a
-<code>solution</code> tag.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
-</h2>
-<hr class="half-width">
-<p>You can include figures generated from R Markdown:</p>
-<div class="codewrapper sourceCode" id="cb3">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<div class="section level3">
+<h3 id="section">1<a class="anchor" aria-label="anchor" href="#section"></a>
 </h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">pie</span><span class="op">(</span></span>
-<span>  <span class="fu">c</span><span class="op">(</span>Sky <span class="op">=</span> <span class="fl">78</span>, <span class="st">"Sunny side of pyramid"</span> <span class="op">=</span> <span class="fl">17</span>, <span class="st">"Shady side of pyramid"</span> <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>, </span>
-<span>  init.angle <span class="op">=</span> <span class="fl">315</span>, </span>
-<span>  col <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"deepskyblue"</span>, <span class="st">"yellow"</span>, <span class="st">"yellow3"</span><span class="op">)</span>, </span>
-<span>  border <span class="op">=</span> <span class="cn">FALSE</span></span>
-<span><span class="op">)</span></span></code></pre>
+<div class="codewrapper sourceCode" id="cb19">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a></span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1" aria-label="code-block-19-2"></a>image[<span class="dv">115</span>, <span class="dv">213</span>]</span></code></pre>
 </div>
-<figure style="text-align: center"><img src="fig/introduction-rendered-pyramid-1.png" alt="pie chart illusion of a pyramid" class="figure mx-auto d-block"><figcaption>
-Sun arise each and every morning
-</figcaption></figure><p>Or you can use pandoc markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure></section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
-</h2>
-<hr class="half-width">
-<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span></span>
+<span><span class="fl">162</span></span></code></pre>
+</div>
+</div>
+<div class="section level3">
+<h3 id="section-1">2<a class="anchor" aria-label="anchor" href="#section-1"></a>
+</h3>
+<div class="codewrapper sourceCode" id="cb21">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" tabindex="-1" aria-label="code-block-21-1"></a></span>
+<span id="cb21-2"><a href="#cb21-2" tabindex="-1" aria-label="code-block-21-2"></a>image[<span class="dv">63</span>, <span class="dv">25</span>]</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span></span>
+<span><span class="fl">9</span></span></code></pre>
+</div>
+</div>
+<div class="section level3">
+<h3 id="section-2">3<a class="anchor" aria-label="anchor" href="#section-2"></a>
+</h3>
+<div class="codewrapper sourceCode" id="cb23">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" tabindex="-1" aria-label="code-block-23-1"></a></span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1" aria-label="code-block-23-2"></a>image[<span class="dv">15</span>, <span class="dv">10</span>] <span class="op">=</span> <span class="dv">200</span></span>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1" aria-label="code-block-23-3"></a>viewer.layers[<span class="st">"human_mitosis"</span>].refresh()</span>
+<span id="cb23-4"><a href="#cb23-4" tabindex="-1" aria-label="code-block-23-4"></a></span>
+<span id="cb23-5"><a href="#cb23-5" tabindex="-1" aria-label="code-block-23-5"></a><span class="bu">print</span>(image[<span class="dv">15</span>, <span class="dv">10</span>])</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span></span>
+<span><span class="fl">200</span></span></code></pre>
+</div>
+<p>The new value is correct. If you zoom into the top left corner of the
+image, you should see the one bright pixel you just created.</p>
+</div>
+<div class="section level3">
+<h3 id="section-3">4<a class="anchor" aria-label="anchor" href="#section-3"></a>
+</h3>
+<div class="codewrapper sourceCode" id="cb25">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" tabindex="-1" aria-label="code-block-25-1"></a></span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1" aria-label="code-block-25-2"></a>image[<span class="dv">15</span>, <span class="dv">10</span>] <span class="op">=</span> <span class="dv">300</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="error" tabindex="0"><code>
+OverflowError                             Traceback (most recent call last)
+Cell In[8], line 1
+----&gt; 1 image[15, 10] = 300
+
+OverflowError: Python integer 300 out of bounds for uint8</code></pre>
+</div>
+<p>An <code>OverflowError</code> occurs when you try to update this
+pixel value. This is because 300 exceeds the maximum value for this
+8-bit image (max 255).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -403,14 +1814,785 @@ this:</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<li>Digital images are made of pixels</li>
+<li>Digital images store these pixels as arrays of numbers</li>
+<li>Light microscopy images are only an approximation of the real
+sample</li>
+<li>Napari (and Python more widely) use NumPy arrays to store images -
+these have a <code>shape</code> and <code>dtype</code>
+</li>
+<li>Most images are 8-bit or 16-bit unsigned integer</li>
+<li>Images use a coordinate system with (0,0) at the top left, x
+increasing to the right, and y increasing down</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-instance-segmentation-classic"><p>Content from <a href="instance-segmentation-classic.html">Image Segmentation: Basic Concepts</a></p>
+<hr>
+<p>Last updated on 2026-09-02 |
+
+        <a href="https://github.com/HealthBioscienceIDEAS/napari-taster-aicatalyst/edit/main/episodes/instance-segmentation-classic.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How do we perform instance segmentation in Napari?</li>
+<li>How do we measure cell size with Napari?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Use simple operations (like erosion and dilation) to clean up a
+segmentation.</li>
+<li>Use connected components labelling on a thresholded image.</li>
+<li>Calculate the number of cells and average cell volume.</li>
+<li>Save and edit your workflow to reuse on subsequent images.</li>
+<li>Perform more complex cell shape analysis using scikit-image’s
+<code>regionprops</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<hr class="half-width">
+<p>Now that we are able to do basic operations in Napari, let’s start
+doing something more applicable by segmenting some cells and measuring
+key properties about them.</p>
+<p>Let’s create another notebook that we made from the last lesson and
+call it <em>instance_segmentation.ipynb</em></p>
+<p>Let’s import napari and open up a viewer as we did last time.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="co"># Import the napari package into the notebook</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="im">import</span> napari</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="co"># Start the viewer</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a>viewer <span class="op">=</span> napari.Viewer()</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1" aria-label="code-block-1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1" aria-label="code-block-1-7"></a><span class="co">#Load in the cells image</span></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1" aria-label="code-block-1-8"></a>viewer.open_sample(<span class="st">"napari"</span>, <span class="st">"cells3d"</span>)</span></code></pre>
+</div>
+</section><section><h2 class="section-heading" id="what-is-segmentation">What is segmentation?<a class="anchor" aria-label="anchor" href="#what-is-segmentation"></a>
+</h2>
+<hr class="half-width">
+<p>In order to count the number of cells, we must ‘segment’ the nuclei
+in this image. Segmentation is the process of labelling each pixel in an
+image e.g. is that pixel part of a nucleus or not? Segmentation comes in
+two main types - ‘semantic segmentation’ and ‘instance segmentation’. In
+this section we’ll describe what both kinds of segmentation represent,
+as well as how they relate to each other, using some simple
+examples.</p>
+</section><section><h2 class="section-heading" id="semantic-segmentation">Semantic segmentation<a class="anchor" aria-label="anchor" href="#semantic-segmentation"></a>
+</h2>
+<hr class="half-width">
+<p>In a semantic segmentation, pixels are grouped into different
+categories (also known as ‘classes’). In this example, we are going to
+use classic image processing techniques to assign each pixel in the
+imate to one of two classes: <code>nuclei</code> or
+<code>background</code>. Importantly, it doesn’t recognise which pixels
+belong to different objects of the same category - for example, here we
+don’t know which pixels belong to individual, separate nuclei. This is
+the role of ‘instance segmentation’ that we’ll look at next.</p>
+<p>This episode uses classic image processing techniques to perform the
+segmentation. If you would like to find more, please check out the extra
+<a href="filters-and-thresholding.html">Filtering and Thresholding
+episode</a>.</p>
+<p>First, we will blur the image using a Gaussian kernel. You can play
+with how much the images is blurred by adjusting <code>sigma</code>
+property in the <code>gaussian</code> function.</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="co"># Create a semantic segmentation </span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a><span class="co"># Import the functions we need from scikit-image</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a><span class="im">from</span> skimage.filters <span class="im">import</span> threshold_otsu, gaussian</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1" aria-label="code-block-2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1" aria-label="code-block-2-6"></a><span class="co"># Access the nuclei channel from the viewer</span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1" aria-label="code-block-2-7"></a>image <span class="op">=</span> viewer.layers[<span class="st">"nuclei"</span>].data</span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1" aria-label="code-block-2-8"></a></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1" aria-label="code-block-2-9"></a><span class="co"># Smooth the image</span></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1" aria-label="code-block-2-10"></a>blurred <span class="op">=</span> gaussian(image, sigma<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1" aria-label="code-block-2-11"></a></span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1" aria-label="code-block-2-12"></a><span class="co"># Compute a threshold</span></span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1" aria-label="code-block-2-13"></a>threshold <span class="op">=</span> threshold_otsu(blurred)</span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1" aria-label="code-block-2-14"></a></span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1" aria-label="code-block-2-15"></a><span class="bu">print</span>(<span class="st">"The threshold picked is:"</span>, threshold) </span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>The threshold picked is: 0.1407702761280905</code></pre>
+</div>
+<p>If you do pick a different blurring kernel, it might have a knock on
+effect on the threshold that the Otsu method chooses.</p>
+<p>Using our threshold on the blurred image we create a semantic
+segmentation.</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="co"># Create a semantic segmentation </span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a>semantic_seg <span class="op">=</span> blurred <span class="op">&gt;</span> threshold</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a><span class="co"># Add as a labels layer to the viewer</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1" aria-label="code-block-4-5"></a>viewer.add_labels(semantic_seg)</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>&lt;Labels layer 'semantic_seg' at 0x1f157459820&gt;</code></pre>
+</div>
+<figure><img src="fig/semantic-seg-napari.png" alt="A screenshot of a rough semantic segmentation of nuclei in Napari" class="figure mx-auto d-block"></figure><p>In the Napari viewer you should see the image above. Mouse over the
+pixels and check their intensity. You should notice that the pixels
+assigned to background are assigned to 0 and the pixels categorized as
+nuclei are have a value of 1.</p>
+</section><section><h2 class="section-heading" id="instance-segmentation">Instance segmentation<a class="anchor" aria-label="anchor" href="#instance-segmentation"></a>
+</h2>
+<hr class="half-width">
+<p>Now we will go about creating an ‘instance segmentation’ for this
+image. Instance segmentations recognise which pixels belong to
+individual ‘instances’ of our category (nuclei). This is the kind of
+segmentation we will need in order to count the number of nuclei (and
+therefore the number of cells) in our image.</p>
+<p>Note that it’s common for instance segmentation to be created by
+first making a semantic segmentation, then splitting the resulting
+category from the semantic segmentation into individual instances. This
+isn’t always the case though - it will depend on the type of
+segmentation method you use.</p>
+<p>We will use the the <a href="https://scikit-image.org/docs/stable/api/skimage.measure.html#skimage.measure.label" class="external-link">label</a>
+function from scikit-image to create an instance segmentation.</p>
+<p>The label function is an example of <a href="https://datacarpentry.org/image-processing/08-connected-components.html#connected-component-analysis" class="external-link">connected
+component analysis</a>. Connected component analysis will go through the
+entire image, determine which parts of the segmentation are connected to
+each other and form separate objects. Then it will assign each connected
+region a unique integer value.</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="co"># Instance segmentation</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a><span class="co"># Import the label function</span></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1" aria-label="code-block-6-4"></a><span class="im">from</span> skimage.measure <span class="im">import</span> label</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1" aria-label="code-block-6-5"></a></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1" aria-label="code-block-6-6"></a><span class="co"># Run the label function on the mask image</span></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1" aria-label="code-block-6-7"></a>instance_seg <span class="op">=</span> label(semantic_seg)</span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1" aria-label="code-block-6-8"></a></span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1" aria-label="code-block-6-9"></a><span class="co"># Add the result to the viewer</span></span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1" aria-label="code-block-6-10"></a>viewer.add_labels(instance_seg)</span></code></pre>
+</div>
+<figure><img src="fig/instance_segmentation_wrong.png" alt="A screenshot of an instance segmentation of nuclei with some incorrectly joined instances." class="figure mx-auto d-block"></figure><p>You should see the above image in the Napari viewer. The different
+colours are used to represent the labels of separate objects. Again,
+mouse over the image and notice the change of pixels. The background
+pixels are still assigned to 0, but each instance of the nuclei has a
+different label value, which has a different color assigned to that
+value.</p>
+</section><section><h2 class="section-heading" id="counting-the-nuclei">Counting the nuclei<a class="anchor" aria-label="anchor" href="#counting-the-nuclei"></a>
+</h2>
+<hr class="half-width">
+<p>Because the instance segmentation assigns a different integer value
+starting at 1 and increasing in steps of 1 (1, 2, 3, …) to each object,
+counting the number of nuclei can be done very easily by taking the
+maximum value of the instance segmentation image.</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="co"># Count the nuclei</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a>number_of_nuclei <span class="op">=</span> instance_seg.<span class="bu">max</span>()</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1" aria-label="code-block-7-3"></a><span class="bu">print</span>(<span class="st">"Number of nuclei: "</span>, number_of_nuclei)</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Number of nuclei: 18</code></pre>
+</div>
+</section><section><h2 class="section-heading" id="using-napari-skimage-plugin-to-measure-nuclei-size">Using napari-skimage plugin to measure nuclei size<a class="anchor" aria-label="anchor" href="#using-napari-skimage-plugin-to-measure-nuclei-size"></a>
+</h2>
+<hr class="half-width">
+<p>In the napari toolbar, open
+<code>Layers &gt; Measure &gt; Regionprops (labels) (skimage)</code>.
+You should see a dialog like this: <img src="fig/region_props_before.png" alt="A screenshot of the napari-skimage Regionprops widget at startup." class="figure"></p>
+<p>Select <code>instance_seg</code> in the ‘Labels layer’ drop down box
+and <code>nuclei</code> in the ‘Intensity Image Layer’ drop down box.
+You can choose to measure various shape properties with this plugin but
+for now let’s keep it simple, making sure that only <code>area</code>,
+<code>centroid</code> and <code>label</code> are selected. You will need
+to hold down <kbd>ctrl</kbd> (or <kbd>⌘</kbd> on Mac) to select multiple
+items in the list.</p>
+<p>Click <code>Analyze</code> - a table of numeric values should appear
+in napari. If it opens in an inconvenient location, you can click and
+drag on the header containing the <code>x</code>, <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/visibility_off.svg" alt="Napari's hide visibility icon" height="30" class="figure"> and other icons
+next to the table window to reposition it. <img src="fig/region_props_after.png" alt="A screenshot of the numeric value table created by the napari-skimage plugin" class="figure"></p>
+</section><section><h2 class="section-heading" id="regionprops">Regionprops<a class="anchor" aria-label="anchor" href="#regionprops"></a>
+</h2>
+<hr class="half-width">
+<p>Before, we used the napari‑skimage plugin to create a table with
+properties of the nuclei. The same properties can also be computed using
+scikit-image directly in our notebook.</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="co"># Create a Regionprops table</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1" aria-label="code-block-9-3"></a><span class="co"># Import tools</span></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1" aria-label="code-block-9-4"></a><span class="im">from</span> skimage.measure <span class="im">import</span> regionprops_table</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1" aria-label="code-block-9-5"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1" aria-label="code-block-9-6"></a></span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1" aria-label="code-block-9-7"></a><span class="co"># Compute region properties</span></span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1" aria-label="code-block-9-8"></a>props <span class="op">=</span> regionprops_table(</span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1" aria-label="code-block-9-9"></a>    label_image<span class="op">=</span>instance_seg,</span>
+<span id="cb9-10"><a href="#cb9-10" tabindex="-1" aria-label="code-block-9-10"></a>    properties<span class="op">=</span>[<span class="st">"label"</span>, <span class="st">"area"</span>, <span class="st">"centroid"</span>]</span>
+<span id="cb9-11"><a href="#cb9-11" tabindex="-1" aria-label="code-block-9-11"></a>)</span>
+<span id="cb9-12"><a href="#cb9-12" tabindex="-1" aria-label="code-block-9-12"></a></span>
+<span id="cb9-13"><a href="#cb9-13" tabindex="-1" aria-label="code-block-9-13"></a><span class="co"># Convert to a pandas DataFrame</span></span>
+<span id="cb9-14"><a href="#cb9-14" tabindex="-1" aria-label="code-block-9-14"></a>props_df <span class="op">=</span> pd.DataFrame(props)</span>
+<span id="cb9-15"><a href="#cb9-15" tabindex="-1" aria-label="code-block-9-15"></a></span>
+<span id="cb9-16"><a href="#cb9-16" tabindex="-1" aria-label="code-block-9-16"></a><span class="co"># Display the table</span></span>
+<span id="cb9-17"><a href="#cb9-17" tabindex="-1" aria-label="code-block-9-17"></a>props_df</span></code></pre>
+</div>
+</section><section><h2 class="section-heading" id="sorting-and-inspecting-the-results">Sorting and inspecting the results<a class="anchor" aria-label="anchor" href="#sorting-and-inspecting-the-results"></a>
+</h2>
+<hr class="half-width">
+<p>Regionprops can generate a lot of information on the shape and size
+of each connected region. For now we will focus only on the column
+headed <code>area</code>, which shows the size in pixels.</p>
+<p>Let’s sort our table so that it is easier to see the extreme
+values.</p>
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="co"># Sort the table based on cell size (area)</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1" aria-label="code-block-10-2"></a>sorted_props_df <span class="op">=</span> props_df.sort_values(<span class="st">"area"</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1" aria-label="code-block-10-3"></a></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1" aria-label="code-block-10-4"></a><span class="co"># Display the table</span></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1" aria-label="code-block-10-5"></a>sorted_props_df</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>    label      area  centroid-0  centroid-1  centroid-2
+0       1   43945.0   39.089407   87.218409   53.622232
+1       2   27187.0   33.299555  219.697392  244.239931
+2       3  202258.0   34.401952  195.413526   76.441688
+3       4   47652.0   34.303828  157.445417  110.678712
+4       5   54018.0   31.364397  201.457755  173.293958
+5       6  113935.0   36.186343   37.206205  183.966147
+6       7   79226.0   33.722503   85.528072  137.286535
+7       8  102444.0   34.497628  136.998624  215.951993
+8       9   34421.0   35.555271   18.081346   24.130676
+9      10   35227.0   34.429500   32.455418   80.085531
+10     11   14525.0   31.464578  246.703408  207.343477
+11     12    3258.0   35.920810    2.583487   80.581338
+12     13    2000.0   32.342000  187.727500    1.962500
+13     14     240.0   33.233333    0.962500  252.758333
+14     15     155.0   29.787097  254.696774   51.258065
+15     16    4709.0   39.099809    3.779996  208.094500
+16     17     522.0   35.431034   24.015326  254.118774
+17     18       7.0   33.000000   62.714286    0.000000</code></pre>
+</div>
+<div class="section level3">
+<h3 id="the-largest-nucleus">The largest nucleus<a class="anchor" aria-label="anchor" href="#the-largest-nucleus"></a>
+</h3>
+<p>According to the table, nucleus 3 is larger than the other nuclei
+(202258 pixels). In the <a href="what-is-an-image.html#pixels">what is
+an image</a> lesson, we learnt to use the mouse pointer to find
+particular values in an image. Hovering the mouse pointer over the light
+purple nuclei at the bottom left of the image we see that these
+apparently four separate nuclei have been labelled as a single
+nucleus.</p>
+<p>In the layer controls of the instance_seg layer we can confirm this
+by selecting label <code>3</code> and enabling
+<code>show selected</code>.</p>
+<div id="why-are-separate-nuclei-getting-the-same-label" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="why-are-separate-nuclei-getting-the-same-label" class="callout-inner">
+<h3 class="callout-title">Why Are Separate Nuclei Getting the Same
+Label?</h3>
+<div class="callout-content">
+<figure><img src="fig/same_label_2d.png" alt="A screenshot of an instance segmentation of nuclei." class="figure mx-auto d-block"></figure><p>In the image above, three of the light purple nuclei are visibly
+touching, so it is not surprising that they have been considered as a
+single <code>connected component</code> and thus labelled as a single
+nucleus. What about the fourth apparently separate nucleus? Why does it
+have the same label?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>It is important to remember that this is a three-dimensional image
+and so pixels will be considered as “connected” if they are adjacent to
+another segmented pixel in any of the three dimensions (and not just in
+the two-dimensional slice that you are looking at).</p>
+<p>You may remember from our <a href="imaging-software.html#d3d">first
+lesson</a> that we can change to 3D view mode by pressing the <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/2D.svg" alt="Napari's 2D/3D toggle" height="30" class="figure"> button. Try it now.</p>
+<p><img src="fig/same_label_3d.png" alt="A screenshot of an instance segmentation of nuclei in 3D mode with some incorrectly joined instances." class="figure">
+You should see the image rendered in 3D, with a clear join between the
+upper most light purple nucleus and its neighbour.</p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="section level3">
+<h3 id="the-smallest-nucleus">The smallest nucleus<a class="anchor" aria-label="anchor" href="#the-smallest-nucleus"></a>
+</h3>
+<p>The smallest nucleus is labelled 18, with a size of 7 pixels. We can
+use the position data (the <code>centroid</code> columns) in the table
+to help find this nucleus. We need to navigate to slice 33 and get the
+mouse near the top left corner (33 63 0) to find label 18 in the
+image.</p>
+<figure><img src="fig/region_props_after_18.png" alt="A screenshot region-props dialog highlighting the smallest nucleus." class="figure mx-auto d-block"></figure><p>Nucleus 18 is right at the edge of the image, so is only a partial
+nucleus. Partial nuclei will need to be excluded from our analysis.
+We’ll do this later in the lesson with a <a href="#removing-border-cells">clear border</a> filter. However, first we
+need to solve the problem of joined nuclei.</p>
+</div>
+</section><section><h2 class="section-heading" id="separating-joined-nuclei">Separating joined nuclei<a class="anchor" aria-label="anchor" href="#separating-joined-nuclei"></a>
+</h2>
+<hr class="half-width">
+<p>Our first problem is how to deal with four apparently distinct nuclei
+(labelled with a light purple colour) being segmented as a single
+nucleus.</p>
+<div class="section level3">
+<h3 id="erosion">Erosion<a class="anchor" aria-label="anchor" href="#erosion"></a>
+</h3>
+<p>To separate our nuclei, we can ‘erode’ our segmentation. Erosion is a
+type of filter, similar to those we covered in the <a href="filters-and-thresholding.html">filters and thresholding
+episode</a>. It will make all segmented nuclei smaller, by setting
+pixels at their edge to zero.</p>
+<p>The size / shape of the region that gets set to zero is controlled by
+the filter’s ‘footprint’. We’ll use scikit-image’s ball function to
+generate a sphere to use as the footprint. Any pixels closer to the edge
+of the nucleus than the radius of this sphere will be set to zero.</p>
+<p>Create a new cell and run:</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="co"># Erode the semantic segmentation</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1" aria-label="code-block-12-2"></a></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1" aria-label="code-block-12-3"></a><span class="co"># import tools</span></span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1" aria-label="code-block-12-4"></a><span class="im">from</span> skimage.morphology <span class="im">import</span> erosion, ball</span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1" aria-label="code-block-12-5"></a></span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1" aria-label="code-block-12-6"></a><span class="co"># Erosion with a radius 1 ball</span></span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1" aria-label="code-block-12-7"></a>eroded_mask <span class="op">=</span> erosion(semantic_seg, footprint <span class="op">=</span> ball(<span class="dv">1</span>))</span>
+<span id="cb12-8"><a href="#cb12-8" tabindex="-1" aria-label="code-block-12-8"></a>viewer.add_labels(eroded_mask, name <span class="op">=</span> <span class="st">"eroded_ball_1"</span>)</span></code></pre>
+</div>
+<div id="what-is-a-good-radius" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="what-is-a-good-radius" class="callout-inner">
+<h3 class="callout-title">What is a good radius?</h3>
+<div class="callout-content">
+<p>We can change the radius of the footprint to control the amount of
+erosion.</p>
+<p>Try eroding the <code>semantic_seg</code> layer with different
+integer values for the radius. What radius do you need to ensure all
+nuclei are separate?</p>
+<p>Note that larger radius values will take longer to run on your
+computer.</p>
+<p>Keep your radius values &lt;= 15.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<p>To test different values of radius, you can assign a different value
+to radius, e.g. <code>radius = 5</code> and rerun the last two lines
+from above. Or you can try with a Python <a href="https://swcarpentry.github.io/python-novice-inflammation/05-loop.html" class="external-link">for
+loop</a> which enables us to test multiple values of radius quickly.</p>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="co"># Erode the mask using a ball</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1" aria-label="code-block-13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1" aria-label="code-block-13-3"></a><span class="co"># Radius 5</span></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1" aria-label="code-block-13-4"></a>eroded_mask <span class="op">=</span> erosion(semantic_seg, footprint<span class="op">=</span>ball(<span class="dv">5</span>))</span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1" aria-label="code-block-13-5"></a><span class="co"># Add the eroded mask as a new layer in Napari</span></span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1" aria-label="code-block-13-6"></a>viewer.add_labels(eroded_mask, name<span class="op">=</span><span class="st">"eroded_ball_5"</span>)</span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1" aria-label="code-block-13-7"></a></span>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1" aria-label="code-block-13-8"></a><span class="co"># Radius 10</span></span>
+<span id="cb13-9"><a href="#cb13-9" tabindex="-1" aria-label="code-block-13-9"></a>eroded_mask <span class="op">=</span> erosion(semantic_seg, footprint<span class="op">=</span>ball(<span class="dv">10</span>))</span>
+<span id="cb13-10"><a href="#cb13-10" tabindex="-1" aria-label="code-block-13-10"></a><span class="co"># Add the eroded mask as a new layer in Napari</span></span>
+<span id="cb13-11"><a href="#cb13-11" tabindex="-1" aria-label="code-block-13-11"></a>viewer.add_labels(eroded_mask, name<span class="op">=</span><span class="st">"eroded_ball_10"</span>)</span>
+<span id="cb13-12"><a href="#cb13-12" tabindex="-1" aria-label="code-block-13-12"></a></span>
+<span id="cb13-13"><a href="#cb13-13" tabindex="-1" aria-label="code-block-13-13"></a><span class="co"># Radius 15</span></span>
+<span id="cb13-14"><a href="#cb13-14" tabindex="-1" aria-label="code-block-13-14"></a>eroded_mask <span class="op">=</span> erosion(semantic_seg, footprint<span class="op">=</span>ball(<span class="dv">15</span>))</span>
+<span id="cb13-15"><a href="#cb13-15" tabindex="-1" aria-label="code-block-13-15"></a><span class="co"># Add the eroded mask as a new layer in Napari</span></span>
+<span id="cb13-16"><a href="#cb13-16" tabindex="-1" aria-label="code-block-13-16"></a>viewer.add_labels(eroded_mask, name<span class="op">=</span><span class="st">"eroded_ball_15"</span>)</span></code></pre>
+</div>
+
+<div class="section level4">
+<h4 id="radius-5">Radius 5<a class="anchor" aria-label="anchor" href="#radius-5"></a>
+</h4>
+<p>Some nuclei that are touching remain <strong>partially
+connected</strong>. <img src="fig/eroded_ball_5.png" alt="Semantic segmentation mask eroded with a ball of radius 5." class="figure"></p>
+</div>
+<div class="section level4">
+<h4 id="radius-10">Radius 10<a class="anchor" aria-label="anchor" href="#radius-10"></a>
+</h4>
+<p>Erosion with a radius of 10 removes enough pixels to <strong>separate
+touching nuclei</strong><br>
+while still keeping the nuclei you want to analyse. <img src="fig/eroded_ball_10.png" alt="Semantic segmentation mask eroded with a ball of radius 10." class="figure"></p>
+</div>
+<div class="section level4">
+<h4 id="radius-15">Radius 15<a class="anchor" aria-label="anchor" href="#radius-15"></a>
+</h4>
+<p>Erosion with a radius of 15 is too strong: several nuclei become
+<strong>over‑eroded</strong><br>
+and some disappear completely. <img src="fig/eroded_ball_15.png" alt="Semantic segmentation mask eroded with a ball of radius 15." class="figure"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="for-loop-to-test-different-radii" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="for-loop-to-test-different-radii" class="callout-inner">
+<h3 class="callout-title">For-loop to test different radii</h3>
+<div class="callout-content">
+<p>Try using a Python <code>for</code> loop to test several radius
+values.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div class="accordion-body">
+<p>You can change the radius manually (for example,
+<code>radius = 5</code>) and re‑run the erosion each time.<br>
+But if you want to test <strong>many</strong> radius values quickly, a
+Python <a href="https://swcarpentry.github.io/python-novice-inflammation/05-loop.html" class="external-link">for
+loop</a> lets you repeat the same steps for each radius in a list.</p>
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="co"># List of radii to test</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1" aria-label="code-block-14-2"></a>radii <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">15</span>]</span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1" aria-label="code-block-14-3"></a><span class="co"># A for-loop that tests several radii</span></span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1" aria-label="code-block-14-4"></a><span class="cf">for</span> radius <span class="kw">in</span> radii:</span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1" aria-label="code-block-14-5"></a>    <span class="co"># Make a name for the output layer</span></span>
+<span id="cb14-6"><a href="#cb14-6" tabindex="-1" aria-label="code-block-14-6"></a>    layer_name <span class="op">=</span> <span class="st">"eroded_ball_"</span> <span class="op">+</span> <span class="bu">str</span>(radius)</span>
+<span id="cb14-7"><a href="#cb14-7" tabindex="-1" aria-label="code-block-14-7"></a>    <span class="co"># Erode the mask using this radius</span></span>
+<span id="cb14-8"><a href="#cb14-8" tabindex="-1" aria-label="code-block-14-8"></a>    eroded_mask <span class="op">=</span> erosion(semantic_seg, footprint<span class="op">=</span>ball(radius))</span>
+<span id="cb14-9"><a href="#cb14-9" tabindex="-1" aria-label="code-block-14-9"></a>    <span class="co"># Add the eroded mask as a new layer in Napari</span></span>
+<span id="cb14-10"><a href="#cb14-10" tabindex="-1" aria-label="code-block-14-10"></a>    viewer.add_labels(eroded_mask, name<span class="op">=</span>layer_name)</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>It is also possible to run the erosion function through a plugin:
+<code>Layers &gt; Filter &gt; Morphology &gt; Binary Morphology (napari skimage)</code>.</p>
+</div>
+<div class="section level3">
+<h3 id="instance-segmentation-using-the-eroded-mask">Instance segmentation using the eroded mask<a class="anchor" aria-label="anchor" href="#instance-segmentation-using-the-eroded-mask"></a>
+</h3>
+<p>Now we have separate nuclei, lets try creating instance labels
+again.</p>
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="co"># Create a new instance segmentation using the eroded mask</span></span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1" aria-label="code-block-15-2"></a>eroded_mask <span class="op">=</span> erosion(semantic_seg, footprint<span class="op">=</span>ball(<span class="dv">10</span>))</span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1" aria-label="code-block-15-3"></a>instance_seg <span class="op">=</span> label(eroded_mask)</span>
+<span id="cb15-4"><a href="#cb15-4" tabindex="-1" aria-label="code-block-15-4"></a></span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1" aria-label="code-block-15-5"></a><span class="co"># Remove old instance segmentation</span></span>
+<span id="cb15-6"><a href="#cb15-6" tabindex="-1" aria-label="code-block-15-6"></a>viewer.layers.remove(<span class="st">'instance_seg'</span>)</span>
+<span id="cb15-7"><a href="#cb15-7" tabindex="-1" aria-label="code-block-15-7"></a></span>
+<span id="cb15-8"><a href="#cb15-8" tabindex="-1" aria-label="code-block-15-8"></a><span class="co"># Add new instance segmentation</span></span>
+<span id="cb15-9"><a href="#cb15-9" tabindex="-1" aria-label="code-block-15-9"></a>viewer.add_labels(instance_seg)</span></code></pre>
+</div>
+<figure><img src="fig/instance_segmentation_on_eroded_mask.png" alt="Instance segmentation on the eroded segmentation mask" class="figure mx-auto d-block"></figure><p>Looking at the image above, there are no longer any incorrectly
+joined nuclei.</p>
+</div>
+<div class="section level3">
+<h3 id="dilation">Dilation<a class="anchor" aria-label="anchor" href="#dilation"></a>
+</h3>
+
+<p>We managed to separate the nuclei, however performing any size or
+shape analysis on these nuclei will be flawed, as they are heavily
+eroded.</p>
+<p>We can largely undo the erosion by using scikit-image’s <a href="https://scikit-image.org/docs/stable/api/skimage.segmentation.html#skimage.segmentation.expand_labels" class="external-link">expand
+labels</a> function.</p>
+<p>The expand labels function is a filter which performs a
+<code>dilation</code>, expanding the bright (non-zero) parts of the
+image. The expand labels function adds an extra step to stop the
+dilation when two neighbouring labels meet, preventing overlapping
+labels.</p>
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a><span class="im">from</span> skimage.segmentation <span class="im">import</span> expand_labels</span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1" aria-label="code-block-16-2"></a></span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1" aria-label="code-block-16-3"></a><span class="co"># Dilate eroded instance segmentation with the same radius</span></span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1" aria-label="code-block-16-4"></a>instance_seg <span class="op">=</span> expand_labels(instance_seg, <span class="dv">10</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" tabindex="-1" aria-label="code-block-16-5"></a></span>
+<span id="cb16-6"><a href="#cb16-6" tabindex="-1" aria-label="code-block-16-6"></a><span class="co"># Remove old instance segmentation</span></span>
+<span id="cb16-7"><a href="#cb16-7" tabindex="-1" aria-label="code-block-16-7"></a>viewer.layers.remove(<span class="st">'instance_seg'</span>)</span>
+<span id="cb16-8"><a href="#cb16-8" tabindex="-1" aria-label="code-block-16-8"></a></span>
+<span id="cb16-9"><a href="#cb16-9" tabindex="-1" aria-label="code-block-16-9"></a><span class="co"># Add new instance segmentation</span></span>
+<span id="cb16-10"><a href="#cb16-10" tabindex="-1" aria-label="code-block-16-10"></a>viewer.add_labels(instance_seg)</span></code></pre>
+</div>
+<p><img src="fig/instance_segmentation_dilated.png" alt="Dilated instance segmentation on the eroded segmentation mask" class="figure">
+There are now 19 apparently correctly labelled nuclei that appear to be
+the same shape as in the original mask image.</p>
+</div>
+<div class="section level3">
+<h3 id="opening">Opening<a class="anchor" aria-label="anchor" href="#opening"></a>
+</h3>
+<p>In order to create a correct instance segmentation we have performed
+a mask erosion followed by a label expansion. This is a common image
+operation often used to remove background noise, known as as
+<code>opening</code>, or an erosion followed by a dilation. In addition
+to helping us separate instances it will have the effect of removing
+objects smaller than the erosion footprint, in this case a sphere with
+radius 10 pixels.</p>
+<div id="is-the-erosion-completely-reversible" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="is-the-erosion-completely-reversible" class="callout-inner">
+<h3 class="callout-title">Is the erosion completely reversible?</h3>
+<div class="callout-content">
+<p>If we compare the eroded and expanded image with the original mask,
+what will we see?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
+</button>
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div class="accordion-body">
+<p><img src="fig/instance_segmentation_vs_semantic_segmentation.png" alt="A comparison between the expanded instance segmentation and the original semantic segmentation showing some mismatch between the borders." class="figure">
+Looking at the above image we can see some small mismatches around the
+edges of most of the nuclei. It should be remembered when looking at
+this image that it is a single slice though a 3D image, so in some cases
+where the differences look large (for example the nucleus at the bottom
+right) they may still be only one pixel deep. Will the effect of this on
+the accuracy of our results be significant?</p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</section><section><h2 class="section-heading" id="removing-border-cells">Removing Border Cells<a class="anchor" aria-label="anchor" href="#removing-border-cells"></a>
+</h2>
+<hr class="half-width">
+<p>Now we return to the second problem with our initial instance
+segmentation, the presence of partial nuclei around the image borders.
+As we’re measuring nuclei size, the presence of any partially visible
+nuclei could substantially bias our statistics.</p>
+<p>We can remove these from our analysis using scikit-image’s <a href="https://scikit-image.org/docs/stable/api/skimage.segmentation.html#skimage.segmentation.clear_border" class="external-link">clear
+border</a> function.</p>
+<div class="codewrapper sourceCode" id="cb17">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="co"># Remove partial nuclei touching the image border</span></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1" aria-label="code-block-17-2"></a></span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1" aria-label="code-block-17-3"></a><span class="co"># Import scikit-image's clear_border</span></span>
+<span id="cb17-4"><a href="#cb17-4" tabindex="-1" aria-label="code-block-17-4"></a><span class="im">from</span> skimage.segmentation <span class="im">import</span> clear_border</span>
+<span id="cb17-5"><a href="#cb17-5" tabindex="-1" aria-label="code-block-17-5"></a></span>
+<span id="cb17-6"><a href="#cb17-6" tabindex="-1" aria-label="code-block-17-6"></a><span class="co"># Clear border</span></span>
+<span id="cb17-7"><a href="#cb17-7" tabindex="-1" aria-label="code-block-17-7"></a>instance_seg <span class="op">=</span> clear_border(instance_seg)</span>
+<span id="cb17-8"><a href="#cb17-8" tabindex="-1" aria-label="code-block-17-8"></a></span>
+<span id="cb17-9"><a href="#cb17-9" tabindex="-1" aria-label="code-block-17-9"></a><span class="co"># Remove old instance segmentation</span></span>
+<span id="cb17-10"><a href="#cb17-10" tabindex="-1" aria-label="code-block-17-10"></a>viewer.layers.remove(<span class="st">'instance_seg'</span>)</span>
+<span id="cb17-11"><a href="#cb17-11" tabindex="-1" aria-label="code-block-17-11"></a></span>
+<span id="cb17-12"><a href="#cb17-12" tabindex="-1" aria-label="code-block-17-12"></a><span class="co"># Add new instance segmentation</span></span>
+<span id="cb17-13"><a href="#cb17-13" tabindex="-1" aria-label="code-block-17-13"></a>viewer.add_labels(instance_seg)</span></code></pre>
+</div>
+<figure><img src="fig/instance_segmentation_clear_border.png" alt="The instance segmentation with any nuclei crossing the image boundary removed" class="figure mx-auto d-block"></figure><p>We now have an image with 11 clearly labelled nuclei. You may notice
+that the smaller nucleus (dark orange) near the top left of the image
+has been removed even though we can’t see where it touches the image
+border. Remember that this is a 3D image and clear border removes nuclei
+touching any border. This nucleus has been removed because it touches
+the top or bottom (z axis) of the image.</p>
+<p>Let’s check the nuclei count as we did above.</p>
+
+<div class="codewrapper sourceCode" id="cb18">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="co"># First count the nuclei</span></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1" aria-label="code-block-18-2"></a>number_of_nuclei <span class="op">=</span> instance_seg.<span class="bu">max</span>()</span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1" aria-label="code-block-18-3"></a><span class="bu">print</span>(<span class="st">"Number of nuclei: "</span>, number_of_nuclei)</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Number of nuclei: 19</code></pre>
+</div>
+<p>Why are there 19 nuclei?</p>
+<p>When we ran <code>clear_borders</code> the pixels corresponding to
+border nuclei were set to zero, however the total number of labels in
+the image was not changed, so whilst there are 19 labels in the image
+some of them have no corresponding pixels. The easiest way to correct
+this is to relabel the image (and replace the old instance segmentation
+in the viewer.)</p>
+<div class="codewrapper sourceCode" id="cb20">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" tabindex="-1" aria-label="code-block-20-1"></a><span class="co"># Relabel</span></span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1" aria-label="code-block-20-2"></a>instance_seg <span class="op">=</span> label(instance_seg)</span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1" aria-label="code-block-20-3"></a></span>
+<span id="cb20-4"><a href="#cb20-4" tabindex="-1" aria-label="code-block-20-4"></a><span class="co"># Remove old instance segmentation</span></span>
+<span id="cb20-5"><a href="#cb20-5" tabindex="-1" aria-label="code-block-20-5"></a>viewer.layers.remove(<span class="st">'instance_seg'</span>)</span>
+<span id="cb20-6"><a href="#cb20-6" tabindex="-1" aria-label="code-block-20-6"></a></span>
+<span id="cb20-7"><a href="#cb20-7" tabindex="-1" aria-label="code-block-20-7"></a><span class="co"># Add relabeled instance segmentation</span></span>
+<span id="cb20-8"><a href="#cb20-8" tabindex="-1" aria-label="code-block-20-8"></a>viewer.add_labels(instance_seg)</span>
+<span id="cb20-9"><a href="#cb20-9" tabindex="-1" aria-label="code-block-20-9"></a></span>
+<span id="cb20-10"><a href="#cb20-10" tabindex="-1" aria-label="code-block-20-10"></a><span class="co"># Number of nuclei after relabling</span></span>
+<span id="cb20-11"><a href="#cb20-11" tabindex="-1" aria-label="code-block-20-11"></a>number_of_nuclei <span class="op">=</span> instance_seg.<span class="bu">max</span>()</span>
+<span id="cb20-12"><a href="#cb20-12" tabindex="-1" aria-label="code-block-20-12"></a><span class="bu">print</span>(<span class="st">"Number of nuclei:"</span>, number_of_nuclei)</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Number of nuclei: 11</code></pre>
+</div>
+</section><section><h2 class="section-heading" id="number-of-pixels-per-nucleus">Number of pixels per nucleus<a class="anchor" aria-label="anchor" href="#number-of-pixels-per-nucleus"></a>
+</h2>
+<hr class="half-width">
+<p>Now that your instance segmentation is correct, you can finish the
+analysis in our notebook.</p>
+<p>Let’s start by counting the pixels per nucleus like we did
+before.</p>
+<div class="codewrapper sourceCode" id="cb22">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" tabindex="-1" aria-label="code-block-22-1"></a><span class="co"># Count the pixels per nucleus</span></span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1" aria-label="code-block-22-2"></a></span>
+<span id="cb22-3"><a href="#cb22-3" tabindex="-1" aria-label="code-block-22-3"></a><span class="co"># Extract region properties </span></span>
+<span id="cb22-4"><a href="#cb22-4" tabindex="-1" aria-label="code-block-22-4"></a>props <span class="op">=</span> regionprops_table(</span>
+<span id="cb22-5"><a href="#cb22-5" tabindex="-1" aria-label="code-block-22-5"></a>    instance_seg,</span>
+<span id="cb22-6"><a href="#cb22-6" tabindex="-1" aria-label="code-block-22-6"></a>    properties<span class="op">=</span>[<span class="st">"label"</span>, <span class="st">"area"</span>]   <span class="co"># 'area' = number of pixels</span></span>
+<span id="cb22-7"><a href="#cb22-7" tabindex="-1" aria-label="code-block-22-7"></a>)</span>
+<span id="cb22-8"><a href="#cb22-8" tabindex="-1" aria-label="code-block-22-8"></a></span>
+<span id="cb22-9"><a href="#cb22-9" tabindex="-1" aria-label="code-block-22-9"></a><span class="co"># Convert to a pandas DataFrame</span></span>
+<span id="cb22-10"><a href="#cb22-10" tabindex="-1" aria-label="code-block-22-10"></a>props_df <span class="op">=</span> pd.DataFrame(props)</span>
+<span id="cb22-11"><a href="#cb22-11" tabindex="-1" aria-label="code-block-22-11"></a></span>
+<span id="cb22-12"><a href="#cb22-12" tabindex="-1" aria-label="code-block-22-12"></a>props_df</span></code></pre>
+</div>
+<p><strong>Are these pixel counts useful measurements?</strong> Pixel
+counts depend on image resolution, rather than the real size of a
+biological structure. This means images of the exact same nuclei taken
+with different settings could give vastly different values for the
+number of pixels.</p>
+<p>This is why biologists convert pixel counts into physical units like
+µm³ that allow comparisons across experiments, microscopes, and
+labs.</p>
+</section><section><h2 class="section-heading" id="volume-per-nuclei">Volume per nuclei<a class="anchor" aria-label="anchor" href="#volume-per-nuclei"></a>
+</h2>
+<hr class="half-width">
+<p>To convert to volumes we need to know the pixel size, which tells us
+the physical measurement of each dimension of a pixel. This information
+is often stored inside the image metadata that comes with the pixel data
+itself.</p>
+<p>Unfortunately the sample image we’re using in this lesson has no
+metadata. Fortunately the image pixel sizes can be found in the <a href="https://scikit-image.org/docs/stable/api/skimage.data.html#skimage.data.cells3d" class="external-link">scikit-image
+documentation</a>. So we can assign a pixel size of 0.26μm (x axis),
+0.26μm (y axis) and 0.29μm (z axis).</p>
+<p>Using this pixel size, we can then calculate the nucleus volume in
+cubic micrometres.</p>
+<div class="codewrapper sourceCode" id="cb23">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" tabindex="-1" aria-label="code-block-23-1"></a><span class="co"># Volume of a single voxel in cubic micrometres</span></span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1" aria-label="code-block-23-2"></a>voxel_volume <span class="op">=</span> <span class="fl">0.26</span> <span class="op">*</span> <span class="fl">0.26</span> <span class="op">*</span> <span class="fl">0.29</span></span>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1" aria-label="code-block-23-3"></a></span>
+<span id="cb23-4"><a href="#cb23-4" tabindex="-1" aria-label="code-block-23-4"></a><span class="co"># Add a physical volume column</span></span>
+<span id="cb23-5"><a href="#cb23-5" tabindex="-1" aria-label="code-block-23-5"></a>props_df[<span class="st">"volume_um3"</span>] <span class="op">=</span> props_df[<span class="st">"area"</span>] <span class="op">*</span> voxel_volume</span>
+<span id="cb23-6"><a href="#cb23-6" tabindex="-1" aria-label="code-block-23-6"></a></span>
+<span id="cb23-7"><a href="#cb23-7" tabindex="-1" aria-label="code-block-23-7"></a>props_df</span></code></pre>
+</div>
+<p>Once you know the voxel size, <code>pandas</code> makes the
+conversion and analysis extremely easy:</p>
+<div class="codewrapper sourceCode" id="cb24">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" tabindex="-1" aria-label="code-block-24-1"></a><span class="co"># Quick stats using pandas</span></span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1" aria-label="code-block-24-2"></a>props_df[<span class="st">"volume_um3"</span>].describe()</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>count      11.000000
+mean      855.980145
+std       178.497656
+min       602.391712
+25%       729.190384
+50%       800.019636
+75%       983.473868
+max      1181.493872
+Name: volume_um3, dtype: float64
+</code></pre>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Connected component analysis (the label function) was used to assign
+each connected region of a mask a unique integer value. This produces an
+instance segmentation from a semantic segmentation.</li>
+<li>Erosion and dilation filters were used to correct the instance
+segmentation. Erosion was used to separate individual nuclei. Dilation
+(or expansion) was used to return the nuclei to their (approximate)
+original size.</li>
+<li>Partial nuclei at the image edges can be removed with the
+clear_border function.</li>
+<li>The napari-skimage plugin can be used to interactively examine the
+nuclei shapes.</li>
 </ul>
 </div>
 </div>
@@ -467,8 +2649,8 @@ any links that you are not going to use.
   "url": "https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/aio.html",
   "identifier": "https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/aio.html",
   "dateCreated": "2026-08-18",
-  "dateModified": "2026-09-01",
-  "datePublished": "2026-09-01"
+  "dateModified": "2026-09-02",
+  "datePublished": "2026-09-02"
 }
 
   </script><script>

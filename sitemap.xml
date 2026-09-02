@@ -13,10 +13,22 @@
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/aio.html</loc>
   </url>
   <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/filters-and-thresholding.html</loc>
+  </url>
+  <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/getting-started-with-napari.html</loc>
+  </url>
+  <url>
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/images.html</loc>
   </url>
   <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/imaging-software.html</loc>
+  </url>
+  <url>
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/index.html</loc>
+  </url>
+  <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instance-segmentation-classic.html</loc>
   </url>
   <url>
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/404.html</loc>
@@ -31,10 +43,22 @@
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/aio.html</loc>
   </url>
   <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/filters-and-thresholding.html</loc>
+  </url>
+  <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/getting-started-with-napari.html</loc>
+  </url>
+  <url>
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/images.html</loc>
   </url>
   <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/imaging-software.html</loc>
+  </url>
+  <url>
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/instance-segmentation-classic.html</loc>
   </url>
   <url>
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/instructor-notes.html</loc>
@@ -46,10 +70,19 @@
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/key-points.html</loc>
   </url>
   <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/napari-notebook.html</loc>
+  </url>
+  <url>
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/profiles.html</loc>
   </url>
   <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/quality-control-and-manual-segmentation.html</loc>
+  </url>
+  <url>
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/what-is-an-image.html</loc>
   </url>
   <url>
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor-notes.html</loc>
@@ -61,9 +94,18 @@
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/key-points.html</loc>
   </url>
   <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/napari-notebook.html</loc>
+  </url>
+  <url>
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/profiles.html</loc>
   </url>
   <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/quality-control-and-manual-segmentation.html</loc>
+  </url>
+  <url>
     <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/what-is-an-image.html</loc>
   </url>
 </urlset>
