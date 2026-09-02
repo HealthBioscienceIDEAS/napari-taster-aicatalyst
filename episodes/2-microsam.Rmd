@@ -348,6 +348,9 @@ Edlund, C., Jackson, T. R., Khalid, N., Bevan, N., Dale, T., Dengel, A., Ahmed, 
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- μSAM adapts SAM for microscopy and integrates it into napari, providing robust segmentation tools for biological images.
+- Classical image analysis methods often fail on label‑free images with subtle contrast.
+- μSAM adapts Segment Anything Model (SAM) for microscopy and integrates it into napari, providing robust segmentation tools for biological images.
+- μSAM supports area and point prompts, plus full image automatic segmentation.
+- Initial embedding step can be slow, especially with larger models.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
