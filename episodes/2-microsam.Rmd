@@ -285,6 +285,17 @@ With batched enabled, μSAM treats each point prompt independently and μSAM ret
 
 ### Automatic segmentation
 
+Automatic segmentation lets μSAM propose all cell masks in the image without any prompts.
+
+To run automatic segmentation using the default settings:
+- In the _Annotator 2d_ window click on _Automatic Segmentation_
+
+μSAM will generate a full‑image segmentation and place it in the auto_segmentation layer
+
+If automatic segmentation clashes with existing committed objects (overlaps, duplicates):
+- Delete the `committed_objects` layer
+- Re‑run Automatic Segmentation
+- Commit again (μSAM will create a new committed‑objects layer automatically)
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
