@@ -297,6 +297,11 @@ If automatic segmentation clashes with existing committed objects (overlaps, dup
 - Re‑run Automatic Segmentation
 - Commit again (μSAM will create a new committed‑objects layer automatically)
 
+
+## Cell tracking
+
+
+
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - μSAM adapts SAM for microscopy and integrates it into napari, providing robust segmentation tools for biological images.
