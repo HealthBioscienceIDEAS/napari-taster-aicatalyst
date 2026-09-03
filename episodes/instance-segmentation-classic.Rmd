@@ -297,7 +297,7 @@ upper most light purple nucleus and its neighbour.
 
 ::::::::::::::::::::::: instructor
 ### Check time before going into smallest one
-This and clear border wil be nice to have, but you really need to 
+This and clear border will be nice to have, but you really need to 
 get everything previously done efficiently.
 :::::::::::::::::::::::
 

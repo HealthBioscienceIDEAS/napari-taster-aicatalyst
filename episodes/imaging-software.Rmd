@@ -48,7 +48,7 @@ It's important to consider if the software you are using is open-source
 or proprietary (requiring a one-off payment or a regular subscription fee to 
 use). Open source means it is more freely available and likely more accessible 
 to a larger group of researchers, but it may not be as robust or stable as
-software commerically developed by large team, particularly if you are 
+software commercially developed by large team, particularly if you are 
 interested in a very specific feature that it provides. Open source software
 often will rely on more open file formats and workflows, and they are designed
 to be extended by the community.
