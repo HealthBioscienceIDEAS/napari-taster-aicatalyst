@@ -356,13 +356,6 @@ auto_seg = automatic_instance_segmentation(
 viewer.add_labels(auto_seg)
 ```
 
-### References
-
-Archit, A., Freckmann, L., Nair, S., Khalid, N., Hilt, P., Rajashekar, V., Freitag, M., Teuber, C., Spitzner, M., Tapia Contreras, C., Buckley, G., von Haaren, S., Gupta, S., Grade, M., Wirth, M., Schneider, G., Dengel, A., Ahmed, S., & Pape, C. (2025). Segment Anything for Microscopy. Nature methods, 22(3), 579–591. https://doi.org/10.1038/s41592-024-02580-4
-
-Edlund, C., Jackson, T. R., Khalid, N., Bevan, N., Dale, T., Dengel, A., Ahmed, S., Trygg, J., & Sjögren, R. (2021). LIVECell-A large-scale dataset for label-free live cell segmentation. Nature methods, 18(9), 1038–1045. https://doi.org/10.1038/s41592-021-01249-6
-
-
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - Classical image analysis methods often fail on label‑free images with subtle contrast.
@@ -371,3 +364,9 @@ Edlund, C., Jackson, T. R., Khalid, N., Bevan, N., Dale, T., Dengel, A., Ahmed, 
 - Initial embedding step can be slow, especially with larger models.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+### References
+
+Archit, A., Freckmann, L., Nair, S., Khalid, N., Hilt, P., Rajashekar, V., Freitag, M., Teuber, C., Spitzner, M., Tapia Contreras, C., Buckley, G., von Haaren, S., Gupta, S., Grade, M., Wirth, M., Schneider, G., Dengel, A., Ahmed, S., & Pape, C. (2025). Segment Anything for Microscopy. Nature methods, 22(3), 579–591. https://doi.org/10.1038/s41592-024-02580-4
+
+Edlund, C., Jackson, T. R., Khalid, N., Bevan, N., Dale, T., Dengel, A., Ahmed, S., Trygg, J., & Sjögren, R. (2021). LIVECell-A large-scale dataset for label-free live cell segmentation. Nature methods, 18(9), 1038–1045. https://doi.org/10.1038/s41592-021-01249-6
