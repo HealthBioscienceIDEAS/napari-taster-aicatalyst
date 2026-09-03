@@ -62,7 +62,6 @@ from skimage.measure import label
 from skimage.segmentation import expand_labels
 ```
 
-
 :::::::::::::::::::::::::challenge
 
 ## Disk vs Ball Structure Element  
@@ -80,6 +79,8 @@ A ball footprint, by contrast, is a three‑dimensional structuring element. It 
 
 :::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::
+
+We are now going to use these tools to create an instance segmentation of the cells, following the same steps we used in the previous episode.
 
 ### Smooth the image
 
