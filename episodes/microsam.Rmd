@@ -129,9 +129,9 @@ instance_seg = expand_labels(eroded_labels, 3)
 viewer.add_labels(instance_seg)
 ```
 
-Below is the result of applying our traditional workflow to the live‑cell image.
+Below is the result of applying our traditional workflow to the unlabeled live‑cell image.
 
-!["Traditional Segmentation Method"](fig/livecells-traditional-segmentation.png)
+![](fig/livecells-traditional-segmentation.png){alt="Results from our traditional segmentation pipeline"}
 
 While many of the cell regions have been identified. Some cells have been largely missed out or broken apart.
 
