@@ -320,7 +320,7 @@ If automatic segmentation clashes with existing committed objects (overlaps, dup
 
 The results of the automatic segmentation will look like the image below.
 
-!["Automatic Segmentation with μSAM"](fig/livecells-automatic_segmentation.png)
+![](fig/livecells-automatic_segmentation.png){alt="Automatic Segmentation  results using μSAM"}
 
 ### Automatic segmentation in a Jupyter notebook
 
