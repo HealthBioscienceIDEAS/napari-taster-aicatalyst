@@ -46,7 +46,7 @@ and the image below should open in the napari viewer.
 
 ![](fig/livecells.png){alt="Screenshot of LIVECell sample image from micro-sam in Napari"}  
 
-
+Take a moment to look at the image. Check the contrast, hover over pixels to see their values, and confirm whether the data is 2D or 3D before continuing.
 
 For details on the dataset this image came from see https://doi.org/10.1038/s41592-021-01249-6.
 Let's try to segment these cells using the image analysis approaches we explored in the first half of the workshop.
