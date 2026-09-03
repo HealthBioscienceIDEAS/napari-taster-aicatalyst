@@ -356,6 +356,16 @@ auto_seg = automatic_instance_segmentation(
 viewer.add_labels(auto_seg)
 ```
 
+## Other napari plugins that use AI models
+
+[Empanada](https://empanada.readthedocs.io/en/latest/index.html) ([`empanada-napari` plugin](https://github.com/volume-em/empanada-napari)) is designed for electron microscopy (EM) segmentation.
+
+[Cellpose](https://www.cellpose.org/) ([`cellpose-napari` plugin](https://cellpose-napari.readthedocs.io/en/latest/)), provides generalist deep‑learning segmentation for a wide range of microscopy images.
+
+[Stardist](https://stardist.net/) ([`stardist-napari` plugin](https://github.com/stardist/stardist-napari)) a popular model mainly for cell nuclei. It also has a napari wrapper - but again, not updated in a while unfortunately.
+
+[Cellfinder](https://brainglobe.info/documentation/cellfinder/index.html) ([`cellfinder-napari` plugin](https://brainglobe.info/documentation/cellfinder/user-guide/napari-plugin/index.html)), part of the [BrainGlobe](https://brainglobe.info/) ecosystem, detects fluorescently labelled cells in large 3D images. 
+
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - Classical image analysis methods often fail on label‑free images with subtle contrast.
