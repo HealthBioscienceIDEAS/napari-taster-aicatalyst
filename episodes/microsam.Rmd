@@ -138,7 +138,7 @@ While many of the cell regions have been identified. Some cells have been largel
 
 This splitting is called over‑segmentation, as shown in the example highlighted in the red box below.
 
-![](fig/livecells-traditional-segmentation-struggle.png){alt="Results from our traditional segmentation pipeline with box around a cell that has been over segmented"}
+![](fig/livecells-traditional-segmentation-mistakes.png){alt="Results from our traditional segmentation pipeline with box around a cell that has been over segmented"}
 
 
 :::::::::::::::::::::::::challenge
