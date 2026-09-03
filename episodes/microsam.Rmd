@@ -47,6 +47,7 @@ and the image below should open in the napari viewer.
 ![](fig/livecells.png){alt="Screenshot of LIVECell sample image from micro-sam in Napari"}  
 
 
+
 For details on the dataset this image came from see https://doi.org/10.1038/s41592-021-01249-6.
 Let's try to segment these cells using the image analysis approaches we explored in the first half of the workshop.
 
@@ -154,7 +155,7 @@ Traditional image-processing methods depend on clear intensity differences betwe
 
 In fluorescence imaging, traditional methods usually work well because labeled structures appear bright and distinct. 
 
-But in label‑free imaging, cells are more heterogeneous in appearance and often have only subtle intensity differences from the background, making thresholding unreliable. 
+But in label‑free imaging, cells are more heterogeneous in appearance and often have only subtle intensity differences from the background (with some areas being brighter, and others darker in this sample), making thresholding unreliable.
 
 ::::::::::::::::::::::::: 
 :::::::::::::::::::::::::
