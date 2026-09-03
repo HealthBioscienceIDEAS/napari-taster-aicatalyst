@@ -190,7 +190,7 @@ As a napari plugin, μSAM integrates directly into the napari image viewer. You 
 
 ### Open Annotator 2d
 
-Remove all layers except for the `livecells` layer and open the μSAM annotator.
+Remove all layers except for the `livecells` layer from the napari viewer, and open the μSAM annotator.
 
 plugins > Segment Anything for Microscopy > Annotator 2d
 
