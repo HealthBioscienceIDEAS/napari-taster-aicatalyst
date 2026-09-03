@@ -64,7 +64,7 @@ from skimage.segmentation import expand_labels
 
 :::::::::::::::::::::::::challenge
 
-## Disk
+## Disk vs Ball Structure Element  
 
 You may notice that in this part of the workshop we import `disk` from `skimage.morphology`, whereas earlier we used a `ball`.
 
