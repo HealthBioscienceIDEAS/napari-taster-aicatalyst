@@ -135,6 +135,11 @@ Below is the result of applying our traditional workflow to the unlabeled liveâ€
 
 While many of the cell regions have been identified. Some cells have been largely missed out or broken apart.
 
+This splitting is called overâ€‘segmentation, as shown in the example highlighted in the red box below.
+
+![](fig/livecells-traditional-segmentation-struggle.png){alt="Results from our traditional segmentation pipeline with box around a cell that has been over segmented"}
+
+
 :::::::::::::::::::::::::challenge
 
 ## Segmenting an unlabeled image
