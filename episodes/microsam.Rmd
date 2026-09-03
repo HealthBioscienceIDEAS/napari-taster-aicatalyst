@@ -20,7 +20,9 @@ exercises: 20
 
 ## Segment unlabeled live cells
 
-We start with segmenting a live-cell sample image that comes with the μSAM napari plugin.
+We start with segmenting a live-cell sample image that comes with the μSAM napari plugin. 
+
+Create a new notebook called `livecells.ipynb` to run the code below.
 
 ``` python
 # Import napari 
@@ -306,6 +308,8 @@ The results of the automatic segmentation will look like the image below.
 μSAM also supports automatic segmentation directly from Python. 
 
 This gives you a full‑image segmentation directly in Jupyter, using the same μSAM model and settings as the napari plugin.
+
+Create a new Jupyter notebook called `livecells-microsam.ipynb` to run the code blocks below.
 
 ``` python
 # import packages
