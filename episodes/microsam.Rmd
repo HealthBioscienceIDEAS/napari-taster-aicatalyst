@@ -211,9 +211,10 @@ When μSAM processes an image, it needs to compute the image's embeddings. The e
 
 This is a computationally expensive step that is done only once per image for the specific model you are using.
 
-After the embedding is computed, Because the embedding is reused for every prompt, μSAM can deliver fast, interactive segmentation.
+Once the embedding is computed, μSAM can deliver fast, interactive segmentation, as the embedding is reused for every prompt on this image.
 
-In the _Annotator 2d_ window, have a look at the _Embedding Settings_, here you can load pre-computed embeddings and select things like the size of the model (the bigger the model the longer it will take to compute the embeddigns).#
+In the _Annotator 2d_ window, have a look at the _Embedding Settings_. Here, you can load pre-computed embeddings and select things like the size of the model (the bigger the model the longer it will take to compute the embeddings).
+
 
 For this workshop we will use the default settings to compute the embeddings by clicking on _Compute Embeddings_.
 
