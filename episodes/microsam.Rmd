@@ -48,10 +48,11 @@ and the image below should open in the napari viewer.
 
 
 For details on the dataset this image came from see https://doi.org/10.1038/s41592-021-01249-6.
-
 Let's try to segment these cells using the image analysis approaches we explored in the first half of the workshop.
 
-### Import the tools we need
+### Import the tools we need from skimage
+
+We will import the tools from `skimage`. Except `disk` from `skimage.morphology`, we used all of these in the [previous episode](instance-segmentation-classic.Rmd).
 
 ``` python
 # Import the functions we need from scikit-image
