@@ -229,7 +229,7 @@ Area prompts let you draw a region on the image and μSAM will propose a segment
 
 We start with the simplest area prompt: the box prompt.
 
-!["Box Prompt"](fig/livecells-boxprompt.png)
+![](fig/livecells-boxprompt.png){alt="Box prompt"}
 
 Creating a box prompt:
 - Select the _prompts_ layer from the layer list and pick the box tool  
@@ -283,7 +283,8 @@ Positive points should be placed inside the cell you want to segment.
 Negative points help μSAM avoid including neighbouring cells or background regions.
 
 The image shows a single positive point prompt placed on one of the cells.
-!["Positive Point Prompt"](fig/livecells-pointprompt.png)
+
+![](fig/livecells-pointprompt.png){alt="Positive point prompt"}
 
 :::::::::::::::::::::::::challenge
 
