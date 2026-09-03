@@ -194,7 +194,7 @@ Remove all layers except for the `livecells` layer from the napari viewer, and o
 
 plugins > Segment Anything for Microscopy > Annotator 2d
 
-This opens a _Annotator 2d_ window, where you can select an image and model, and interactively segment objects.
+This opens an _Annotator 2d_ window, where you can select an image and model, and interactively segment objects.
 
 In the layer list you will see a number of new layers appear:
 - prompts
