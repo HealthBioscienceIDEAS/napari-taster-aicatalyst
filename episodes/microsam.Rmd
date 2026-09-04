@@ -361,18 +361,20 @@ viewer.add_labels(auto_seg)
 Other μSAM functionality includes fine tuning models and segment objects across multiple slices of a stack for 3D volumetric or time‑lapse data with their [_3D Annotator_](https://computational-cell-analytics.github.io/micro-sam/micro_sam.html#annotator-3d) and [_Tracking Annotator_](https://computational-cell-analytics.github.io/micro-sam/micro_sam.html#annotator-tracking) respectively. It does a decent job at matching the masks of the same object across slices, assigning consistent labels throughout the volume or across time.
 
 Learners who want to explore μSAM further can have a look at μSAM's:
+
 - [Documentation](https://computational-cell-analytics.github.io/micro-sam/micro_sam.html) which includes guides on how to get set up and use their annotators.
+
 - [Video tutorials](https://www.youtube.com/playlist?list=PLwYZXQJ3f36GQPpKCrSbHjGiH39X4XjSO) with walkthroughs showing μSAM in napari, including 3D segmentation and time‑lapse annotation.
 
 ## Other napari plugins that use AI models
 
-[Empanada](https://empanada.readthedocs.io/en/latest/index.html) ([`empanada-napari` plugin](https://github.com/volume-em/empanada-napari)) is designed for electron microscopy (EM) segmentation.
+- [Empanada](https://empanada.readthedocs.io/en/latest/index.html) ([`empanada-napari` plugin](https://github.com/volume-em/empanada-napari)) is designed for electron microscopy (EM) segmentation.
 
-[Cellpose](https://www.cellpose.org/) ([`cellpose-napari` plugin](https://cellpose-napari.readthedocs.io/en/latest/)), provides generalist deep‑learning segmentation for a wide range of microscopy images.
+- [Cellpose](https://www.cellpose.org/) ([`cellpose-napari` plugin](https://cellpose-napari.readthedocs.io/en/latest/)), provides generalist deep‑learning segmentation for a wide range of microscopy images.
 
-[Stardist](https://stardist.net/) ([`stardist-napari` plugin](https://github.com/stardist/stardist-napari)) a popular model mainly for cell nuclei. It also has a napari wrapper - but again, not updated in a while unfortunately.
+- [Stardist](https://stardist.net/) ([`stardist-napari` plugin](https://github.com/stardist/stardist-napari)) a popular model mainly for cell nuclei. It also has a napari wrapper - but again, not updated in a while unfortunately.
 
-[Cellfinder](https://brainglobe.info/documentation/cellfinder/index.html) ([`cellfinder-napari` plugin](https://brainglobe.info/documentation/cellfinder/user-guide/napari-plugin/index.html)), part of the [BrainGlobe](https://brainglobe.info/) ecosystem, detects fluorescently labelled cells in large 3D images. 
+- [Cellfinder](https://brainglobe.info/documentation/cellfinder/index.html) ([`cellfinder-napari` plugin](https://brainglobe.info/documentation/cellfinder/user-guide/napari-plugin/index.html)), part of the [BrainGlobe](https://brainglobe.info/) ecosystem, detects fluorescently labelled cells in large 3D images. 
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
