@@ -8,6 +8,17 @@ All images will be pre-loaded examples that are already part of Napari.
 Provided Napari software is loaded correctly, you are all set!
 
 ## Software Setup
+
+### Opening a Terminal
+
+You will need a terminal to run some of the setup instructions and commands
+for this workshop: 
+
+ - **Windows (if you used Miniforge)**: Click Start > Search for Miniforge Prompt > Click to Open
+ - **Windows (if you used Anaconda)**: Click Start > Search for Anaconda Prompt > Click to Open
+ - **macOS**: Launchpad > Other Application > Terminal
+ - **Linux**: Open a terminal window
+ 
 ### Install uv
 
 `uv` is a Python package manager and environment tool. Use the 
