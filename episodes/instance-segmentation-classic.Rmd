@@ -82,6 +82,9 @@ image = viewer.layers["nuclei"].data
 # Smooth the image
 blurred = gaussian(image, sigma=3)
 
+# Add the image to the viewer
+viewer.add_images(blurred)
+
 # Compute a threshold
 threshold = threshold_otsu(blurred)
 

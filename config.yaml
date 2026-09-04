@@ -68,8 +68,8 @@ contact: 'team@carpentries.org'
 episodes:
 - imaging-software.Rmd
 - getting-started-with-napari.Rmd
-- napari-notebook.Rmd
 - what-is-an-image.Rmd
+- napari-notebook.Rmd
 - instance-segmentation-classic.Rmd
 - microsam.Rmd
 

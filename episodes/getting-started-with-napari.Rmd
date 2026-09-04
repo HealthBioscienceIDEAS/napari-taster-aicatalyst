@@ -114,7 +114,8 @@ various aspects of the Napari viewer:
 https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/console.svg
 ){alt="A screenshot of Napari's console button" height='30px'}
 
-This button opens Napari's built-in python console.
+This button opens Napari's built-in python console, where we can enter in
+Python commands to interact with the imaging data. 
 
 ### 2D/3D ![](
 https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/2D.svg
