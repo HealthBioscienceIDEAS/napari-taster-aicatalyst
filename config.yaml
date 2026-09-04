@@ -71,6 +71,7 @@ episodes:
 - napari-notebook.Rmd
 - what-is-an-image.Rmd
 - instance-segmentation-classic.Rmd
+- microsam.Rmd
 
 # Information for Learners
 learners:
