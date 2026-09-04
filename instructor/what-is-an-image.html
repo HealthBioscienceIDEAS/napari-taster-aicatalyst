@@ -92,11 +92,11 @@
   Image visualisation with Napari
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 46%" class="percentage">
-    46%
+<aside class="col-md-12 lesson-progress"><div style="width: 17%" class="percentage">
+    17%
   </div>
   <div class="progress IDEAS">
-    <div class="progress-bar IDEAS" role="progressbar" style="width: 46%" aria-valuenow="46" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar IDEAS" role="progressbar" style="width: 17%" aria-valuenow="17" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -168,22 +168,13 @@
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
-<div class="accordion accordion-flush" id="accordionFlush4">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading4">
-        <a href="napari-notebook.html">3. Using Napari through Jupyter</a>
-    </div><!--/div.accordion-header-->
-
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
-        4. What is an image?
+        3. What is an image?
         </span>
       </button>
     </div><!--/div.accordion-header-->
@@ -206,10 +197,28 @@
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="napari-notebook.html">4. Using Napari through Jupyter</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
         <a href="instance-segmentation-classic.html">5. Image Segmentation: Basic Concepts</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="microsam.html">6. Segment Anything for Microscopy (μSAM)</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -257,23 +266,23 @@
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="../instructor/napari-notebook.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="../instructor/instance-segmentation-classic.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link" href="../instructor/getting-started-with-napari.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link float-end" href="../instructor/napari-notebook.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link" href="../instructor/napari-notebook.html" rel="prev">
+        <a class="chapter-link" href="../instructor/getting-started-with-napari.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Using Napari through Jupyter
+          Previous: Getting Started With Napari
         </a>
-        <a class="chapter-link float-end" href="../instructor/instance-segmentation-classic.html" rel="next">
-          Next: Image Segmentation: Basic Concepts...
+        <a class="chapter-link float-end" href="../instructor/napari-notebook.html" rel="next">
+          Next: Using Napari through Jupyter...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>What is an image?</h1>
-        <p>Last updated on 2026-09-03 |
+        <p>Last updated on 2026-09-04 |
 
         <a href="https://github.com/HealthBioscienceIDEAS/napari-taster-aicatalyst/edit/main/episodes/what-is-an-image.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -364,10 +373,31 @@ color to display.</p>
 that have specific values - but how is an image really represented in
 the computer? Let’s dig deeper into Napari’s <code>Image</code>
 layers…</p>
-<p>In our notebook, let’s look at the human mitosis image more closely -
-copy the text in the ‘Python’ cell below into Napari’s console and then
-press the <kbd>Enter</kbd> key. You should see it returns text that
-matches the ‘Output’ cell below in response.</p>
+<p>First, open Napari’s built-in Python console by pressing the console
+button <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/console.svg" alt="A screenshot of Napari's console button" height="30" class="figure">. Note
+this can take a few seconds to open, so give it some time:</p>
+<figure><img src="../fig/console.png" alt="A screenshot of Napari's console" class="figure mx-auto d-block"></figure><div id="console-readability" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="console-readability" class="callout-inner">
+<h3 class="callout-title">Console readability</h3>
+<div class="callout-content">
+<p>You can increase the font size in the console by clicking inside it,
+then pressing <kbd>Ctrl</kbd> and <kbd>+</kbd> together. The font size
+can also be decreased with <kbd>Ctrl</kbd> and <kbd>-</kbd>
+together.</p>
+<p>Note that you can also pop the console out into its own window by
+clicking the small <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/pop_out.svg" alt="A screenshot of Napari's float panel button" height="30" class="figure">
+icon on the left side.</p>
+</div>
+</div>
+</div>
+<p>Let’s look at the human mitosis image more closely - copy the text in
+the ‘Python’ cell below into Napari’s console and then press the
+<kbd>Enter</kbd> key. You should see it returns text that matches the
+‘Output’ cell below in response.</p>
 <p>All of the information about the Napari viewer can be accessed
 through the console with a variable called <code>viewer</code>. A
 <code>viewer</code> has 1 to many layers, and here we access the top
@@ -377,12 +407,12 @@ actual image data stored in that layer, we retrieve it with
 <div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
-  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> By number of by label </h3>
+  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Working in the console </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
-<p>SHow that the layer can also be accessed via the name of the
-layer</p>
+<p>Instead of the notebook, use the console. And by sow that the layer
+can also be accessed via the name of the layer</p>
 </div>
 </div>
 </div>
@@ -436,7 +466,7 @@ information all at the same location).</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
   <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> This section is out of scope. </h3>
 </button>
-<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
+<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
 <div class="accordion-body">
 <p>We don’t have time to cover this bit about creating an image.</p>
 </div>
@@ -490,7 +520,7 @@ simple microscope’ section of Pete Bankhead’s bioimage book</a>.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor3" aria-expanded="false" aria-controls="collapseInstructor3">
   <h3 class="accordion-header" id="headingInstructor3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Resuming teaching </h3>
 </button>
-<div id="collapseInstructor3" class="accordion-collapse collapse" aria-labelledby="headingInstructor3" data-bs-parent="#accordionInstructor3">
+<div id="collapseInstructor3" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor3" aria-labelledby="headingInstructor3">
 <div class="accordion-body">
 <p>The image dimensiosn bit is an important one</p>
 </div>
@@ -544,7 +574,7 @@ the bit-depth (8-bit).</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor4" aria-expanded="false" aria-controls="collapseInstructor4">
   <h3 class="accordion-header" id="headingInstructor4">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Go quickly through types </h3>
 </button>
-<div id="collapseInstructor4" class="accordion-collapse collapse" aria-labelledby="headingInstructor4" data-bs-parent="#accordionInstructor4">
+<div id="collapseInstructor4" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor4" aria-labelledby="headingInstructor4">
 <div class="accordion-body">
 <p>I don’t think we need to go through this. Look for a resume
 instructor note.</p>
@@ -629,7 +659,7 @@ on the bit depth?</p></li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="section level3">
 <h3 id="dimensions">Dimensions<a class="anchor" aria-label="anchor" href="#dimensions"></a></h3>
@@ -678,7 +708,7 @@ on the bit depth?</p></li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor5" aria-expanded="false" aria-controls="collapseInstructor5">
   <h3 class="accordion-header" id="headingInstructor5">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Resume just to cover common data types </h3>
 </button>
-<div id="collapseInstructor5" class="accordion-collapse collapse" aria-labelledby="headingInstructor5" data-bs-parent="#accordionInstructor5">
+<div id="collapseInstructor5" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor5" aria-labelledby="headingInstructor5">
 <div class="accordion-body">
 <p>That often we will see 8 or 16 bit, with float’s making sense in some
 cases as well. It’s all a tradeoff between precision needed and storage
@@ -755,7 +785,7 @@ episodes), and also when converting between different bit depths.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor6" aria-expanded="false" aria-controls="collapseInstructor6">
   <h3 class="accordion-header" id="headingInstructor6">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Briefly cover coordinate systems </h3>
 </button>
-<div id="collapseInstructor6" class="accordion-collapse collapse" aria-labelledby="headingInstructor6" data-bs-parent="#accordionInstructor6">
+<div id="collapseInstructor6" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor6" aria-labelledby="headingInstructor6">
 <div class="accordion-body">
 <p>Highlight that the information is there in Napari, and these can help
 access individual pixel values, make accurate measurements and perform
@@ -840,7 +870,7 @@ value - is it correct? If not, why not?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="section level3">
 <h3 id="section">1<a class="anchor" aria-label="anchor" href="#section"></a></h3>
@@ -944,17 +974,17 @@ any links that you are not going to use.
  -->
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="../instructor/napari-notebook.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="../instructor/instance-segmentation-classic.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link" href="../instructor/getting-started-with-napari.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link float-end" href="../instructor/napari-notebook.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link" href="../instructor/napari-notebook.html" rel="prev">
+        <a class="chapter-link" href="../instructor/getting-started-with-napari.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Using Napari through Jupyter
+          Previous: Getting Started With Napari
         </a>
-        <a class="chapter-link float-end" href="../instructor/instance-segmentation-classic.html" rel="next">
-          Next: Image Segmentation: Basic Concepts...
+        <a class="chapter-link float-end" href="../instructor/napari-notebook.html" rel="next">
+          Next: Using Napari through Jupyter...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -1000,8 +1030,8 @@ any links that you are not going to use.
   "url": "https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/what-is-an-image.html",
   "identifier": "https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/what-is-an-image.html",
   "dateCreated": "2026-08-18",
-  "dateModified": "2026-09-03",
-  "datePublished": "2026-09-03"
+  "dateModified": "2026-09-04",
+  "datePublished": "2026-09-04"
 }
 
   </script><script>

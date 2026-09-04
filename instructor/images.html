@@ -211,7 +211,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="napari-notebook.html">3. Using Napari through Jupyter</a>
+        <a href="what-is-an-image.html">3. What is an image?</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -223,7 +223,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="what-is-an-image.html">4. What is an image?</a>
+        <a href="napari-notebook.html">4. Using Napari through Jupyter</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -236,6 +236,18 @@
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
         <a href="instance-segmentation-classic.html">5. Image Segmentation: Basic Concepts</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="microsam.html">6. Segment Anything for Microscopy (μSAM)</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -411,8 +423,7 @@ or further channels).</p>
 <figure><img src="../fig/napari-hub.png" alt="Screenshot of searching 'matplotlib' on napari hub" class="figure mx-auto d-block"></figure><hr>
 <h3 id="getting-started-with-napari-figure-26">Figure 26</h3>
 <p aria-hidden="true">Image 1 of 1: ‘Screenshot of plugin installation window in Napari’</p>
-<figure><img src="../fig/plugin-installation.png" alt="Screenshot of plugin installation window in Napari" class="figure mx-auto d-block"></figure><hr></section><section id="napari-notebook"><h2 class="section-heading"><a href="napari-notebook.html">Using Napari through Jupyter</a></h2>
-<hr class="half-width"></section><section id="what-is-an-image"><h2 class="section-heading"><a href="what-is-an-image.html">What is an image?</a></h2>
+<figure><img src="../fig/plugin-installation.png" alt="Screenshot of plugin installation window in Napari" class="figure mx-auto d-block"></figure><hr></section><section id="what-is-an-image"><h2 class="section-heading"><a href="what-is-an-image.html">What is an image?</a></h2>
 <hr class="half-width">
 <h3 id="what-is-an-image-figure-1">Figure 1</h3>
 <p aria-hidden="true">Image 1 of 1: ‘A screenshot of Napari's delete layer button’</p>
@@ -425,17 +436,33 @@ or further channels).</p>
 <p aria-hidden="true">Image 1 of 1: ‘A screenshot of Napari - with the mouse cursor  hovering over a pixel and highlighting the corresponding pixel value’</p>
 <figure><img src="../fig/pixel-value.png" alt="A screenshot of Napari - with the mouse cursor  hovering over a pixel and highlighting the corresponding pixel value" class="figure mx-auto d-block"></figure><hr>
 <h3 id="what-is-an-image-figure-4">Figure 4</h3>
+<p aria-hidden="true">Image 1 of 1: ‘A screenshot of Napari's console button’</p>
+<p>First, open Napari’s built-in Python console by pressing the console
+button <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/console.svg" alt="A screenshot of Napari's console button" height="30" class="figure">. Note
+this can take a few seconds to open, so give it some time:</p>
+<hr>
+<h3 id="what-is-an-image-figure-5">Figure 5</h3>
+<p aria-hidden="true">Image 1 of 1: ‘A screenshot of Napari's console’</p>
+<figure><img src="../fig/console.png" alt="A screenshot of Napari's console" class="figure mx-auto d-block"></figure><hr>
+<h3 id="what-is-an-image-figure-6">Figure 6</h3>
+<p aria-hidden="true">Image 1 of 1: ‘A screenshot of Napari's float panel button’</p>
+<p>Note that you can also pop the console out into its own window by
+clicking the small <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/pop_out.svg" alt="A screenshot of Napari's float panel button" height="30" class="figure">
+icon on the left side.</p>
+<hr>
+<h3 id="what-is-an-image-figure-7">Figure 7</h3>
 <p aria-hidden="true">Image 1 of 1: ‘A diagram comparing the array of numbers and image  display for a simplified image of an arrow’</p>
 <figure><img src="../fig/array.png" alt="A diagram comparing the array of numbers and image  display for a simplified image of an arrow" class="figure mx-auto d-block"></figure><hr>
-<h3 id="what-is-an-image-figure-5">Figure 5</h3>
+<h3 id="what-is-an-image-figure-8">Figure 8</h3>
 <p aria-hidden="true">Image 1 of 1: ‘A screenshot of Napari - with the mouse cursor  hovering over a pixel and highlighting the corresponding coordinates’</p>
 <figure><img src="../fig/coordinates.png" alt="A screenshot of Napari - with the mouse cursor  hovering over a pixel and highlighting the corresponding coordinates" class="figure mx-auto d-block"></figure><hr>
-<h3 id="what-is-an-image-figure-6">Figure 6</h3>
+<h3 id="what-is-an-image-figure-9">Figure 9</h3>
 <p aria-hidden="true">Image 1 of 1: ‘Diagram comparing a standard graph  coordinate system (left) and the image coordinate system (right)’</p>
 <figure><img src="../fig/coordinate-system.png" alt="Diagram comparing a standard graph  coordinate system (left) and the image coordinate system (right)" class="figure mx-auto d-block"></figure><hr>
-<h3 id="what-is-an-image-figure-7">Figure 7</h3>
+<h3 id="what-is-an-image-figure-10">Figure 10</h3>
 <p aria-hidden="true">Image 1 of 1: ‘A diagram showing how pixel coordinates change over a simple 4x4 image’</p>
-<figure><img src="../fig/coordinates-on-image.png" style="width:50.0%" alt="A diagram showing how pixel coordinates change over a simple 4x4 image" class="figure mx-auto d-block"></figure><hr></section><section id="instance-segmentation-classic"><h2 class="section-heading"><a href="instance-segmentation-classic.html">Image Segmentation: Basic Concepts</a></h2>
+<figure><img src="../fig/coordinates-on-image.png" style="width:50.0%" alt="A diagram showing how pixel coordinates change over a simple 4x4 image" class="figure mx-auto d-block"></figure><hr></section><section id="napari-notebook"><h2 class="section-heading"><a href="napari-notebook.html">Using Napari through Jupyter</a></h2>
+<hr class="half-width"></section><section id="instance-segmentation-classic"><h2 class="section-heading"><a href="instance-segmentation-classic.html">Image Segmentation: Basic Concepts</a></h2>
 <hr class="half-width">
 <h3 id="instance-segmentation-classic-figure-1">Figure 1</h3>
 <p aria-hidden="true">Image 1 of 1: ‘A screenshot of a rough semantic segmentation of nuclei in Napari’</p>
@@ -512,7 +539,26 @@ the accuracy of our results be significant?</p>
 <hr>
 <h3 id="instance-segmentation-classic-figure-15">Figure 15</h3>
 <p aria-hidden="true">Image 1 of 1: ‘The instance segmentation with any nuclei crossing the image boundary removed’</p>
-<figure><img src="../fig/instance_segmentation_clear_border.png" alt="The instance segmentation with any nuclei crossing the image boundary removed" class="figure mx-auto d-block"></figure><hr></section>
+<figure><img src="../fig/instance_segmentation_clear_border.png" alt="The instance segmentation with any nuclei crossing the image boundary removed" class="figure mx-auto d-block"></figure><hr></section><section id="microsam"><h2 class="section-heading"><a href="microsam.html">Segment Anything for Microscopy (μSAM)</a></h2>
+<hr class="half-width">
+<h3 id="microsam-figure-1">Figure 1</h3>
+<p aria-hidden="true">Image 1 of 1: ‘Screenshot of LIVECell sample image from micro-sam in Napari’</p>
+<figure><img src="../fig/livecells.png" alt="Screenshot of LIVECell sample image from micro-sam in Napari" class="figure mx-auto d-block"></figure><hr>
+<h3 id="microsam-figure-2">Figure 2</h3>
+<p aria-hidden="true">Image 1 of 1: ‘Results from our traditional segmentation pipeline’</p>
+<figure><img src="../fig/livecells-traditional-segmentation.png" alt="Results from our traditional segmentation pipeline" class="figure mx-auto d-block"></figure><hr>
+<h3 id="microsam-figure-3">Figure 3</h3>
+<p aria-hidden="true">Image 1 of 1: ‘Results from our traditional segmentation pipeline with box around a cell that has been over segmented’</p>
+<figure><img src="../fig/livecells-traditional-segmentation-mistakes.png" alt="Results from our traditional segmentation pipeline with box around a cell that has been over segmented" class="figure mx-auto d-block"></figure><hr>
+<h3 id="microsam-figure-4">Figure 4</h3>
+<p aria-hidden="true">Image 1 of 1: ‘Box prompt’</p>
+<figure><img src="../fig/livecells-boxprompt.png" alt="Box prompt" class="figure mx-auto d-block"></figure><hr>
+<h3 id="microsam-figure-5">Figure 5</h3>
+<p aria-hidden="true">Image 1 of 1: ‘Positive point prompt’</p>
+<figure><img src="../fig/livecells-pointprompt.png" alt="Positive point prompt" class="figure mx-auto d-block"></figure><hr>
+<h3 id="microsam-figure-6">Figure 6</h3>
+<p aria-hidden="true">Image 1 of 1: ‘Automatic Segmentation  results using μSAM’</p>
+<figure><img src="../fig/livecells-automatic_segmentation.png" alt="Automatic Segmentation  results using μSAM" class="figure mx-auto d-block"></figure><hr></section>
 </div>
     </main>
 </div>
@@ -560,8 +606,8 @@ the accuracy of our results be significant?</p>
   "url": "https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/images.html",
   "identifier": "https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/images.html",
   "dateCreated": "2026-08-18",
-  "dateModified": "2026-09-03",
-  "datePublished": "2026-09-03"
+  "dateModified": "2026-09-04",
+  "datePublished": "2026-09-04"
 }
 
   </script><script>

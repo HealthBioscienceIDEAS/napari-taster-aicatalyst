@@ -211,7 +211,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="napari-notebook.html">3. Using Napari through Jupyter</a>
+        <a href="what-is-an-image.html">3. What is an image?</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -223,7 +223,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="what-is-an-image.html">4. What is an image?</a>
+        <a href="napari-notebook.html">4. Using Napari through Jupyter</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -236,6 +236,18 @@
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
         <a href="instance-segmentation-classic.html">5. Image Segmentation: Basic Concepts</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="microsam.html">6. Segment Anything for Microscopy (μSAM)</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -318,13 +330,6 @@ the canvas, layer list, layer controls…</li>
 <li>Different layer types have different layer controls</li>
 <li>Lots of additional functionality for Napari are available through
 plugins extendng its capability.</li>
-</ul></section><section id="napari-notebook"><h2 class="section-heading"><a href="napari-notebook.html">Using Napari through Jupyter</a></h2>
-<hr class="half-width">
-<ul>
-<li>You can interact with Napari both through the interface, it’s
-built-in console or through a Jupyter lab notebook</li>
-<li>Napari represents all elements for viewing (Images, Points, etc) as
-layers</li>
 </ul></section><section id="what-is-an-image"><h2 class="section-heading"><a href="what-is-an-image.html">What is an image?</a></h2>
 <hr class="half-width">
 <ul>
@@ -338,6 +343,13 @@ these have a <code>shape</code> and <code>dtype</code>
 <li>Most images are 8-bit or 16-bit unsigned integer</li>
 <li>Images use a coordinate system with (0,0) at the top left, x
 increasing to the right, and y increasing down</li>
+</ul></section><section id="napari-notebook"><h2 class="section-heading"><a href="napari-notebook.html">Using Napari through Jupyter</a></h2>
+<hr class="half-width">
+<ul>
+<li>You can interact with Napari both through the interface, it’s
+built-in console or through a Jupyter lab notebook</li>
+<li>Napari represents all elements for viewing (Images, Points, etc) as
+layers</li>
 </ul></section><section id="instance-segmentation-classic"><h2 class="section-heading"><a href="instance-segmentation-classic.html">Image Segmentation: Basic Concepts</a></h2>
 <hr class="half-width">
 <ul>
@@ -352,6 +364,18 @@ original size.</li>
 clear_border function.</li>
 <li>The napari-skimage plugin can be used to interactively examine the
 nuclei shapes.</li>
+</ul></section><section id="microsam"><h2 class="section-heading"><a href="microsam.html">Segment Anything for Microscopy (μSAM)</a></h2>
+<hr class="half-width">
+<ul>
+<li>Classical image analysis methods often fail on label‑free images
+with subtle contrast.</li>
+<li>μSAM adapts Segment Anything Model (SAM) for microscopy and
+integrates it into napari, providing robust segmentation tools for
+biological images.</li>
+<li>μSAM supports area and point prompts, plus full image automatic
+segmentation.</li>
+<li>Initial embedding step can be slow, especially with larger
+models.</li>
 </ul></section>
 </div>
     </main>
@@ -400,8 +424,8 @@ nuclei shapes.</li>
   "url": "https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/key-points.html",
   "identifier": "https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/instructor/key-points.html",
   "dateCreated": "2026-08-18",
-  "dateModified": "2026-09-03",
-  "datePublished": "2026-09-03"
+  "dateModified": "2026-09-04",
+  "datePublished": "2026-09-04"
 }
 
   </script><script>

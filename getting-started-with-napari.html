@@ -92,11 +92,11 @@
   Image visualisation with Napari
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 15%" class="percentage">
-    15%
+<aside class="col-md-12 lesson-progress"><div style="width: 9%" class="percentage">
+    9%
   </div>
   <div class="progress IDEAS">
-    <div class="progress-bar IDEAS" role="progressbar" style="width: 15%" aria-valuenow="15" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar IDEAS" role="progressbar" style="width: 9%" aria-valuenow="9" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -192,7 +192,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="napari-notebook.html">3. Using Napari through Jupyter</a>
+        <a href="what-is-an-image.html">3. What is an image?</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -201,7 +201,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="what-is-an-image.html">4. What is an image?</a>
+        <a href="napari-notebook.html">4. Using Napari through Jupyter</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -211,6 +211,15 @@
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
         <a href="instance-segmentation-classic.html">5. Image Segmentation: Basic Concepts</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="microsam.html">6. Segment Anything for Microscopy (μSAM)</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -259,7 +268,7 @@
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="imaging-software.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="napari-notebook.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="what-is-an-image.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -267,14 +276,14 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Imaging Software for microscopy
         </a>
-        <a class="chapter-link float-end" href="napari-notebook.html" rel="next">
-          Next: Using Napari through Jupyter...
+        <a class="chapter-link float-end" href="what-is-an-image.html" rel="next">
+          Next: What is an image?...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Getting Started With Napari</h1>
-        <p>Last updated on 2026-09-03 |
+        <p>Last updated on 2026-09-04 |
 
         <a href="https://github.com/HealthBioscienceIDEAS/napari-taster-aicatalyst/edit/main/episodes/getting-started-with-napari.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -370,7 +379,8 @@ or further channels).</p>
 control various aspects of the Napari viewer:</p>
 <div class="section level3">
 <h3 id="console">Console <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/console.svg" alt="A screenshot of Napari's console button" height="30" class="figure"><a class="anchor" aria-label="anchor" href="#console"></a></h3>
-<p>This button opens Napari’s built-in python console.</p>
+<p>This button opens Napari’s built-in python console, where we can
+enter in Python commands to interact with the imaging data.</p>
 </div>
 <div class="section level3">
 <h3 id="d3d">2D/3D <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/2D.svg" alt="A screenshot of Napari's 2D button" height="25" class="figure"> / <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/3D.svg" alt="A screenshot of Napari's 3D button" height="25" class="figure"><a class="anchor" aria-label="anchor" href="#d3d"></a></h3>
@@ -689,7 +699,7 @@ any links that you are not going to use.
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="imaging-software.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="napari-notebook.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="what-is-an-image.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -697,8 +707,8 @@ any links that you are not going to use.
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Imaging Software for microscopy
         </a>
-        <a class="chapter-link float-end" href="napari-notebook.html" rel="next">
-          Next: Using Napari through Jupyter...
+        <a class="chapter-link float-end" href="what-is-an-image.html" rel="next">
+          Next: What is an image?...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -744,8 +754,8 @@ any links that you are not going to use.
   "url": "https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/getting-started-with-napari.html",
   "identifier": "https://HealthBioscienceIDEAS.github.io/napari-taster-aicatalyst/getting-started-with-napari.html",
   "dateCreated": "2026-08-18",
-  "dateModified": "2026-09-03",
-  "datePublished": "2026-09-03"
+  "dateModified": "2026-09-04",
+  "datePublished": "2026-09-04"
 }
 
   </script><script>
