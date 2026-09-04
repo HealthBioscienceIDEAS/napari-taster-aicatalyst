@@ -356,6 +356,14 @@ auto_seg = automatic_instance_segmentation(
 viewer.add_labels(auto_seg)
 ```
 
+## Additional resources and other functionality
+
+Other μSAM functionality includes fine tuning models and segment objects across multiple slices of a stack for 3D volumetric or time‑lapse data with their [_3D Annotator_](https://computational-cell-analytics.github.io/micro-sam/micro_sam.html#annotator-3d) and [_Tracking Annotator_](https://computational-cell-analytics.github.io/micro-sam/micro_sam.html#annotator-tracking) respectively. It does a decent job at matching the masks of the same object across slices, assigning consistent labels throughout the volume or across time.
+
+Learners who want to explore μSAM further can have a look at μSAM's:
+- [Documentation](https://computational-cell-analytics.github.io/micro-sam/micro_sam.html) which includes guides on how to get set up and use their annotators.
+- [Video tutorials](https://www.youtube.com/playlist?list=PLwYZXQJ3f36GQPpKCrSbHjGiH39X4XjSO) with walkthroughs showing μSAM in napari, including 3D segmentation and time‑lapse annotation.
+
 ## Other napari plugins that use AI models
 
 [Empanada](https://empanada.readthedocs.io/en/latest/index.html) ([`empanada-napari` plugin](https://github.com/volume-em/empanada-napari)) is designed for electron microscopy (EM) segmentation.
