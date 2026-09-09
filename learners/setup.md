@@ -14,8 +14,7 @@ Provided Napari software is loaded correctly, you are all set!
 You will need a terminal to run some of the setup instructions and commands
 for this workshop: 
 
- - **Windows (if you used Miniforge)**: Click Start > Search for Miniforge Prompt > Click to Open
- - **Windows (if you used Anaconda)**: Click Start > Search for Anaconda Prompt > Click to Open
+ - **Windows**: Open PowerShell
  - **macOS**: Launchpad > Other Application > Terminal
  - **Linux**: Open a terminal window
  
@@ -141,10 +140,6 @@ To create a seperate environment, navigate outside of the
 cd ..
 ```
 Next, follow the instructions below.
-If you do not already have conda installed 
-(e.g. via Miniforge, Anaconda or similar), download and install the latest 
-[Miniforge distribution](https://conda-forge.org/download/) for your 
-operating system. 
 
 ::::::::::::::::::::::: tab
 ### Windows
