@@ -86,7 +86,30 @@ We've seen that images are made of individual units called pixels that have
 specific values - but how is an image really represented in the computer? Let's 
 dig deeper into Napari's `Image` layers...
 
-In our notebook, let's look at the human mitosis image more closely - copy the text in the 
+First, open Napari's built-in Python console by pressing the console button ![](
+https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/console.svg
+){alt="A screenshot of Napari's console button" height='30px'}. 
+Note this can take a few seconds to open, so give it some time:
+
+![](fig/console.png){alt="A screenshot of Napari's console"}
+
+:::::::::::::::::::::::::::::::::::::: callout
+
+### Console readability
+
+You can increase the font size in the console by clicking inside it, then 
+pressing <kbd>Ctrl</kbd> and <kbd>+</kbd> together. The font size can also be 
+decreased with <kbd>Ctrl</kbd> and <kbd>-</kbd> together.
+
+Note that you can also pop the console out into its own window by clicking the 
+small ![](
+https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/pop_out.svg
+){alt="A screenshot of Napari's float panel button" height='30px'} 
+icon on the left side.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+Let's look at the human mitosis image more closely - copy the text in the 
 'Python' cell below into Napari's console and then press the <kbd>Enter</kbd> 
 key. You should see it returns text that matches the 'Output' cell below in 
 response.
@@ -97,8 +120,9 @@ here we access the top (first) layer with `viewer.layers[0]`. Then, to access
 the actual image data stored in that layer, we retrieve it with `.data`:
 
 :::::::::::::::::::::::: instructor
-# By number of by label
-SHow that the layer can also be accessed via the name of the layer
+# Working in the console
+Instead of the notebook, use the console. And by sow that the layer can also 
+be accessed via the name of the layer
 ::::::::::::::::::::::::
 
 ```python
