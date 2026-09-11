@@ -338,11 +338,23 @@ import napari
 ```
 
 ``` python
+# open the livecell sample image in the napari viewer
 viewer = napari.Viewer()
-image = viewer.layers["livecell"].data
+viewer.open_sample("micro_sam","micro_sam-livecell")
 ```
 
+An output similar to the output below should appear.
+
+``` output
+[<Image layer 'livecell' at 0x1fb2cf7b0e0>]
+```
+
+Next, retrieve the image data, load the model, and run automatic segmentation:
+
 ``` python
+# get data from image
+image = viewer.layers["livecell"].data
+
 # Load model
 predictor, segmenter = get_predictor_and_segmenter(model_type="vit_b_lm")
 
@@ -355,6 +367,8 @@ auto_seg = automatic_instance_segmentation(
 # Add to viewer
 viewer.add_labels(auto_seg)
 ```
+
+The segmentation result should be added to the napari viewer as a labels layer, allowing you to inspect the detected cell instances.
 
 ## Additional resources and other functionality
 
